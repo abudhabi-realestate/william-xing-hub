@@ -1,0 +1,56 @@
+SiteI18n.init({
+  zh: {
+    'meta.title': '邢文举 · 阿布扎比 / 迪拜房产与实用工具',
+    'hero.name': '邢文举 · William Xing',
+    'hero.sub': '阿布扎比 / 迪拜 · 阿联酋房产顾问',
+    'hero.label': '// Profile · AUH & DXB Real Estate',
+    'tag.invest': '投资 · 居留 · 自住',
+    'hero.bio':
+      '长居阿联酋，<strong>阿布扎比 + 迪拜双城</strong>房产研究与实操顾问。' +
+      '阿布扎比侧重 ADREC 数据解读，深耕 Reem / Yas / Saadiyat 等核心投资区；迪拜熟悉主流板块与开发商项目，覆盖投资、居留与自住场景。' +
+      '曾在菊厂历练，用<strong>跨境视角</strong>看现金流、成本与风险——帮你把两城差异和选型逻辑一次讲清楚。',
+    'tools.title': 'Tools · 实用工具',
+    'tools.sub': '静态数据工具矩阵 · 可收藏 · 可转发',
+    'tool.report.title': '阿布扎比数据报告',
+    'tool.report.desc': 'ADREC 2025 年报宏观 KPI + 近半年成交数据；期房结构、投资区筛选、均价走势与区域分布。',
+    'tool.calc.title': '买房成本计算器',
+    'tool.calc.desc': '迪拜 / 阿布扎比 · 期房与二手现房一次性费用估算；期房支持付款计划与 Excel 导出。',
+    'tool.school.title': '迪拜选校助手',
+    'tool.school.desc': '基于 KHDA 官方数据的私立学校筛选；按区域、学费、评级对比，适合带娃家庭。',
+    'tool.mrz.title': '护照 MRZ 校验',
+    'tool.mrz.desc': '护照机读区校验码验证，快速核对证件信息是否录入正确。',
+    'contact.wechat': 'WeChat · nothing9802',
+    'contact.wechatCopied': '已复制微信号',
+    'contact.whatsapp': 'WhatsApp · +971522240716',
+    footer:
+      '咨询联系：微信 nothing9802 · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      '© 邢文举 · 阿联酋',
+  },
+  en: {
+    'meta.title': 'William Xing · Abu Dhabi / Dubai Real Estate & Tools',
+    'hero.name': 'William Xing',
+    'hero.sub': 'Abu Dhabi / Dubai · UAE Real Estate Advisor',
+    'hero.label': '// Profile · AUH & DXB Real Estate',
+    'tag.invest': 'Investment · Residency · End-use',
+    'hero.bio':
+      'Based in the UAE, advising across <strong>Abu Dhabi and Dubai</strong>. ' +
+      'Abu Dhabi: ADREC-driven insights on Reem, Yas, Saadiyat and core districts. Dubai: mainstream areas and developer projects for investment, residency and end-use. ' +
+      'Former Huawei stint with a <strong>cross-border lens</strong> on cash flow, costs and risk — clarifying how the two markets differ and what fits you.',
+    'tools.title': 'Tools · Free Resources',
+    'tools.sub': 'Static data tools · Bookmark · Share',
+    'tool.report.title': 'Abu Dhabi Market Report',
+    'tool.report.desc': 'ADREC 2025 annual KPIs + recent 6-month transactions; off-plan mix, investment zones, price trends & district breakdown.',
+    'tool.calc.title': 'Property Cost Calculator',
+    'tool.calc.desc': 'Dubai / Abu Dhabi · one-off costs for off-plan & resale; payment plans & Excel export for off-plan.',
+    'tool.school.title': 'Dubai School Picker',
+    'tool.school.desc': 'Filter private schools from official KHDA data; compare by area, fees & ratings — for families with children.',
+    'tool.mrz.title': 'Passport MRZ Check',
+    'tool.mrz.desc': 'Verify passport MRZ check digits — quickly confirm ID data was entered correctly.',
+    'contact.wechat': 'WeChat · nothing9802',
+    'contact.wechatCopied': 'WeChat ID copied',
+    'contact.whatsapp': 'WhatsApp · +971522240716',
+    footer:
+      'Contact: WeChat nothing9802 · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      '© William Xing · UAE',
+  },
+});
