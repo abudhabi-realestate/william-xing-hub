@@ -53,11 +53,12 @@ SiteI18n.init({
     'tool.yield.desc': '毛 / 净回报率、回本年限、NOI 拆解；可选购价外成本与按揭后现金回报率。',
     'tool.school.title': '迪拜选校助手',
     'tool.school.desc': '基于 KHDA 官方数据的私立学校筛选；按区域、学费、评级对比，适合带娃家庭。',
-    'contact.wechat': 'WeChat · nothing9802',
+    'contact.wechatLabel': '微信',
+    'contact.wechat': '微信 · nothing9802',
     'contact.wechatCopied': '已复制微信号',
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
-      '咨询联系：微信 nothing9802 · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      '咨询联系：<span class="contact-wechat">微信 nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
       '© 邢文举 · 阿联酋',
   },
   en: {
@@ -114,11 +115,12 @@ SiteI18n.init({
     'tool.yield.desc': 'Gross / net yield, payback period, NOI breakdown; optional all-in costs & cash-on-cash with mortgage.',
     'tool.school.title': 'Dubai School Picker',
     'tool.school.desc': 'Filter private schools from official KHDA data; compare by area, fees & ratings — for families with children.',
+    'contact.wechatLabel': 'WeChat',
     'contact.wechat': 'WeChat · nothing9802',
     'contact.wechatCopied': 'WeChat ID copied',
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
-      'Contact: WeChat nothing9802 · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      'Contact: <span class="contact-wechat">WeChat nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
       '© William Xing · UAE',
   },
 });

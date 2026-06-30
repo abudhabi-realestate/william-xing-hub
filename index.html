@@ -263,18 +263,31 @@
       color: var(--text);
       border-color: var(--gold-light);
     }
-    .btn-ghost {
+    .btn-wechat {
+      background: rgba(184, 149, 106, 0.2);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 24px rgba(184, 149, 106, 0.14);
+    }
+    .btn-wechat:hover {
+      background: rgba(184, 149, 106, 0.32);
+      color: var(--text);
+      border-color: var(--gold-light);
+      box-shadow: 0 0 28px rgba(184, 149, 106, 0.22);
+    }
+    .btn-wechat .btn-id {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .btn-secondary {
       background: transparent;
       color: var(--muted);
-      border: none;
-      padding: 10px 0;
-      text-decoration: underline;
-      text-decoration-color: var(--border);
-      text-underline-offset: 4px;
+      border: 1px solid var(--border);
     }
-    .btn-ghost:hover {
+    .btn-secondary:hover {
       color: var(--gold-light);
-      text-decoration-color: var(--gold);
+      border-color: var(--border-strong);
+      background: rgba(184, 149, 106, 0.06);
     }
 
     .market-pulse {
@@ -567,6 +580,11 @@
     }
     .footer a { color: var(--gold-light); text-decoration: none; }
     .footer a:hover { color: var(--gold-light); }
+    .footer .contact-wechat {
+      color: var(--gold-bright);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
   </style>
 </head>
 <body data-i18n-title="meta.title">
@@ -607,8 +625,11 @@
         曾在菊厂历练，用<strong>跨境视角</strong>看现金流、成本与风险——帮你把两城差异和选型逻辑一次讲清楚。
       </p>
       <div class="hero-actions">
-        <a href="https://wa.me/971522240716" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp · +971522240716</a>
-        <button type="button" class="btn btn-ghost" id="copy-wechat" data-wechat="nothing9802" data-i18n="contact.wechat">WeChat · nothing9802</button>
+        <button type="button" class="btn btn-wechat" id="copy-wechat" data-wechat="nothing9802">
+          <span data-i18n="contact.wechatLabel">微信</span>
+          <span class="btn-id">nothing9802</span>
+        </button>
+        <a href="https://wa.me/971522240716" class="btn btn-secondary" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp · +971522240716</a>
       </div>
     </div>
   </section>
@@ -763,13 +784,16 @@
     wechatBtn.addEventListener('click', async () => {
       const id = wechatBtn.dataset.wechat;
       const copied = SiteI18n.t('contact.wechatCopied');
+      const label = SiteI18n.t('contact.wechatLabel');
       try {
         await navigator.clipboard.writeText(id);
-        const prev = wechatBtn.textContent;
-        wechatBtn.textContent = copied;
-        setTimeout(() => { wechatBtn.textContent = prev; SiteI18n.apply(); }, 1600);
+        wechatBtn.innerHTML = '<span>' + copied + '</span>';
+        setTimeout(() => {
+          wechatBtn.innerHTML = '<span data-i18n="contact.wechatLabel">' + label + '</span><span class="btn-id">' + id + '</span>';
+          SiteI18n.apply();
+        }, 1600);
       } catch {
-        wechatBtn.textContent = id;
+        wechatBtn.innerHTML = '<span class="btn-id">' + id + '</span>';
       }
     });
   }
