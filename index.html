@@ -296,6 +296,59 @@
     }
     .section-head p { font-size: 0.82rem; color: var(--muted); }
 
+    .fold-block {
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: rgba(12, 11, 9, 0.45);
+      overflow: hidden;
+    }
+    .fold-block:last-of-type { margin-bottom: 2rem; }
+    .fold-trigger {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1rem 1.15rem;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .fold-trigger::-webkit-details-marker { display: none; }
+    .fold-trigger::marker { content: ""; display: none; }
+    .fold-trigger:hover { background: var(--surface-hover); }
+    .fold-trigger .section-head {
+      margin-bottom: 0;
+      flex: 1;
+      min-width: 0;
+    }
+    .fold-badge {
+      flex-shrink: 0;
+      font-family: "SF Mono", "Consolas", monospace;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      background: var(--gold-dim);
+      border-radius: 2px;
+    }
+    .fold-chevron {
+      flex-shrink: 0;
+      font-size: 0.65rem;
+      color: var(--gold-bright);
+      transition: transform 0.2s;
+      line-height: 1;
+    }
+    .fold-block[open] .fold-chevron { transform: rotate(180deg); }
+    .fold-panel {
+      padding: 0 1rem 1.15rem;
+      border-top: 1px solid var(--border);
+    }
+    .fold-panel .vlog-grid,
+    .fold-panel .tool-grid { margin-bottom: 0; margin-top: 0.85rem; }
+
     .vlog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -483,11 +536,16 @@
     </div>
   </section>
 
-  <div class="section-head">
-    <h2 data-i18n="vlog.title">Vlog · 阿布30天</h2>
-    <p data-i18n="vlog.sub">Week 2 已更新 Day 1—8 · ADREC 数据系列 · 可收藏阅读</p>
-  </div>
-
+  <details class="fold-block glass-panel" open>
+    <summary class="fold-trigger">
+      <div class="section-head">
+        <h2 data-i18n="vlog.title">Vlog · 阿布30天</h2>
+        <p data-i18n="vlog.sub">Week 2 已更新 Day 1—8 · ADREC 数据系列 · 可收藏阅读</p>
+      </div>
+      <span class="fold-badge" data-i18n="fold.vlog.badge">8 篇</span>
+      <span class="fold-chevron" aria-hidden="true">▼</span>
+    </summary>
+    <div class="fold-panel">
   <div class="vlog-grid">
     <a class="vlog-card glass-panel featured-hub" href="https://sobhazanyan.github.io/abu-30days-vlog/" target="_blank" rel="noopener">
       <span class="vlog-icon">VLOG</span>
@@ -538,12 +596,19 @@
       <p data-i18n="vlog.d8.desc">规划 · 社区 · 选盘</p>
     </a>
   </div>
+    </div>
+  </details>
 
-  <div class="section-head">
-    <h2 data-i18n="tools.title">Tools · 实用工具</h2>
-    <p data-i18n="tools.sub">静态数据工具矩阵 · 可收藏 · 可转发</p>
-  </div>
-
+  <details class="fold-block glass-panel">
+    <summary class="fold-trigger">
+      <div class="section-head">
+        <h2 data-i18n="tools.title">Tools · 实用工具</h2>
+        <p data-i18n="tools.sub">静态数据工具矩阵 · 可收藏 · 可转发</p>
+      </div>
+      <span class="fold-badge" data-i18n="fold.tools.badge">4 个</span>
+      <span class="fold-chevron" aria-hidden="true">▼</span>
+    </summary>
+    <div class="fold-panel">
   <div class="tool-grid">
     <a class="tool-card glass-panel" href="https://sobhazanyan.github.io/abu-market-report/" target="_blank" rel="noopener">
       <span class="tool-icon">DATA</span>
@@ -570,6 +635,8 @@
       <span class="tool-go">OPEN →</span>
     </a>
   </div>
+    </div>
+  </details>
 
   <footer class="footer">
     <p data-i18n-html="footer">
