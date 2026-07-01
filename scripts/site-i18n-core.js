@@ -28,10 +28,14 @@ window.SiteI18n = (function () {
 
   function apply() {
     document.querySelectorAll('[data-i18n]').forEach((el) => {
-      el.textContent = t(el.getAttribute('data-i18n'));
+      const key = el.getAttribute('data-i18n');
+      const fallback = (el.textContent || '').trim() || undefined;
+      el.textContent = t(key, undefined, fallback);
     });
     document.querySelectorAll('[data-i18n-html]').forEach((el) => {
-      el.innerHTML = t(el.getAttribute('data-i18n-html'));
+      const key = el.getAttribute('data-i18n-html');
+      const fallback = (el.innerHTML || '').trim() || undefined;
+      el.innerHTML = t(key, undefined, fallback);
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
       el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
