@@ -118,6 +118,26 @@
     }
     #content li { margin: 0.35rem 0; }
     #content li strong { color: var(--gold-light); }
+    #content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.86rem;
+    }
+    #content th, #content td {
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    #content th {
+      background: rgba(184, 149, 106, 0.1);
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+    #content td { color: var(--muted); }
+    #content a { color: var(--gold-light); text-decoration: none; }
+    #content a:hover { color: var(--gold-bright); text-decoration: underline; }
     .loading { color: var(--muted); font-size: 0.88rem; }
     .footer {
       margin-top: 2.5rem;
@@ -151,22 +171,28 @@
     </footer>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./scripts/marked.min.js"></script>
   <script>
-    marked.setOptions({ gfm: true, breaks: false });
-    fetch('./guides/dubai-crs-tax-faq.md')
-      .then(function (r) {
-        if (!r.ok) throw new Error('load failed');
-        return r.text();
-      })
-      .then(function (md) {
-        var body = md.replace(/^#[^\n]+\n+/m, '');
-        document.getElementById('content').innerHTML = marked.parse(body);
-        document.getElementById('content').classList.remove('loading');
-      })
-      .catch(function () {
+    (function () {
+      if (typeof marked === 'undefined') {
         document.getElementById('content').textContent = '内容加载失败，请刷新或返回主页。';
-      });
+        return;
+      }
+      marked.setOptions({ gfm: true, breaks: false });
+      fetch('./guides/dubai-crs-tax-faq.md')
+        .then(function (r) {
+          if (!r.ok) throw new Error('load failed');
+          return r.text();
+        })
+        .then(function (md) {
+          var body = md.replace(/^#[^\n]+\n+/m, '');
+          document.getElementById('content').innerHTML = marked.parse(body);
+          document.getElementById('content').classList.remove('loading');
+        })
+        .catch(function () {
+          document.getElementById('content').textContent = '内容加载失败，请刷新或返回主页。';
+        });
+    })();
   </script>
 </body>
 </html>
