@@ -11,6 +11,7 @@
 | 迪拜 CRS · 税务合规 30 问 | https://SobhaZanYan.github.io/william-xing-hub/dubai-crs-faq.html |
 | 黄金签证-常见问题 | https://SobhaZanYan.github.io/william-xing-hub/golden-visa-guide.html |
 | 黄金签证-材料与流程 | https://SobhaZanYan.github.io/william-xing-hub/golden-visa-materials.html |
+| 阿布 vs 迪拜黄金签证 | https://SobhaZanYan.github.io/william-xing-hub/golden-visa-abu-dubai.html |
 | 阿布扎比数据报告 | https://SobhaZanYan.github.io/abu-market-report/ |
 | 买房成本计算器 | https://SobhaZanYan.github.io/uae-buy-cost-calculator/ |
 | 租金回报率计算器 | https://SobhaZanYan.github.io/uae-rental-yield-calculator/ |
