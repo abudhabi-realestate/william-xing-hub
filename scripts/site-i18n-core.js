@@ -43,6 +43,11 @@ window.SiteI18n = (function () {
     document.querySelectorAll('[data-i18n-title]').forEach((el) => {
       el.title = t(el.getAttribute('data-i18n-title'));
     });
+    document.querySelectorAll('[data-i18n-href]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-href');
+      const fallback = el.getAttribute('href') || undefined;
+      el.href = t(key, undefined, fallback);
+    });
     document.querySelectorAll('.lang-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
       btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');

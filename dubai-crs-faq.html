@@ -56,6 +56,18 @@
       font-family: "SF Mono", Consolas, monospace;
       color: var(--muted);
     }
+    .lang-switch { display: flex; gap: 4px; margin-left: auto; }
+    .lang-btn {
+      padding: 4px 9px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .lang-btn.active { background: rgba(184, 149, 106, 0.12); color: var(--gold-bright); }
     .wrap {
       max-width: 720px;
       margin: 0 auto;
@@ -154,6 +166,10 @@
   <header class="bar">
     <div class="bar-inner">
       <a href="./">WilliamXing</a>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="zh">中</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
       <a class="back" href="./">← 返回主页</a>
     </div>
   </header>
@@ -172,27 +188,32 @@
   </main>
 
   <script src="./scripts/marked.min.js"></script>
+  <script src="./scripts/guide-i18n.js"></script>
   <script>
-    (function () {
-      if (typeof marked === 'undefined') {
-        document.getElementById('content').textContent = '内容加载失败，请刷新或返回主页。';
-        return;
-      }
-      marked.setOptions({ gfm: true, breaks: false });
-      fetch('./guides/dubai-crs-tax-faq.md')
-        .then(function (r) {
-          if (!r.ok) throw new Error('load failed');
-          return r.text();
-        })
-        .then(function (md) {
-          var body = md.replace(/^#[^\n]+\n+/m, '');
-          document.getElementById('content').innerHTML = marked.parse(body);
-          document.getElementById('content').classList.remove('loading');
-        })
-        .catch(function () {
-          document.getElementById('content').textContent = '内容加载失败，请刷新或返回主页。';
-        });
-    })();
+    window.GUIDE_I18N = {
+      pathZh: './guides/dubai-crs-tax-faq.md',
+      pathEn: './guides/en/dubai-crs-tax-faq.md',
+      zh: {
+        pageTitle: '迪拜 CRS · 税务合规 30 问 · William Xing',
+        h1: '迪拜 CRS · 税务合规 30 问',
+        desc: 'CRS 2.0 · TRC · 开户 · 买房 · 合规底线 — 阿联酋视角，仅供参考，不构成税务或法律建议。',
+        label: 'Guide · CRS & Tax Compliance',
+        back: '← 返回主页',
+        loading: '正在加载…',
+        loadError: '内容加载失败，请刷新或返回主页。',
+      },
+      en: {
+        pageTitle: 'Dubai CRS · Tax Compliance · 30 FAQs · William Xing',
+        h1: 'Dubai CRS · Tax Compliance · 30 FAQs',
+        desc: 'CRS 2.0 · TRC · banking · property · compliance basics — UAE perspective. Reference only; not tax or legal advice.',
+        label: 'Guide · CRS & Tax Compliance',
+        back: '← Home',
+        loading: 'Loading…',
+        loadError: 'Failed to load. Please refresh or return home.',
+      },
+    };
+    marked.setOptions({ gfm: true, breaks: false });
+    GuideI18n.init();
   </script>
 </body>
 </html>

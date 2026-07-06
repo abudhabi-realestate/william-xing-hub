@@ -56,6 +56,18 @@
       font-family: "SF Mono", Consolas, monospace;
       color: var(--muted);
     }
+    .lang-switch { display: flex; gap: 4px; margin-left: auto; }
+    .lang-btn {
+      padding: 4px 9px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .lang-btn.active { background: rgba(184, 149, 106, 0.12); color: var(--gold-bright); }
     .wrap {
       max-width: 720px;
       margin: 0 auto;
@@ -153,6 +165,10 @@
   <header class="bar">
     <div class="bar-inner">
       <a href="./">WilliamXing</a>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="zh">中</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
       <a class="back" href="./">← 返回主页</a>
     </div>
   </header>
@@ -171,21 +187,32 @@
   </main>
 
   <script src="./scripts/marked.min.js"></script>
+  <script src="./scripts/guide-i18n.js"></script>
   <script>
+    window.GUIDE_I18N = {
+      pathZh: './guides/golden-visa-abu-dubai.md',
+      pathEn: './guides/en/golden-visa-abu-dubai.md',
+      zh: {
+        pageTitle: '阿布 vs 迪拜黄金签证 · William Xing',
+        h1: '阿布 vs 迪拜黄金签证',
+        desc: '付款门槛不同 · 卖房后签证能否保留 · 2026 中国护照无犯罪证明 — 仅供参考，不构成法律或投资建议。',
+        label: 'Guide · Golden Visa · AUH vs DXB',
+        back: '← 返回主页',
+        loading: '正在加载…',
+        loadError: '内容加载失败，请刷新或返回主页。',
+      },
+      en: {
+        pageTitle: 'Abu Dhabi vs Dubai Golden Visa · William Xing',
+        h1: 'Abu Dhabi vs Dubai Golden Visa',
+        desc: 'Payment threshold · visa after selling · 2026 China passport police clearance — reference only; not legal advice.',
+        label: 'Guide · Golden Visa · AUH vs DXB',
+        back: '← Home',
+        loading: 'Loading…',
+        loadError: 'Failed to load. Please refresh or return home.',
+      },
+    };
     marked.setOptions({ gfm: true, breaks: false });
-    fetch('./guides/golden-visa-abu-dubai.md')
-      .then(function (r) {
-        if (!r.ok) throw new Error('load failed');
-        return r.text();
-      })
-      .then(function (md) {
-        var body = md.replace(/^#[^\n]+\n+/m, '');
-        document.getElementById('content').innerHTML = marked.parse(body);
-        document.getElementById('content').classList.remove('loading');
-      })
-      .catch(function () {
-        document.getElementById('content').textContent = '内容加载失败，请刷新或返回主页。';
-      });
+    GuideI18n.init();
   </script>
 </body>
 </html>
