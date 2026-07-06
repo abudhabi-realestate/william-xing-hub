@@ -112,26 +112,39 @@
 
     .lang-switch {
       display: inline-flex;
+      align-items: stretch;
       border: 1px solid var(--border);
-      border-radius: 3px;
+      border-radius: 4px;
       overflow: hidden;
+      flex-shrink: 0;
     }
     .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.1rem;
       padding: 5px 10px;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 700;
       font-family: "SF Mono", "Consolas", monospace;
       background: transparent;
       border: none;
       color: var(--muted);
       cursor: pointer;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      transition: color 0.15s, background 0.15s;
     }
-    .lang-btn:hover { color: var(--gold-light); }
+    .lang-btn + .lang-btn {
+      border-left: 1px solid var(--border);
+    }
+    .lang-btn:hover { color: var(--gold-light); background: rgba(201, 162, 39, 0.06); }
     .lang-btn.active {
       background: var(--gold-dim);
       color: var(--gold-bright);
+      cursor: default;
     }
+    button.lang-btn { -webkit-appearance: none; appearance: none; }
 
     .wrap {
       position: relative;

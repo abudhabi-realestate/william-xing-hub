@@ -56,18 +56,30 @@
       font-family: "SF Mono", Consolas, monospace;
       color: var(--muted);
     }
-    .lang-switch { display: flex; gap: 4px; margin-left: auto; }
+    .lang-switch { display: inline-flex; align-items: stretch; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-left: auto; flex-shrink: 0; }
     .lang-btn {
-      padding: 4px 9px;
-      font-size: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.1rem;
+      padding: 4px 10px;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--muted);
+      font-family: "SF Mono", Consolas, monospace;
       background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      border: none;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      line-height: 1.2;
       cursor: pointer;
+      transition: color 0.15s, background 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
     }
-    .lang-btn.active { background: rgba(184, 149, 106, 0.12); color: var(--gold-bright); }
+    .lang-btn + .lang-btn { border-left: 1px solid var(--border); }
+    .lang-btn:hover { color: var(--gold-light); background: rgba(184, 149, 106, 0.06); }
+    .lang-btn.active { background: rgba(184, 149, 106, 0.12); color: var(--gold-bright); cursor: default; }
+    span.lang-btn { pointer-events: none; }
     .wrap {
       max-width: 720px;
       margin: 0 auto;
