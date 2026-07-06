@@ -87,10 +87,10 @@
 
 ## 关联阅读
 
-- **阿布买房框架：** [阿布房产 30 天 Blog](https://sobhazanyan.github.io/abu-30days-vlog/) — 认地图、三岛选型、租金对照  
+- **阿布买房框架：** [阿布房产 30 天 Blog](https://abudhabi-realestate.github.io/abu-30days-vlog/) — 认地图、三岛选型、租金对照  
 - **材料与流程：** [黄金签证-材料与流程](./golden-visa-materials.html) — 材料清单、申请流程、政府规费  
 - **税务与 CRS：** [迪拜 CRS · 税务合规 30 问](./dubai-crs-faq.html) — 黄金签证与 TRC、开户、CRS 的关系  
-- **买房成本：** [买房成本计算器](https://sobhazanyan.github.io/uae-buy-cost-calculator/) — 过户费、期房付款计划估算  
+- **买房成本：** [买房成本计算器](https://abudhabi-realestate.github.io/uae-buy-cost-calculator/) — 过户费、期房付款计划估算  
 
 ---
 
