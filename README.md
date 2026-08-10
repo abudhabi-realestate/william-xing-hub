@@ -8,6 +8,7 @@
 
 | 类型 | URL |
 |------|-----|
+| 投资阿布扎比 · 数据全景 | https://abudhabi-realestate.github.io/william-xing-hub/invest-in-abu-dhabi.html |
 | 阿联酋税务居民证 TRC 2026 指南 | https://abudhabi-realestate.github.io/william-xing-hub/uae-trc-2026.html |
 | 迪拜 CRS · 税务合规 30 问 | https://abudhabi-realestate.github.io/william-xing-hub/dubai-crs-faq.html |
 | 黄金签证-常见问题 | https://abudhabi-realestate.github.io/william-xing-hub/golden-visa-guide.html |

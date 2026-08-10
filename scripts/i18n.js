@@ -6,6 +6,7 @@ SiteI18n.init({
     'hero.sub': '阿布扎比 / 迪拜 · 阿联酋房产顾问',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': '投资 · 居留 · 自住',
+    'nav.invest': '投资阿布扎比',
     'nav.abu30': '阿布30天',
     'nav.compliance': '合规',
     'nav.golden': '黄金签证',
@@ -19,6 +20,9 @@ SiteI18n.init({
     'quick.cost.desc': '过户费 · 期房付款计划',
     'quick.compliance.title': '合规阅读',
     'quick.compliance.desc': 'CRS · TRC · 开户误区',
+    'invest.title': '投资阿布扎比 · 数据全景',
+    'invest.desc': 'ADREC 2026 Q1 官方数据、六大投资优势、五城税负与收益率对比、Vision 2030 重点板块 — 一页讲清楚。',
+    'invest.go': 'READ →',
     'hero.bio':
       '长居阿联酋，<strong>阿布扎比 + 迪拜双城</strong>房产研究与实操顾问。' +
       '阿布扎比侧重 ADREC 数据解读，深耕 Reem / Yas / Saadiyat 等核心投资区；迪拜熟悉主流板块与开发商项目，覆盖投资、居留与自住场景。' +
@@ -133,6 +137,7 @@ SiteI18n.init({
     'hero.sub': 'Abu Dhabi / Dubai · UAE Real Estate Advisor',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': 'Investment · Residency · End-use',
+    'nav.invest': 'Invest in Abu Dhabi',
     'nav.abu30': 'Abu 30 Days',
     'nav.compliance': 'Compliance',
     'nav.golden': 'Golden Visa',
@@ -146,6 +151,9 @@ SiteI18n.init({
     'quick.cost.desc': 'Transfer fees · payment plan',
     'quick.compliance.title': 'Compliance',
     'quick.compliance.desc': 'CRS · TRC · banking myths',
+    'invest.title': 'Invest in Abu Dhabi · The Data',
+    'invest.desc': 'ADREC Q1 2026 official data, six reasons to invest, a five-city tax/yield comparison, and Vision 2030 hotspots — on one page.',
+    'invest.go': 'READ →',
     'hero.bio':
       'Based in the UAE, advising across <strong>Abu Dhabi and Dubai</strong>. ' +
       'Abu Dhabi: ADREC-driven insights on Reem, Yas, Saadiyat and core districts. Dubai: mainstream areas and developer projects for investment, residency and end-use. ' +

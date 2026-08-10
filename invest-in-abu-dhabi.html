@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>投资阿布扎比 · William Xing</title>
+  <meta name="description" content="阿布扎比房产投资全景：ADREC 2026年Q1官方数据、六大投资优势、五城税负与收益率对比、Vision 2030重点板块 — 常驻阿联酋顾问邢文举整理，仅供参考。" />
+  <link rel="canonical" href="https://abudhabi-realestate.github.io/william-xing-hub/invest-in-abu-dhabi.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100' rx='16'/><circle cx='50' cy='50' r='28' fill='none' stroke='%23c9a227' stroke-width='3'/><text y='58' x='50' text-anchor='middle' font-size='36' fill='%23e8d5a3'>W</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-elevated: #0a0a0a;
+      --surface: rgba(14, 13, 11, 0.78);
+      --surface-hover: rgba(22, 20, 16, 0.86);
+      --gold: #b8956a;
+      --gold-light: #d4c4a8;
+      --gold-bright: #e8d5a3;
+      --gold-dim: rgba(184, 149, 106, 0.08);
+      --text: #ece6dc;
+      --muted: #8a8278;
+      --border: rgba(184, 149, 106, 0.16);
+      --border-strong: rgba(212, 196, 168, 0.28);
+      --serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a:any-link { text-decoration: none; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    [hidden] { display: none !important; }
+
+    .bar {
+      background: rgba(5, 5, 5, 0.96);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.25rem;
+    }
+    .bar-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .bar a:any-link {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-family: var(--serif);
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+    }
+    .bar a:hover { color: var(--gold-bright); }
+    .back:any-link {
+      font-size: 0.78rem;
+      font-family: "SF Mono", Consolas, monospace;
+      color: var(--muted);
+    }
+    .lang-switch { display: inline-flex; align-items: stretch; padding: 2px; gap: 1px; background: rgba(0,0,0,0.4); border: 1px solid rgba(184,149,106,0.14); border-radius: 999px; margin-left: auto; flex-shrink: 0; }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.25rem;
+      padding: 5px 11px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: "SF Mono", Consolas, monospace;
+      background: transparent;
+      border: none;
+      border-radius: 999px;
+      color: rgba(138, 130, 120, 0.92);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      cursor: pointer;
+      transition: color 0.15s, background 0.15s, box-shadow 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .lang-btn:hover { color: var(--gold-light); background: rgba(184, 149, 106, 0.08); }
+    .lang-btn.active { background: rgba(184, 149, 106, 0.16); color: var(--gold-bright); box-shadow: inset 0 0 0 1px rgba(184, 149, 106, 0.22); cursor: default; }
+
+    .wrap { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.25rem 3.5rem; }
+
+    .glass-panel {
+      background: var(--surface);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .hero { margin-bottom: 1.75rem; }
+    .hero-label {
+      font-family: "SF Mono", Consolas, monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.03em;
+      line-height: 1.35;
+    }
+    .hero-lede { font-size: 0.94rem; color: var(--muted); max-width: 42em; margin-bottom: 0.4rem; }
+    .hero-note { font-size: 0.72rem; color: var(--muted); font-family: "SF Mono", Consolas, monospace; }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0 0.6rem;
+    }
+    @media (max-width: 720px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-cell { background: var(--bg-elevated); padding: 1.1rem 1rem; }
+    .stat-cell .value { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--gold-light); letter-spacing: 0.01em; }
+    .stat-cell .label { font-size: 0.72rem; color: var(--text); margin-top: 0.4rem; }
+    .stat-cell .note { font-size: 0.66rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
+
+    .section-head { margin: 2.5rem 0 1.1rem; padding-left: 12px; border-left: 2px solid var(--gold); }
+    .section-head h2 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--gold-light); letter-spacing: 0.03em; margin-bottom: 4px; }
+    .section-head p { font-size: 0.82rem; color: var(--muted); }
+
+    .panel { padding: 1.5rem 1.6rem; margin-bottom: 0.5rem; }
+    .panel h3 { font-family: var(--serif); font-size: 0.95rem; color: var(--text); margin-bottom: 0.9rem; }
+
+    table.data-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    table.data-table th, table.data-table td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; }
+    table.data-table th { background: rgba(184, 149, 106, 0.08); color: var(--gold-light); font-weight: 600; font-size: 0.78rem; }
+    table.data-table td { color: var(--muted); }
+    table.data-table td:first-child { color: var(--text); }
+    .table-scroll { overflow-x: auto; }
+
+    .area-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+    .area-chip { font-size: 0.72rem; font-family: "SF Mono", Consolas, monospace; color: var(--gold-light); border: 1px solid var(--border); padding: 5px 10px; border-radius: 1px; }
+    .area-chip b { color: var(--gold-bright); }
+    .signal-list { margin-top: 1rem; font-size: 0.8rem; color: var(--muted); }
+    .signal-list li { margin: 0.3rem 0; list-style: none; padding-left: 1rem; position: relative; }
+    .signal-list li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+
+    .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.25rem 0 2rem; }
+    @media (max-width: 760px) { .reason-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .reason-grid { grid-template-columns: 1fr; } }
+    .reason-card { padding: 1.1rem 1.15rem; display: flex; flex-direction: column; gap: 8px; }
+    .reason-icon { font-family: "SF Mono", Consolas, monospace; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); background: var(--gold-dim); color: var(--gold-light); border-radius: 2px; }
+    .reason-card h3 { font-size: 0.9rem; color: var(--text); font-weight: 600; font-family: var(--serif); }
+    .reason-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+    .reason-card a:any-link { color: var(--gold-light); font-size: 0.72rem; }
+    .reason-card a:hover { color: var(--gold-bright); }
+
+    .destination-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 1.25rem 0 2rem; }
+    @media (max-width: 760px) { .destination-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .destination-grid { grid-template-columns: 1fr; } }
+    .dest-card { padding: 1.1rem 1.15rem; }
+    .dest-tag { font-family: "SF Mono", Consolas, monospace; font-size: 0.6rem; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; }
+    .dest-card h3 { font-family: var(--serif); font-size: 0.92rem; color: var(--text); margin: 0.35rem 0 0.5rem; }
+    .dest-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    .process-list { counter-reset: step; margin: 1.25rem 0 2rem; display: flex; flex-direction: column; gap: 10px; }
+    .process-item { display: flex; gap: 1rem; padding: 1rem 1.15rem; }
+    .process-item::before { counter-increment: step; content: counter(step, decimal-leading-zero); font-family: "SF Mono", Consolas, monospace; font-size: 1rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .process-item h3 { font-size: 0.9rem; color: var(--text); font-weight: 600; margin-bottom: 0.3rem; font-family: var(--serif); }
+    .process-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    .why-list { margin: 1.25rem 0 2rem; padding: 1.4rem 1.6rem; }
+    .why-list ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .why-list li { font-size: 0.86rem; color: var(--text); padding-left: 1.1rem; position: relative; }
+    .why-list li::before { content: "◆"; position: absolute; left: 0; top: 0.1em; font-size: 0.6em; color: var(--gold); }
+    .why-list li strong { color: var(--gold-light); }
+
+    .disclaimer { padding: 1.1rem 1.3rem; margin: 0.5rem 0 2.5rem; font-size: 0.74rem; color: var(--muted); line-height: 1.7; }
+    .disclaimer a:any-link { color: var(--gold-light); }
+    .disclaimer a:hover { color: var(--gold-bright); }
+
+    .cta { padding: 1.75rem 1.75rem; margin-bottom: 2rem; text-align: left; }
+    .cta h2 { font-family: var(--serif); font-size: 1.1rem; color: var(--text); margin-bottom: 0.5rem; }
+    .cta p { font-size: 0.84rem; color: var(--muted); margin-bottom: 1.25rem; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 0.85rem 1rem; margin-bottom: 1.4rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 1px;
+      font-size: 0.78rem; font-weight: 500; text-decoration: none; transition: border-color 0.2s, background 0.2s, color 0.2s;
+      font-family: "SF Mono", Consolas, monospace; letter-spacing: 0.04em; cursor: pointer;
+    }
+    .btn-wechat { background: rgba(184, 149, 106, 0.2); color: var(--gold-bright); border: 1px solid var(--gold); box-shadow: 0 0 24px rgba(184, 149, 106, 0.14); }
+    .btn-wechat:hover { background: rgba(184, 149, 106, 0.32); color: var(--text); border-color: var(--gold-light); }
+    .btn-wechat .btn-id { color: var(--text); font-weight: 600; }
+    .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-secondary:hover { color: var(--gold-light); border-color: var(--border-strong); background: rgba(184, 149, 106, 0.06); }
+    .cta-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.76rem; }
+    .cta-links a:any-link { color: var(--gold-light); }
+    .cta-links a:hover { color: var(--gold-bright); }
+
+    .footer {
+      margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--muted); font-family: "SF Mono", Consolas, monospace;
+    }
+    .footer a:any-link { color: var(--gold-light); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a href="./">WilliamXing</a>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="zh">中</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="back" href="./" data-back>← 返回主页</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+  <!-- ================= ZH ================= -->
+  <div class="lang-view" data-lang="zh">
+
+    <section class="hero">
+      <div class="hero-label">Guide · Invest in Abu Dhabi · 2026</div>
+      <h1>投资阿布扎比：数据说话</h1>
+      <p class="hero-lede">用 ADREC 官方一手数据 + 常驻阿联酋的跨境视角，把"要不要投阿布扎比"讲清楚——不是营销口径，是可核实的数字与风险提示。</p>
+
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="value">AED 66B</div><div class="label">2026年Q1总成交额</div><div class="note">同比 +160.7%（Q1 2025：AED 25.31B）</div></div>
+        <div class="stat-cell"><div class="value">13,518 笔</div><div class="label">2026年Q1成交宗数</div><div class="note">单季历史最高纪录</div></div>
+        <div class="stat-cell"><div class="value">AED 8.27B</div><div class="label">外国直接投资（FDI）</div><div class="note">同比 +423%，约等于 2025 全年总量</div></div>
+        <div class="stat-cell"><div class="value">99 个</div><div class="label">参与投资的买家国籍数</div><div class="note">Q1 2025 为 68 个</div></div>
+      </div>
+      <p class="hero-note">数据来源：Abu Dhabi Real Estate Centre（ADREC）官方新闻稿，2026 年 4 月 7 日发布。</p>
+    </section>
+
+    <div class="section-head">
+      <h2>成交结构拆解</h2>
+      <p>买卖与按揭双双创纪录，期房主导新增供应</p>
+    </div>
+    <div class="glass-panel panel">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th>类别</th><th>成交额</th><th>成交宗数</th><th>同比变化</th></tr></thead>
+          <tbody>
+            <tr><td>买卖交易</td><td>AED 50.97B</td><td>8,940</td><td>+228.6%</td></tr>
+            <tr><td>抵押贷款</td><td>AED 15.03B</td><td>4,578</td><td>+53.4%</td></tr>
+            <tr><td>合计</td><td>AED 66B</td><td>13,518</td><td>+160.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="area-row">
+        <span class="area-chip">Hudayriyat Island · <b>AED 11.97B</b>（榜首）</span>
+        <span class="area-chip">Reem Island · <b>AED 9.45B</b></span>
+        <span class="area-chip">Saadiyat Island · <b>AED 8.8B</b></span>
+        <span class="area-chip">Yas Island · <b>AED 5.5B+</b></span>
+      </div>
+      <ul class="signal-list">
+        <li>新项目注册 16 个，同比 +60%</li>
+        <li>期房占住宅交易约 81%，Q4 2025 为 80%</li>
+        <li>需求持续跑赢供应，是本轮量价齐升的核心驱动</li>
+      </ul>
+    </div>
+
+    <div class="section-head">
+      <h2>六个投资阿布扎比的理由</h2>
+      <p>结构性优势，而非一时行情</p>
+    </div>
+    <div class="reason-grid">
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">TAX</span>
+        <h3>零个税 · 零资本利得税</h3>
+        <p>无个人所得税，出售房产无资本利得税，无年度房产税；仅在过户时缴纳约 2% 的一次性 ADREC 过户费（迪拜为 4%）。</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">GV</span>
+        <h3>黄金签证门槛清晰</h3>
+        <p>房产投资达 AED 200 万即可申请 10 年期黄金签证，直系家属可随同办理。</p>
+        <a href="golden-visa-guide.html">查看黄金签证常见问题 →</a>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">FX</span>
+        <h3>迪拉姆锚定美元</h3>
+        <p>AED 与美元挂钩超过 30 年，固定汇率 3.6725，资产端不承受额外汇率波动风险。</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">OWN</span>
+        <h3>外国人可 100% 自由持有</h3>
+        <p>在 Reem / Yas / Saadiyat / Al Maryah 等指定投资区，外国人可 100% 永久产权，无需本地担保人，产权直接登记。</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">ROI</span>
+        <h3>有竞争力的租金回报</h3>
+        <p>主流板块毛租金回报率约 5%–8%（Reem / Yas 约 6%–8%，Saadiyat 约 5%–7%），高于伦敦（3%–4%）、纽约（4%–5%）、巴黎（3%–4%）等成熟市场。</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">2030</span>
+        <h3>城市升级持续兑现</h3>
+        <p>三岛基建、文化、金融与体育设施投入不断落地，早期入场窗口仍在打开。</p>
+        <a href="https://abudhabi-realestate.github.io/abu-30days-vlog/articles/day-14.html" target="_blank" rel="noopener">详见 2030 愿景解读 →</a>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>五城横向对比</h2>
+      <p>把税负、房产税与收益率放在同一张表里看</p>
+    </div>
+    <div class="glass-panel panel">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th>指标</th><th>阿布扎比</th><th>迪拜</th><th>伦敦</th><th>纽约</th><th>巴黎</th></tr></thead>
+          <tbody>
+            <tr><td>个人所得税</td><td>0%</td><td>0%</td><td>20%–45%</td><td>联邦+州+市综合最高约 37%+</td><td>0%–45%</td></tr>
+            <tr><td>房产资本利得税</td><td>0%</td><td>0%</td><td>18%–24%</td><td>并入普通收入，综合最高 30%+</td><td>约 19%+社会税 17.2%（随持有年限递减）</td></tr>
+            <tr><td>年度房产税</td><td>无（仅一次性过户费约 2%）</td><td>无（仅一次性过户费 4%）</td><td>Council Tax，按估值分级，每年数百至数千英镑</td><td>约 0.5%–1.8%（各州/市差异较大）</td><td>Taxe foncière 约 0.5%–1.5%</td></tr>
+            <tr><td>毛租金回报率</td><td>约 5%–8%</td><td>约 6%–7%</td><td>约 3%–4%</td><td>约 4%–5%</td><td>约 3%–4%</td></tr>
+            <tr><td>Numbeo 安全指数（2026）</td><td>88.9</td><td>83.9</td><td>44.4</td><td>48.9</td><td>42.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="hero-note" style="margin: 0.6rem 0 2.5rem;">税负与回报率为一般性简化对比，实际因个人身份、持有结构与具体项目而异，不构成税务或投资建议；安全指数来自 Numbeo 2026 年度数据。</p>
+
+    <div class="section-head">
+      <h2>Vision 2030 重点板块</h2>
+      <p>六大板块，正在被重新建造的首都</p>
+    </div>
+    <div class="destination-grid">
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">文化圣岛</span>
+        <h3>Saadiyat Island</h3>
+        <p>卢浮宫阿布扎比、古根海姆（建设中）、扎耶德国家博物馆；顶奢文化区，资本保值属性强。</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">娱乐生活岛</span>
+        <h3>Yas Island</h3>
+        <p>法拉利世界、华纳兄弟世界、亚斯码头 F1 赛道、海洋世界、亚斯购物中心；年访客量千万级。</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">都市生活岛</span>
+        <h3>Al Reem Island</h3>
+        <p>Sun &amp; Sky Towers、Reem Mall，毗邻 Al Maryah 金融区；城市生活性价比高、流动性最佳。</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">滨海生活岛</span>
+        <h3>Hudayriyat Island</h3>
+        <p>Modon 主导的滨海总体规划，骑行赛道、水上运动区、海滩住宅；2026 年 Q1 成交额登顶全岛。</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">金融中心</span>
+        <h3>Al Maryah Island</h3>
+        <p>ADGM 金融自贸区、Cleveland Clinic 阿布扎比、The Galleria；英美法系监管框架。</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">可持续科技城</span>
+        <h3>Masdar City</h3>
+        <p>全球首批碳中和智慧城区，IRENA（国际可再生能源署）总部所在地，科技与清洁能源企业聚集。</p>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>我能帮你做什么</h2>
+      <p>从需求沟通到交付后跟进，四步走完</p>
+    </div>
+    <div class="process-list">
+      <div class="glass-panel process-item">
+        <div><h3>需求沟通</h3><p>预算、目的（投资 / 居留 / 自住）、身份与时间线——不推销库存，先听你的目标。</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>数据匹配</h3><p>结合 ADREC 数据与板块特性，给出候选楼盘 / 户型清单及风险提示。</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>看房与签约陪同</h3><p>线上 / 线下带看，SPA 条款、Escrow 节点、付款计划逐条讲清楚。</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>交付后跟进</h3><p>交房验收、黄金签证申请、出租或转售策略的持续建议。</p></div>
+      </div>
+    </div>
+
+    <div class="glass-panel why-list">
+      <h3 style="margin-bottom: 1rem;">为什么找我聊</h3>
+      <ul>
+        <li>常驻阿联酋，<strong>阿布扎比 + 迪拜双城</strong>覆盖</li>
+        <li>阿布扎比侧重 <strong>ADREC 数据解读</strong>，深耕 Reem / Yas / Saadiyat 核心投资区</li>
+        <li>迪拜熟悉主流板块与开发商项目，覆盖投资、居留与自住场景</li>
+        <li>曾在菊厂历练，用<strong>跨境视角</strong>看现金流、成本与风险</li>
+        <li>中英双语沟通，微信 / WhatsApp 随时联系</li>
+        <li>不承诺"包租包收益"，只讲清楚事实与风险</li>
+      </ul>
+    </div>
+
+    <div class="glass-panel disclaimer">
+      数据来源：Abu Dhabi Real Estate Centre（ADREC）官方新闻稿（2026 年 4 月）、Numbeo 2026 年度安全指数。本页内容仅供参考，不构成投资、法律或税务建议；具体交易请以官方规定、购房合同条款及专业人士意见为准。
+    </div>
+
+    <div class="glass-panel cta">
+      <h2>开始一次不推销的对话</h2>
+      <p>发给我你的预算区间和目的，我会给你一份基于 ADREC 数据的候选清单和风险提示。</p>
+      <div class="cta-actions">
+        <button type="button" class="btn btn-wechat" id="copy-wechat" data-wechat="nothing9802">
+          <span data-wechat-label>微信</span>
+          <span class="btn-id">nothing9802</span>
+        </button>
+        <a href="https://wa.me/971522240716" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp · +971522240716</a>
+      </div>
+      <div class="cta-links">
+        <a href="golden-visa-guide.html">黄金签证常见问题</a>
+        <a href="https://abudhabi-realestate.github.io/uae-buy-cost-calculator/" target="_blank" rel="noopener">买房成本计算器</a>
+        <a href="https://abudhabi-realestate.github.io/abu-market-report/" target="_blank" rel="noopener">阿布扎比数据报告</a>
+        <a href="https://abudhabi-realestate.github.io/abu-30days-vlog/" target="_blank" rel="noopener">阿布30天系列目录</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>咨询联系：微信 nothing9802 · <a href="https://wa.me/971522240716">WhatsApp +971522240716</a></p>
+      <p>© 邢文举 · 阿联酋</p>
+    </footer>
+
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div class="lang-view" data-lang="en" hidden>
+
+    <section class="hero">
+      <div class="hero-label">Guide · Invest in Abu Dhabi · 2026</div>
+      <h1>Invest in Abu Dhabi: Let the Data Speak</h1>
+      <p class="hero-lede">Official ADREC figures plus a cross-border perspective from a full-time UAE resident — no marketing spin, just verifiable numbers and the risks worth knowing.</p>
+
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="value">AED 66B</div><div class="label">Q1 2026 total transactions</div><div class="note">+160.7% YoY (Q1 2025: AED 25.31B)</div></div>
+        <div class="stat-cell"><div class="value">13,518</div><div class="label">Q1 2026 deals</div><div class="note">Highest quarterly volume on record</div></div>
+        <div class="stat-cell"><div class="value">AED 8.27B</div><div class="label">Foreign direct investment</div><div class="note">+423% YoY, roughly all of 2025's FDI in one quarter</div></div>
+        <div class="stat-cell"><div class="value">99</div><div class="label">Buyer nationalities</div><div class="note">Up from 68 in Q1 2025</div></div>
+      </div>
+      <p class="hero-note">Source: Abu Dhabi Real Estate Centre (ADREC) official press release, 7 April 2026.</p>
+    </section>
+
+    <div class="section-head">
+      <h2>Breaking Down the Quarter</h2>
+      <p>Sales and mortgages both set records; off-plan drives new supply</p>
+    </div>
+    <div class="glass-panel panel">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th>Category</th><th>Value</th><th>Deals</th><th>YoY</th></tr></thead>
+          <tbody>
+            <tr><td>Sales &amp; purchases</td><td>AED 50.97B</td><td>8,940</td><td>+228.6%</td></tr>
+            <tr><td>Mortgages</td><td>AED 15.03B</td><td>4,578</td><td>+53.4%</td></tr>
+            <tr><td>Total</td><td>AED 66B</td><td>13,518</td><td>+160.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="area-row">
+        <span class="area-chip">Hudayriyat Island · <b>AED 11.97B</b> (top)</span>
+        <span class="area-chip">Reem Island · <b>AED 9.45B</b></span>
+        <span class="area-chip">Saadiyat Island · <b>AED 8.8B</b></span>
+        <span class="area-chip">Yas Island · <b>AED 5.5B+</b></span>
+      </div>
+      <ul class="signal-list">
+        <li>16 new project registrations, +60% YoY</li>
+        <li>Off-plan made up about 81% of residential transactions, vs 80% in Q4 2025</li>
+        <li>Demand continues to outpace supply — the core driver of this cycle</li>
+      </ul>
+    </div>
+
+    <div class="section-head">
+      <h2>Six Reasons to Invest in Abu Dhabi</h2>
+      <p>Structural advantages, not a one-quarter rally</p>
+    </div>
+    <div class="reason-grid">
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">TAX</span>
+        <h3>Zero income &amp; capital gains tax</h3>
+        <p>No personal income tax, no capital gains tax on resale, no annual property tax — only a one-time ~2% ADREC transfer fee at closing (vs 4% in Dubai).</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">GV</span>
+        <h3>Clear Golden Visa threshold</h3>
+        <p>A property investment of AED 2M qualifies you for a renewable 10-year Golden Visa, with immediate family included.</p>
+        <a href="golden-visa-guide.html">Read the Golden Visa FAQ →</a>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">FX</span>
+        <h3>AED pegged to the US dollar</h3>
+        <p>Fixed at 3.6725 for over three decades — no extra currency risk sitting on top of your property exposure.</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">OWN</span>
+        <h3>100% freehold for foreigners</h3>
+        <p>In designated investment zones — Reem, Yas, Saadiyat, Al Maryah and others — foreign nationals hold outright title, no local sponsor required.</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">ROI</span>
+        <h3>Competitive rental yields</h3>
+        <p>Gross yields of roughly 5%–8% in mainstream communities (Reem/Yas ~6%–8%, Saadiyat ~5%–7%) — ahead of London (3%–4%), New York (4%–5%) and Paris (3%–4%).</p>
+      </div>
+      <div class="glass-panel reason-card">
+        <span class="reason-icon">2030</span>
+        <h3>Vision 2030 keeps delivering</h3>
+        <p>Infrastructure, culture, finance and sports investment across the three islands continues to land — the early-mover window is still open.</p>
+        <a href="https://abudhabi-realestate.github.io/abu-30days-vlog/articles/en/day-14.html" target="_blank" rel="noopener">Read the 2030 vision breakdown →</a>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>Five Cities, Side by Side</h2>
+      <p>Taxes, property tax and yields on one table</p>
+    </div>
+    <div class="glass-panel panel">
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead><tr><th>Metric</th><th>Abu Dhabi</th><th>Dubai</th><th>London</th><th>New York</th><th>Paris</th></tr></thead>
+          <tbody>
+            <tr><td>Personal income tax</td><td>0%</td><td>0%</td><td>20%–45%</td><td>Federal + state + city combined, up to ~37%+</td><td>0%–45%</td></tr>
+            <tr><td>Capital gains tax (property)</td><td>0%</td><td>0%</td><td>18%–24%</td><td>Taxed as ordinary income, combined up to 30%+</td><td>~19% + 17.2% social levies (tapering with holding period)</td></tr>
+            <tr><td>Annual property tax</td><td>None (one-time ~2% transfer fee)</td><td>None (one-time 4% transfer fee)</td><td>Council Tax, banded by valuation, hundreds to thousands GBP/yr</td><td>~0.5%–1.8% (varies widely by state/city)</td><td>Taxe foncière ~0.5%–1.5%</td></tr>
+            <tr><td>Gross rental yield</td><td>~5%–8%</td><td>~6%–7%</td><td>~3%–4%</td><td>~4%–5%</td><td>~3%–4%</td></tr>
+            <tr><td>Numbeo Safety Index (2026)</td><td>88.9</td><td>83.9</td><td>44.4</td><td>48.9</td><td>42.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="hero-note" style="margin: 0.6rem 0 2.5rem;">Tax and yield figures are simplified for comparison and vary by individual status, ownership structure and specific project — not tax or investment advice. Safety Index from Numbeo 2026.</p>
+
+    <div class="section-head">
+      <h2>Vision 2030 Destinations</h2>
+      <p>Six districts where the capital is being rebuilt</p>
+    </div>
+    <div class="destination-grid">
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Culture capital</span>
+        <h3>Saadiyat Island</h3>
+        <p>Louvre Abu Dhabi, Guggenheim Abu Dhabi (under construction), Zayed National Museum — a trophy cultural district with strong capital preservation.</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Entertainment capital</span>
+        <h3>Yas Island</h3>
+        <p>Ferrari World, Warner Bros. World, Yas Marina Circuit F1, SeaWorld, Yas Mall — tens of millions of visitors a year.</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Urban living</span>
+        <h3>Al Reem Island</h3>
+        <p>Sun &amp; Sky Towers, Reem Mall, next door to the Al Maryah financial district — best liquidity and value for city living.</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Lifestyle destination</span>
+        <h3>Hudayriyat Island</h3>
+        <p>Modon's beachfront masterplan — cycling track, watersports district, beachfront homes; topped Q1 2026 transaction value island-by-island.</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Global financial centre</span>
+        <h3>Al Maryah Island</h3>
+        <p>Home to ADGM, Cleveland Clinic Abu Dhabi, The Galleria — an English common-law regulatory free zone.</p>
+      </div>
+      <div class="glass-panel dest-card">
+        <span class="dest-tag">Sustainable hub</span>
+        <h3>Masdar City</h3>
+        <p>One of the world's first carbon-neutral urban districts, home to IRENA headquarters, with tech and clean-energy companies clustering in.</p>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>How I Can Help</h2>
+      <p>Four steps from first conversation to after-handover support</p>
+    </div>
+    <div class="process-list">
+      <div class="glass-panel process-item">
+        <div><h3>Discovery</h3><p>Budget, purpose (investment / residency / self-use), nationality and timeline — no inventory pressure, I listen to your goals first.</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>Data matching</h3><p>Shortlist of candidate projects/units based on ADREC data and community fundamentals, plus honest risk notes.</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>Viewing &amp; closing support</h3><p>In-person or remote viewings; walking through SPA terms, escrow milestones and payment plans line by line.</p></div>
+      </div>
+      <div class="glass-panel process-item">
+        <div><h3>After handover</h3><p>Handover inspection, Golden Visa application, and ongoing advice on renting out or reselling.</p></div>
+      </div>
+    </div>
+
+    <div class="glass-panel why-list">
+      <h3 style="margin-bottom: 1rem;">Why talk to me</h3>
+      <ul>
+        <li>Full-time UAE resident covering <strong>Abu Dhabi + Dubai</strong></li>
+        <li>Abu Dhabi focus on <strong>ADREC data</strong>, specialising in Reem / Yas / Saadiyat</li>
+        <li>Familiar with Dubai's mainstream communities and developer projects, across investment, residency and self-use cases</li>
+        <li>Ex-Huawei background — a <strong>cross-border lens</strong> on cash flow, cost and risk</li>
+        <li>Bilingual CN/EN, reachable on WeChat / WhatsApp</li>
+        <li>No "guaranteed rental returns" promises — just facts and risks, plainly stated</li>
+      </ul>
+    </div>
+
+    <div class="glass-panel disclaimer">
+      Data sources: Abu Dhabi Real Estate Centre (ADREC) official press release (April 2026), Numbeo 2026 Safety Index. This page is for reference only and does not constitute investment, legal or tax advice; refer to official regulations, your purchase contract and licensed professionals for any transaction.
+    </div>
+
+    <div class="glass-panel cta">
+      <h2>Start a no-pressure conversation</h2>
+      <p>Send me your budget range and purpose, and I'll put together an ADREC-data-backed shortlist with honest risk notes.</p>
+      <div class="cta-actions">
+        <button type="button" class="btn btn-wechat" id="copy-wechat-en" data-wechat="nothing9802">
+          <span data-wechat-label>WeChat</span>
+          <span class="btn-id">nothing9802</span>
+        </button>
+        <a href="https://wa.me/971522240716" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp · +971522240716</a>
+      </div>
+      <div class="cta-links">
+        <a href="golden-visa-guide.html">Golden Visa FAQ</a>
+        <a href="https://abudhabi-realestate.github.io/uae-buy-cost-calculator/" target="_blank" rel="noopener">Buy cost calculator</a>
+        <a href="https://abudhabi-realestate.github.io/abu-market-report/" target="_blank" rel="noopener">Abu Dhabi data report</a>
+        <a href="https://abudhabi-realestate.github.io/abu-30days-vlog/en/" target="_blank" rel="noopener">30-day Abu Dhabi series</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Contact: WeChat nothing9802 · <a href="https://wa.me/971522240716">WhatsApp +971522240716</a></p>
+      <p>© William Xing · UAE</p>
+    </footer>
+
+  </div>
+
+  </main>
+
+  <script>
+  (function () {
+    var STORAGE_KEY = 'site-lang';
+    var backText = { zh: '← 返回主页', en: '← Home' };
+    var titleText = { zh: '投资阿布扎比 · William Xing', en: 'Invest in Abu Dhabi · William Xing' };
+
+    function getLang() { return localStorage.getItem(STORAGE_KEY) || 'zh'; }
+
+    function apply(lang) {
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+      document.title = titleText[lang] || titleText.zh;
+      document.querySelectorAll('.lang-view').forEach(function (el) {
+        el.hidden = el.getAttribute('data-lang') !== lang;
+      });
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        var active = btn.dataset.lang === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      var back = document.querySelector('.back');
+      if (back) back.textContent = backText[lang] || backText.zh;
+    }
+
+    function setLang(lang) {
+      if (lang !== 'zh' && lang !== 'en') return;
+      localStorage.setItem(STORAGE_KEY, lang);
+      apply(lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+    });
+
+    apply(getLang());
+  })();
+
+  (function () {
+    document.querySelectorAll('[id^="copy-wechat"]').forEach(function (wechatBtn) {
+      wechatBtn.addEventListener('click', function () {
+        var id = wechatBtn.dataset.wechat;
+        var lang = document.documentElement.lang === 'en' ? 'en' : 'zh';
+        var copiedText = lang === 'en' ? 'Copied' : '已复制';
+        var labelText = lang === 'en' ? 'WeChat' : '微信';
+        var labelSpan = wechatBtn.querySelector('[data-wechat-label]');
+        var idSpan = wechatBtn.querySelector('.btn-id');
+        navigator.clipboard.writeText(id).then(function () {
+          if (labelSpan) labelSpan.textContent = copiedText;
+          if (idSpan) idSpan.textContent = '';
+          setTimeout(function () {
+            if (labelSpan) labelSpan.textContent = labelText;
+            if (idSpan) idSpan.textContent = id;
+          }, 1600);
+        }).catch(function () {});
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
