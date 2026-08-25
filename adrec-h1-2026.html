@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阿布扎比房产市场报告 H1 2026 · William Xing</title>
+  <meta name="description" content="ADREC 官方 H1 2026 市场报告解读：总成交 AED 1170 亿、住宅销售 AED 704 亿、外资占比 70%、期房 89%。供应、成交、租赁与商业全景。" />
+  <link rel="canonical" href="https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100' rx='16'/><circle cx='50' cy='50' r='28' fill='none' stroke='%23c9a227' stroke-width='3'/><text y='58' x='50' text-anchor='middle' font-size='36' fill='%23e8d5a3'>W</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-elevated: #0a0a0a;
+      --surface: rgba(14, 13, 11, 0.78);
+      --surface-hover: rgba(22, 20, 16, 0.86);
+      --gold: #b8956a;
+      --gold-light: #d4c4a8;
+      --gold-bright: #e8d5a3;
+      --gold-dim: rgba(184, 149, 106, 0.08);
+      --text: #ece6dc;
+      --muted: #8a8278;
+      --border: rgba(184, 149, 106, 0.16);
+      --border-strong: rgba(212, 196, 168, 0.28);
+      --serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+      --mono: "SF Mono", Consolas, monospace;
+      --nav-h: 52px;
+      --sec-h: 42px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    a:any-link { text-decoration: none; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      padding-top: calc(var(--nav-h) + var(--sec-h));
+    }
+    body::before {
+      content: "";
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 90% 50% at 50% -8%, rgba(184, 149, 106, 0.07), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 100% 80%, rgba(184, 149, 106, 0.03), transparent 50%);
+    }
+
+    .bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 40;
+      height: var(--nav-h);
+      background: rgba(5, 5, 5, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .bar-inner {
+      max-width: 1080px; margin: 0 auto; height: 100%;
+      padding: 0 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .bar a.brand:any-link {
+      color: var(--gold-light); font-family: var(--serif); font-size: 0.88rem; letter-spacing: 0.06em;
+    }
+    .bar a.brand:hover { color: var(--gold-bright); }
+    .bar-right { display: flex; align-items: center; gap: 0.85rem; }
+    .back:any-link { font-size: 0.72rem; font-family: var(--mono); color: var(--muted); }
+    .back:hover { color: var(--gold-light); }
+    .lang-switch {
+      display: inline-flex; padding: 2px; gap: 1px;
+      background: rgba(0,0,0,0.4); border: 1px solid rgba(184,149,106,0.14); border-radius: 999px;
+    }
+    .lang-btn {
+      min-width: 2.25rem; padding: 5px 11px; font-size: 0.7rem; font-weight: 600;
+      font-family: var(--mono); background: transparent; border: none; border-radius: 999px;
+      color: rgba(138,130,120,0.92); cursor: pointer; letter-spacing: 0.05em;
+    }
+    .lang-btn:hover { color: var(--gold-light); background: rgba(184,149,106,0.08); }
+    .lang-btn.active { background: rgba(184,149,106,0.16); color: var(--gold-bright); cursor: default; }
+
+    .sec-nav {
+      position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 30;
+      height: var(--sec-h);
+      background: rgba(8, 7, 6, 0.94);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .sec-nav::-webkit-scrollbar { display: none; }
+    .sec-nav-inner {
+      max-width: 1080px; margin: 0 auto; height: 100%;
+      padding: 0 1.25rem;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .sec-nav a {
+      color: var(--muted); font-size: 0.72rem; white-space: nowrap;
+      padding: 5px 10px; border-radius: 999px; letter-spacing: 0.02em;
+    }
+    .sec-nav a:hover, .sec-nav a.active { color: var(--gold-bright); background: var(--gold-dim); }
+
+    .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem 3.5rem; }
+
+    .hero { margin-bottom: 1.5rem; }
+    .hero-label {
+      font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em;
+      color: var(--muted); text-transform: uppercase; margin-bottom: 0.55rem;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-size: clamp(1.55rem, 3.4vw, 2.15rem);
+      font-weight: 600; line-height: 1.3; letter-spacing: 0.02em; margin-bottom: 0.75rem;
+    }
+    .hero-lede { font-size: 0.92rem; color: var(--muted); max-width: 46em; margin-bottom: 0.45rem; }
+    .hero-note { font-size: 0.7rem; color: var(--muted); font-family: var(--mono); }
+
+    .kpi-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border: 1px solid var(--border); margin: 1.4rem 0 0.5rem;
+    }
+    @media (max-width: 800px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+    .panel .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .kpi {
+      background: var(--bg-elevated); padding: 1.15rem 1.05rem;
+    }
+    .kpi .value {
+      font-family: var(--serif); font-size: 1.42rem; font-weight: 600;
+      color: var(--gold-light); letter-spacing: 0.01em; font-variant-numeric: tabular-nums;
+    }
+    .kpi .label { font-size: 0.74rem; color: var(--text); margin-top: 0.35rem; }
+    .kpi .note { font-size: 0.66rem; color: var(--muted); margin-top: 0.28rem; line-height: 1.45; }
+    .kpi .delta { color: var(--gold-bright); font-family: var(--mono); font-size: 0.68rem; margin-top: 0.35rem; }
+
+    .section { margin-top: 2.6rem; scroll-margin-top: calc(var(--nav-h) + var(--sec-h) + 16px); }
+    .section-head { margin-bottom: 1.1rem; padding-left: 12px; border-left: 2px solid var(--gold); }
+    .section-head h2 {
+      font-family: var(--serif); font-size: 1.12rem; font-weight: 600;
+      color: var(--gold-light); letter-spacing: 0.03em; margin-bottom: 4px;
+    }
+    .section-head p { font-size: 0.82rem; color: var(--muted); }
+
+    .panel {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 1.35rem 1.4rem; margin-bottom: 0.75rem;
+    }
+    .panel h3 {
+      font-family: var(--serif); font-size: 0.92rem; color: var(--text); margin-bottom: 0.85rem;
+    }
+    .panel-sub { font-size: 0.74rem; color: var(--muted); margin: -0.45rem 0 0.9rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    @media (max-width: 840px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+    .chart-box { position: relative; height: 280px; }
+    .chart-box.tall { height: 340px; }
+    .chart-caption {
+      font-size: 0.66rem; color: var(--muted); font-family: var(--mono);
+      margin-top: 0.65rem; letter-spacing: 0.02em;
+    }
+
+    table.data { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    table.data th, table.data td {
+      border: 1px solid var(--border); padding: 0.5rem 0.65rem; text-align: left;
+    }
+    table.data th {
+      background: rgba(184,149,106,0.08); color: var(--gold-light);
+      font-weight: 600; font-size: 0.74rem;
+    }
+    table.data td { color: var(--muted); }
+    table.data td:first-child, table.data th:first-child { color: var(--text); }
+    table.data td.num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .table-scroll { overflow-x: auto; }
+
+    .quote {
+      border-left: 2px solid var(--gold); padding: 0.2rem 0 0.2rem 1.1rem;
+      font-size: 0.86rem; color: var(--text); line-height: 1.75;
+    }
+    .quote cite {
+      display: block; margin-top: 0.7rem; font-style: normal;
+      font-size: 0.7rem; color: var(--muted); font-family: var(--mono);
+    }
+
+    .insight { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .insight li {
+      font-size: 0.82rem; color: var(--muted); padding-left: 1rem; position: relative;
+    }
+    .insight li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+    .insight strong { color: var(--text); font-weight: 600; }
+
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.85rem; }
+    .chip {
+      font-size: 0.7rem; font-family: var(--mono); color: var(--gold-light);
+      border: 1px solid var(--border); padding: 4px 9px;
+    }
+    .chip b { color: var(--gold-bright); }
+
+    .callout {
+      border: 1px solid var(--border-strong); background: var(--gold-dim);
+      padding: 1.05rem 1.15rem; margin-bottom: 0.75rem;
+    }
+    .callout h3 { font-family: var(--serif); font-size: 0.9rem; color: var(--gold-bright); margin-bottom: 0.4rem; }
+    .callout p { font-size: 0.8rem; color: var(--muted); }
+
+    .reason-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    @media (max-width: 760px) { .reason-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .reason-grid { grid-template-columns: 1fr; } }
+    .reason {
+      background: var(--surface); border: 1px solid var(--border); padding: 1rem 1.05rem;
+    }
+    .reason .tag {
+      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em;
+      color: var(--gold); margin-bottom: 0.35rem;
+    }
+    .reason h3 { font-family: var(--serif); font-size: 0.88rem; margin-bottom: 0.35rem; }
+    .reason p { font-size: 0.76rem; color: var(--muted); line-height: 1.55; }
+
+    .bar-list { display: flex; flex-direction: column; gap: 0.55rem; }
+    .bar-row { display: grid; grid-template-columns: 9.5rem 1fr 4.2rem; gap: 0.65rem; align-items: center; }
+    @media (max-width: 560px) { .bar-row { grid-template-columns: 6.5rem 1fr 3.6rem; } }
+    .bar-name { font-size: 0.74rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar-track { height: 7px; background: rgba(184,149,106,0.1); overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--gold); }
+    .bar-val { font-size: 0.72rem; font-family: var(--mono); color: var(--gold-light); text-align: right; }
+
+    .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 0.75rem; }
+    @media (max-width: 840px) { .split { grid-template-columns: 1fr; } }
+
+    .disclaimer { padding: 1.05rem 1.2rem; font-size: 0.74rem; color: var(--muted); line-height: 1.7; }
+    .disclaimer a:any-link { color: var(--gold-light); }
+    .cta { padding: 1.6rem 1.6rem; }
+    .cta h2 { font-family: var(--serif); font-size: 1.05rem; margin-bottom: 0.45rem; }
+    .cta p { font-size: 0.84rem; color: var(--muted); margin-bottom: 1.1rem; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.1rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+      font-size: 0.76rem; font-family: var(--mono); letter-spacing: 0.04em; cursor: pointer; border-radius: 1px;
+    }
+    .btn-wechat {
+      background: rgba(184,149,106,0.2); color: var(--gold-bright);
+      border: 1px solid var(--gold); box-shadow: 0 0 24px rgba(184,149,106,0.14);
+    }
+    .btn-wechat:hover { background: rgba(184,149,106,0.32); color: var(--text); }
+    .btn-wechat .btn-id { color: var(--text); font-weight: 600; }
+    .btn-secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-secondary:hover { color: var(--gold-light); border-color: var(--border-strong); }
+    .cta-links { display: flex; flex-wrap: wrap; gap: 0.45rem 1.15rem; font-size: 0.76rem; }
+    .cta-links a:any-link { color: var(--gold-light); }
+    .cta-links a:hover { color: var(--gold-bright); }
+
+    .footer {
+      margin-top: 1.5rem; padding-top: 1.15rem; border-top: 1px solid var(--border);
+      font-size: 0.7rem; color: var(--muted); font-family: var(--mono);
+    }
+    .footer a:any-link { color: var(--gold-light); }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="brand" href="./">WilliamXing</a>
+      <div class="bar-right">
+        <div class="lang-switch">
+          <button type="button" class="lang-btn active" data-lang="zh">中</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a class="back" href="./" data-i18n="nav.back">← 返回主页</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sec-nav" aria-label="Report sections">
+    <div class="sec-nav-inner">
+      <a href="#overview" data-i18n="nav.overview">总览</a>
+      <a href="#supply" data-i18n="nav.supply">住宅供应</a>
+      <a href="#sales" data-i18n="nav.sales">成交与销售</a>
+      <a href="#leases" data-i18n="nav.leases">租赁</a>
+      <a href="#commercial" data-i18n="nav.commercial">商业地产</a>
+      <a href="#why" data-i18n="nav.why">为何阿布</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero" id="overview">
+      <div class="hero-label">ADREC · H1 2026 · Abu Dhabi Real Estate Market Report</div>
+      <h1 data-i18n="hero.title">阿布扎比房产市场报告 · 2026 上半年</h1>
+      <p class="hero-lede" data-i18n="hero.lede">官方记录的最强上半年：全类交易 AED 1,170 亿，已超过 2025 全年的五分之四。住宅销售 AED 704 亿、同比近三倍，外资贡献七成，近九成金额落在期房。</p>
+      <p class="hero-note" data-i18n="hero.note">数据来源：Abu Dhabi Real Estate Centre（ADREC）《Abu Dhabi Real Estate Market Report H1 2026》。交易以登记时点计，不含法院强制过户。</p>
+    </section>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="value">AED 117B</div>
+        <div class="label" data-i18n="kpi.t1">全类房地产交易额</div>
+        <div class="delta">+112% YoY</div>
+        <div class="note" data-i18n="kpi.t1n">史上最强上半年 · 约等于 2025 全年的 81%</div>
+      </div>
+      <div class="kpi">
+        <div class="value">AED 70.4B</div>
+        <div class="label" data-i18n="kpi.t2">住宅单元销售额</div>
+        <div class="delta">+178% YoY</div>
+        <div class="note" data-i18n="kpi.t2n">买卖交易 AED 860 亿中的主体 · 约 1.59 万套</div>
+      </div>
+      <div class="kpi">
+        <div class="value">70%</div>
+        <div class="label" data-i18n="kpi.t3">外资买家占比（金额）</div>
+        <div class="delta">FDI AED 13.8B · 4×</div>
+        <div class="note" data-i18n="kpi.t3n">居留外籍 51% + 非居留 20% · 116 个国籍</div>
+      </div>
+      <div class="kpi">
+        <div class="value">89%</div>
+        <div class="label" data-i18n="kpi.t4">期房占住宅销售金额</div>
+        <div class="delta">82% of deals</div>
+        <div class="note" data-i18n="kpi.t4n">现房仍以现金为主（61%）· 按揭保持韧性</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="value">409k</div>
+        <div class="label" data-i18n="kpi.t5">全酋长国住宅存量</div>
+        <div class="note" data-i18n="kpi.t5n">阿布扎比地区 32.4 万套、占 79% · 年均 +2.9%</div>
+      </div>
+      <div class="kpi">
+        <div class="value">~71k</div>
+        <div class="label" data-i18n="kpi.t6">至 2030 年新增供应</div>
+        <div class="note" data-i18n="kpi.t6n">酋长国年均 +3.8% · 阿布地区 +4.6%，2028 年见峰</div>
+      </div>
+      <div class="kpi">
+        <div class="value">AED 9.3B</div>
+        <div class="label" data-i18n="kpi.t7">住宅租赁合同年值</div>
+        <div class="delta">+8% YoY</div>
+        <div class="note" data-i18n="kpi.t7n">23.3 万份在租合同 · 量仅 +2%，涨价驱动价值</div>
+      </div>
+      <div class="kpi">
+        <div class="value">95%</div>
+        <div class="label" data-i18n="kpi.t8">写字楼整体出租率</div>
+        <div class="note" data-i18n="kpi.t8n">零售 94% · Prime / Grade A 基本满租 · 新租 +13%</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:1rem">
+      <div class="panel">
+        <h3 data-i18n="quote.dmt.h">DMT 主席</h3>
+        <blockquote class="quote">
+          <span data-i18n="quote.dmt">这份报告记录了 2026 年上半年 AED 1,170 亿的交易——史上最强的上半年，已超过去年全年的五分之四。阿布扎比是 EIU 全球宜居指数中 MENA 地区最宜居的城市。规划目标是：市场扩张的同时，住房成本仍控制在家庭收入的四分之一以内。</span>
+          <cite>H.E. Mohamed Ali Al Shorafa · DMT Chairman</cite>
+        </blockquote>
+      </div>
+      <div class="panel">
+        <h3 data-i18n="quote.adrec.h">ADREC 总干事</h3>
+        <blockquote class="quote">
+          <span data-i18n="quote.adrec">住宅销售 AED 704 亿，接近去年同期的三倍。外资占金额 70%，FDI 达 AED 138 亿、来自 116 个国籍；本国买家投入 AED 210 亿，同比亦翻倍。近九成金额在竣工前锁定——登记之后，必须对进度、监管账户和开发商承诺持续监管。</span>
+          <cite>Rashed Al Omaira · ADREC Director General</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3 data-i18n="freeze.h">租金上涨临时冻结 · 2026 年 6 月 2 日生效</h3>
+      <p data-i18n="freeze.p">新租价格指数月环比曾在 12–1 月见顶约 1.6%。6 月 2 日起全酋长国临时冻结租金上调：续租涨幅上限 0%，重新出租按前一份合同租金，ADGM 社区除外。6 月公寓新租涨幅回落至 0.5%、别墅持平。ADREC 强调一个月不成趋势，将按数据而非日历评估该措施。</p>
+    </div>
+
+    <!-- SUPPLY -->
+    <section class="section" id="supply">
+      <div class="section-head">
+        <h2 data-i18n="s.supply">01 · 住宅供应</h2>
+        <p data-i18n="s.supply.sub">存量 40.9 万套，阿布扎比地区占 79%；至 2030 年再增约 7.1 万套</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.stock">全酋长国住宅存量（千套）</h3>
+          <p class="panel-sub" data-i18n="c.stock.sub">2022–H1 2026 年均 +2.9%；2026–2030 预测年均 +3.8%</p>
+          <div class="chart-box"><canvas id="chartStock"></canvas></div>
+          <p class="chart-caption" data-i18n="c.stock.cap">来源：ADREC · 不含国民住房未来供应 · 扎夫拉地区未计入 Al Dhannah City 约 1 万套</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.own">阿布扎比地区：租 vs 买</h3>
+          <p class="panel-sub" data-i18n="c.own.sub">在租住房占已入住存量的 69%；投资区更高</p>
+          <div class="chart-box"><canvas id="chartTenure"></canvas></div>
+          <p class="chart-caption" data-i18n="c.own.cap">来源：ADREC / Tawtheeq 与水电入住数据 · H1 2026</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="c.dist">阿布扎比地区十大城区存量</h3>
+        <p class="panel-sub" data-i18n="c.dist.sub">10 个城区合计约 20.9 万套，占地区存量 65%；前六城超过一半</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr>
+                <th data-i18n="th.district">城区</th>
+                <th class="num" data-i18n="th.apt">公寓</th>
+                <th class="num" data-i18n="th.villa">别墅 / 联排</th>
+                <th class="num" data-i18n="th.total">合计</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Al Danah 达纳</td><td class="num">43,411</td><td class="num">1,000</td><td class="num">44,411</td></tr>
+              <tr><td>Mohamed Bin Zayed City</td><td class="num">25,716</td><td class="num">9,951</td><td class="num">35,667</td></tr>
+              <tr><td>Al Reem Island 里姆岛</td><td class="num">27,086</td><td class="num">410</td><td class="num">27,496</td></tr>
+              <tr><td>Khalifa City 哈利法城</td><td class="num">9,299</td><td class="num">11,411</td><td class="num">20,710</td></tr>
+              <tr><td>Al Zahiyah 扎希亚</td><td class="num">20,560</td><td class="num">148</td><td class="num">20,708</td></tr>
+              <tr><td>Al Raha 拉哈</td><td class="num">14,194</td><td class="num">544</td><td class="num">14,738</td></tr>
+              <tr><td>Al Nahyan</td><td class="num">13,537</td><td class="num">864</td><td class="num">14,401</td></tr>
+              <tr><td>Al Hisn</td><td class="num">11,689</td><td class="num">189</td><td class="num">11,878</td></tr>
+              <tr><td>Yas Island 亚斯岛</td><td class="num">6,031</td><td class="num">3,800</td><td class="num">9,831</td></tr>
+              <tr><td>Al Bateen 巴廷</td><td class="num">7,438</td><td class="num">2,156</td><td class="num">9,594</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chip-row">
+          <span class="chip">Investment zones · <b>22%</b> <span data-i18n="chip.iz">约 7.2 万套</span></span>
+          <span class="chip">Al Reem · <b>~27,500</b></span>
+          <span class="chip">Al Raha / Yas / Saadiyat</span>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.pipe">阿布扎比地区新增供应节奏</h3>
+          <p class="panel-sub" data-i18n="c.pipe.sub">H2 2026–2030 共增约 6.75 万套；开发项目占 77%，建筑许可占 23%</p>
+          <div class="chart-box"><canvas id="chartPipe"></canvas></div>
+          <p class="chart-caption" data-i18n="c.pipe.cap">来源：ADREC 已登记项目巡检 + 有效建筑许可 · 2028 年交付峰值约 2.18 万套</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.future">增量供应集中在六城</h3>
+          <p class="panel-sub" data-i18n="c.future.sub">H1 2026–2030 增量的 77%；公寓增量 75% 来自萨迪亚特、里姆、亚斯</p>
+          <div class="bar-list" id="futureBars"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <ul class="insight">
+          <li data-i18n="i.s1"><strong>九家头部开发商</strong>贡献阿布扎比地区开发项目管道的 76%（Aldar、Modon、Bloom、Reportage、Radiant、SAAS、Ajyal Burtville、Sama Emirates、Burtville）。</li>
+          <li data-i18n="i.s2">别墅增量 56% 来自 Zayed City、Madinat Al Riyad、Al Hidayriyyat Island、Al Bahyah。</li>
+          <li data-i18n="i.s3">投资区 H2 2026–2030 预计新增约 6.25 万套，增长将在 2027 年后明显加速。</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SALES -->
+    <section class="section" id="sales">
+      <div class="section-head">
+        <h2 data-i18n="s.sales">02 · 成交与住宅销售</h2>
+        <p data-i18n="s.sales.sub">全类交易翻倍，住宅销售近三倍；期房和新城区贡献了绝大部分增量</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.tx">全类房地产交易额（十亿 AED）</h3>
+          <p class="panel-sub" data-i18n="c.tx.sub">H1 2026 达 1,170 亿，其中买卖 860 亿、占 74%——序列中最高占比</p>
+          <div class="chart-box"><canvas id="chartTx"></canvas></div>
+          <p class="chart-caption" data-i18n="c.tx.cap">来源：ADREC 登记 · 含买卖、按揭、Musataha 等</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.buyer">住宅销售买家结构（十亿 AED）</h3>
+          <p class="panel-sub" data-i18n="c.buyer.sub">同比多出的约 450 亿中：居留外籍贡献 50%、本国 27%、非居留 23%</p>
+          <div class="chart-box"><canvas id="chartBuyer"></canvas></div>
+          <p class="chart-caption" data-i18n="c.buyer.cap">企业按注册地归类：阿联酋公司计入本国，外国公司计入非居留外资</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3 data-i18n="c.offplan">期房 vs 现房</h3>
+          <ul class="insight">
+            <li data-i18n="i.op1"><strong>期房 AED 624 亿</strong>（金额 89% / 宗数 82%），同比超过三倍。</li>
+            <li data-i18n="i.op2">期房公寓同比 <strong>+220%</strong>，84% 集中在萨迪亚特、ADGM（里姆+玛丽亚）、亚斯、法希德四城。</li>
+            <li data-i18n="i.op3">期房别墅/联排同比 <strong>+289%</strong>；65% 金额来自 Al Naseem、Nawayef West/East、Ramhan、Bashayer Villas、SHA Residences、Bayn 七个项目。</li>
+            <li data-i18n="i.op4">现房 AED 80 亿，同比 +6%（公寓 +9%、别墅 +3%），为序列中最强上半年现房。</li>
+            <li data-i18n="i.op5">现房 61% 现金、39% 按揭；现房按揭 AED 31 亿，同比 +3%。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.nat">外资来源（按字母序前十）</h3>
+          <p class="panel-sub" data-i18n="c.nat.sub">FDI 与居留外籍各自约 61–62% 的金额来自前十国籍</p>
+          <div class="table-scroll">
+            <table class="data">
+              <thead>
+                <tr>
+                  <th data-i18n="th.nres">非居留外资（FDI）</th>
+                  <th data-i18n="th.res">居留外籍</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Russia / China / UK</td><td>China / UK / Egypt</td></tr>
+                <tr><td>US / France / Kazakhstan</td><td>India / Russia / Canada</td></tr>
+                <tr><td>Netherlands / Taiwan / Germany</td><td>France / US / Jordan</td></tr>
+                <tr><td>Jordan</td><td>Pakistan</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Emirati · <b>AED 21.0B</b> · 30%</span>
+            <span class="chip">Resident · <b>AED 35.6B</b> · 51%</span>
+            <span class="chip">FDI · <b>AED 13.8B</b> · 20%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.salesd">H1 2026 住宅销售金额按城区</h3>
+          <p class="panel-sub" data-i18n="c.salesd.sub">胡达里亚特以 190 亿登顶（占 27%，同比 8 倍）；成熟三岛合计仍占 44%</p>
+          <div class="chart-box"><canvas id="chartSalesDist"></canvas></div>
+          <p class="chart-caption" data-i18n="c.salesd.cap">新兴四城 Ramhan / Fahid / Ghadeer Al Tayr / Zayed City 合计 AED 101 亿（14%）</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.proj">十大项目 · 占全市场 43%</h3>
+          <p class="panel-sub" data-i18n="c.proj.sub">合计约 AED 300 亿；头部十家开发商拿下期房一级销售约 90%（AED 510 亿）</p>
+          <div class="bar-list" id="projBars"></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3 data-i18n="c.price">现房重复销售价格指数</h3>
+          <p class="panel-sub" data-i18n="c.price.sub">同房源跨期对比，剔除产品结构变化 · 以 2020 Q1 = 100</p>
+          <div class="kpi-grid" style="margin:0">
+            <div class="kpi">
+              <div class="value">+20%</div>
+              <div class="label" data-i18n="c.apt.yoy">公寓同比</div>
+              <div class="note" data-i18n="c.apt.n">一年前为 +15%，加速上涨</div>
+            </div>
+            <div class="kpi">
+              <div class="value">+12%</div>
+              <div class="label" data-i18n="c.villa.yoy">别墅 / 联排同比</div>
+              <div class="note" data-i18n="c.villa.n">较 2020 年基期已高 72%</div>
+            </div>
+            <div class="kpi">
+              <div class="value">+18%</div>
+              <div class="label" data-i18n="c.rpt.sales">重复销售指数</div>
+              <div class="note" data-i18n="c.rpt.sales.n">阿布扎比地区需求仍快于供应</div>
+            </div>
+            <div class="kpi">
+              <div class="value">+9%</div>
+              <div class="label" data-i18n="c.rpt.lease">重复租赁指数</div>
+              <div class="note" data-i18n="c.rpt.lease.n">与销售指数一并同比</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.band">投资区成交价带（H1 2026）</h3>
+          <p class="panel-sub" data-i18n="c.band.sub">各价带需求都在涨，增量主要来自高端</p>
+          <ul class="insight">
+            <li data-i18n="i.b1">公寓 <strong>&gt;AED 28k/㎡</strong> 金额扩大 3.3 倍，占公寓成交额 46%。</li>
+            <li data-i18n="i.b2">公寓 &lt;AED 17k/㎡ 仍增至近 3,000 套（+14%，AED 44 亿）。</li>
+            <li data-i18n="i.b3">别墅 <strong>&gt;AED 19k/㎡</strong> 同比 4.6 倍，占别墅金额一半（一年前约三分之一）。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 data-i18n="c.psqm">公寓均价与天花板（千 AED/㎡，H1 2026）</h3>
+        <p class="panel-sub" data-i18n="c.psqm.sub">多数城区最高价是均价的 2–4 倍，均价不能代表板块全貌</p>
+        <div class="table-scroll">
+          <table class="data">
+            <thead>
+              <tr>
+                <th data-i18n="th.district">城区</th>
+                <th class="num" data-i18n="th.avg">公寓均价</th>
+                <th class="num" data-i18n="th.max">公寓最高</th>
+                <th class="num" data-i18n="th.vavg">别墅均价</th>
+                <th class="num" data-i18n="th.vmax">别墅最高</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Al Saadiyat Island</td><td class="num">42</td><td class="num">142</td><td class="num">23</td><td class="num">100</td></tr>
+              <tr><td>Fahid Island</td><td class="num">40</td><td class="num">52</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>Al Maryah Island</td><td class="num">36</td><td class="num">92</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>Yas Island</td><td class="num">25</td><td class="num">104</td><td class="num">18</td><td class="num">53</td></tr>
+              <tr><td>Ghantout (Bayn)</td><td class="num">25</td><td class="num">45</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>Al Hidayriyyat Island</td><td class="num">24</td><td class="num">33</td><td class="num">15</td><td class="num">36</td></tr>
+              <tr><td>Al Raha</td><td class="num">21</td><td class="num">39</td><td class="num">12</td><td class="num">12</td></tr>
+              <tr><td>Al Jubail Island</td><td class="num">20</td><td class="num">26</td><td class="num">24</td><td class="num">34</td></tr>
+              <tr><td>Al Reem Island</td><td class="num">18</td><td class="num">38</td><td class="num">14</td><td class="num">16</td></tr>
+              <tr><td>Zayed City</td><td class="num">16</td><td class="num">21</td><td class="num">16</td><td class="num">22</td></tr>
+              <tr><td>Khalifa City</td><td class="num">14</td><td class="num">25</td><td class="num">12</td><td class="num">26</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="chart-caption" data-i18n="c.psqm.cap">里姆别墅样本仅 29 笔：Reem Hills 约 9–12k，运河一线约 16k</p>
+      </div>
+    </section>
+
+    <!-- LEASES -->
+    <section class="section" id="leases">
+      <div class="section-head">
+        <h2 data-i18n="s.leases">03 · 住宅租赁</h2>
+        <p data-i18n="s.leases.sub">价值涨、成交量稳：高入住、新供应有限、自住比例上升</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.lv">住宅租赁合同年值（十亿 AED）</h3>
+          <p class="panel-sub" data-i18n="c.lv.sub">H1 2026 全酋长国 93 亿、同比 +8%；阿布扎比地区占 92%</p>
+          <div class="chart-box"><canvas id="chartLease"></canvas></div>
+          <p class="chart-caption" data-i18n="c.lv.cap">来源：Tawtheeq 在租合同 · 截止 2026-06-30</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.lvol">在租合同数量（千份）</h3>
+          <p class="panel-sub" data-i18n="c.lvol.sub">23.3 万份（阿布地区 20.1 万），同比仅 +2%</p>
+          <div class="chart-box"><canvas id="chartLeaseVol"></canvas></div>
+          <p class="chart-caption" data-i18n="c.lvol.cap">量价背离：价值几乎全部由租金水平推动</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h3 data-i18n="c.lmix">产品结构（阿布扎比地区）</h3>
+          <ul class="insight">
+            <li data-i18n="i.l1">公寓贡献租赁金额的 <strong>74%</strong>，合同量约 86%；自 2022 年以来净新增在租合同的约 87% 来自公寓。</li>
+            <li data-i18n="i.l2">别墅只占已入住存量 <strong>14%</strong>，却贡献 26% 的租赁金额，租金约为公寓的两倍以上。</li>
+            <li data-i18n="i.l3">投资区新租：公寓 <strong>+21%</strong>、别墅 <strong>+16%</strong>；全地区新租公寓 +17%、别墅 +9%。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.ldist">过去 12 个月租赁金额：十五城占 86%</h3>
+          <div class="bar-list" id="leaseBars"></div>
+          <p class="chart-caption" data-i18n="c.ldist.cap">公寓金额 58% 来自达纳、里姆、扎希亚、拉哈、MBZ；别墅 51% 来自哈利法城、MBZ、亚斯、萨迪亚特、Al Muntazah</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMERCIAL -->
+    <section class="section" id="commercial">
+      <div class="section-head">
+        <h2 data-i18n="s.com">04 · 商业地产</h2>
+        <p data-i18n="s.com.sub">零售与写字楼都是「供应慢、需求更快、租金向上」</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3 data-i18n="c.retail">零售 GLA 结构（万㎡）</h3>
+          <p class="panel-sub" data-i18n="c.retail.sub">H1 2026 总量约 385 万㎡；街铺/社区商场 + 大型商场合计占 69%</p>
+          <div class="chart-box"><canvas id="chartRetail"></canvas></div>
+          <p class="chart-caption" data-i18n="c.retail.cap">H1 年化供应增速 5%（2025 全年仅 1.3%）· 街铺 +7.1 万㎡、中小商场 +3.9 万㎡</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.office">写字楼 GLA 结构（万㎡）</h3>
+          <p class="panel-sub" data-i18n="c.office.sub">总量约 342 万㎡，较 2025 年末仅 +0.3%；Prime 已追上 Grade A</p>
+          <div class="chart-box"><canvas id="chartOffice"></canvas></div>
+          <p class="chart-caption" data-i18n="c.office.cap">11 个商务区占 84% GLA · 达纳、里姆、纳赫扬、玛丽亚为核心</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="panel">
+          <h3 data-i18n="c.rocc">零售出租率</h3>
+          <div class="kpi" style="border:none;padding:0.2rem 0 0.8rem;background:transparent">
+            <div class="value">94%</div>
+            <div class="note" data-i18n="c.rocc.n">五年高位附近 · 大型商场 94.2%，高需求商场 95.6%</div>
+          </div>
+          <ul class="insight">
+            <li data-i18n="i.r1">新租指数 <strong>+9%</strong>，全部合同 +6%。</li>
+            <li>High Demand Malls · AED 2,652/㎡</li>
+            <li>Large Malls · AED 1,590/㎡</li>
+            <li>Street / Community · AED 1,184/㎡</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.oocc">写字楼出租率</h3>
+          <div class="kpi" style="border:none;padding:0.2rem 0 0.8rem;background:transparent">
+            <div class="value">95%</div>
+            <div class="note" data-i18n="c.oocc.n">Prime 95% · Grade A 95% · Grade B 近满租已持续约 3.5 年</div>
+          </div>
+          <ul class="insight">
+            <li data-i18n="i.o1">新租 <strong>+13%</strong>，全部合同 +9%——涨价来自新成交，而非续租。</li>
+            <li data-i18n="i.o2">供给纪律支撑平衡：新库存随到随被消化。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="c.rgloc">零售 GLA 地理集中</h3>
+          <p class="panel-sub" data-i18n="c.rgloc.sub">九个城区（各超 15 万㎡）合计 235 万㎡、占 62%</p>
+          <div class="bar-list" id="retailBars"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why">
+      <div class="section-head">
+        <h2 data-i18n="s.why">05 · 阿布扎比的长期底盘</h2>
+        <p data-i18n="s.why.sub">报告第五章：制度、资金与宜居，解释本轮成交为何不只是周期</p>
+      </div>
+      <div class="reason-grid">
+        <div class="reason">
+          <div class="tag">ESCROW</div>
+          <h3 data-i18n="w.1t">政府监管的期房资金</h3>
+          <p data-i18n="w.1p">买家付款进入政府监管账户，按核验后的工程进度向开发商拨付。H1 近九成金额是期房，这一机制是市场能放大的前提。</p>
+        </div>
+        <div class="reason">
+          <div class="tag">FREEHOLD</div>
+          <h3 data-i18n="w.2t">投资区 100% 永久产权</h3>
+          <p data-i18n="w.2p">指定投资区内，外国人可 100% 持有单元、土地或楼宇。ADGM 以普通法运行，Q1 2026 有 179 家资管、263 只基金。</p>
+        </div>
+        <div class="reason">
+          <div class="tag">TAX</div>
+          <h3 data-i18n="w.3t">0% 个税 · 9% 企业税</h3>
+          <p data-i18n="w.3p">利润可在 AML 框架下全额汇出。迪拉姆锚定美元，利率跟随美联储。主权评级 Fitch AA / Moody's Aa2。</p>
+        </div>
+        <div class="reason">
+          <div class="tag">VISA</div>
+          <h3 data-i18n="w.4t">10 年黄金签证</h3>
+          <p data-i18n="w.4p">投资者、创业者与专业人才。购房 AED 200 万及以上可直接获签，家属不受年龄限制，海外停留期间身份可维持。</p>
+        </div>
+        <div class="reason">
+          <div class="tag">CAPITAL</div>
+          <h3 data-i18n="w.5t">资本之都</h3>
+          <p data-i18n="w.5p">主权财富基金约 1.8 万亿美元。Q1 2026 在 ADGM 设点的资管合计管理规模超 4.4 万亿美元；百万富翁人口十年约 +80%。</p>
+        </div>
+        <div class="reason">
+          <div class="tag">LIVE</div>
+          <h3 data-i18n="w.6t">MENA 最宜居</h3>
+          <p data-i18n="w.6p">EIU 全球宜居指数 MENA 第一。IMD 世界竞争力 2026 年第 5。200+ 国籍、Louvre / NYU AD / Cleveland Clinic，以及 2026 年 9 月的 LIVEX。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="panel disclaimer" style="margin-top:2rem">
+      <span data-i18n="disc">本页根据 ADREC《Abu Dhabi Real Estate Market Report H1 2026》整理，用于阅读与讨论，不构成投资、法律或税务建议。交易以 ADREC 登记时点计，与 SPA / MOU 签署日可能不同；法院强制过户已从住宅销售分析中剔除；供应预测基于当前已登记项目与有效许可，随后续巡检可能调整。政策与税费以官方最新规定为准。</span>
+      来源：<a href="https://www.adrec.gov.ae" target="_blank" rel="noopener">adrec.gov.ae</a>
+    </div>
+
+    <div class="panel cta">
+      <h2 data-i18n="cta.h">用这份半年报，对一下你的预算和板块</h2>
+      <p data-i18n="cta.p">告诉我预算区间和用途（投资 / 自住 / 身份），我按 ADREC 口径给你一份候选清单，并标明风险，而不是保证收益。</p>
+      <div class="cta-actions">
+        <button type="button" class="btn btn-wechat" id="copy-wechat" data-wechat="nothing9802">
+          <span data-wechat-label data-i18n="cta.wx">微信</span>
+          <span class="btn-id">nothing9802</span>
+        </button>
+        <a href="https://wa.me/971522240716" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp · +971522240716</a>
+      </div>
+      <div class="cta-links">
+        <a href="invest-in-abu-dhabi.html" data-i18n="cta.invest">投资阿布扎比总览</a>
+        <a href="golden-visa-guide.html" data-i18n="cta.gv">黄金签证 FAQ</a>
+        <a href="https://abudhabi-realestate.github.io/uae-buy-cost-calculator/" target="_blank" rel="noopener" data-i18n="cta.calc">买房成本计算器</a>
+        <a href="https://abudhabi-realestate.github.io/abu-market-report/" target="_blank" rel="noopener" data-i18n="cta.old">2025 年报交互版</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>WeChat nothing9802 · <a href="https://wa.me/971522240716">WhatsApp +971522240716</a></p>
+      <p>© William Xing · UAE · ADREC H1 2026</p>
+    </footer>
+  </main>
+
+  <script>
+  (function () {
+    var I18N = {
+      zh: {
+        'meta.title': '阿布扎比房产市场报告 H1 2026 · William Xing',
+        'nav.back': '← 返回主页',
+        'nav.overview': '总览', 'nav.supply': '住宅供应', 'nav.sales': '成交与销售',
+        'nav.leases': '租赁', 'nav.commercial': '商业地产', 'nav.why': '为何阿布',
+        'hero.title': '阿布扎比房产市场报告 · 2026 上半年',
+        'hero.lede': '官方记录的最强上半年：全类交易 AED 1,170 亿，已超过 2025 全年的五分之四。住宅销售 AED 704 亿、同比近三倍，外资贡献七成，近九成金额落在期房。',
+        'hero.note': '数据来源：Abu Dhabi Real Estate Centre（ADREC）《Abu Dhabi Real Estate Market Report H1 2026》。交易以登记时点计，不含法院强制过户。',
+        'kpi.t1': '全类房地产交易额', 'kpi.t1n': '史上最强上半年 · 约等于 2025 全年的 81%',
+        'kpi.t2': '住宅单元销售额', 'kpi.t2n': '买卖交易 AED 860 亿中的主体 · 约 1.59 万套',
+        'kpi.t3': '外资买家占比（金额）', 'kpi.t3n': '居留外籍 51% + 非居留 20% · 116 个国籍',
+        'kpi.t4': '期房占住宅销售金额', 'kpi.t4n': '现房仍以现金为主（61%）· 按揭保持韧性',
+        'kpi.t5': '全酋长国住宅存量', 'kpi.t5n': '阿布扎比地区 32.4 万套、占 79% · 年均 +2.9%',
+        'kpi.t6': '至 2030 年新增供应', 'kpi.t6n': '酋长国年均 +3.8% · 阿布地区 +4.6%，2028 年见峰',
+        'kpi.t7': '住宅租赁合同年值', 'kpi.t7n': '23.3 万份在租合同 · 量仅 +2%，涨价驱动价值',
+        'kpi.t8': '写字楼整体出租率', 'kpi.t8n': '零售 94% · Prime / Grade A 基本满租 · 新租 +13%',
+        'quote.dmt.h': 'DMT 主席',
+        'quote.dmt': '这份报告记录了 2026 年上半年 AED 1,170 亿的交易——史上最强的上半年，已超过去年全年的五分之四。阿布扎比是 EIU 全球宜居指数中 MENA 地区最宜居的城市。规划目标是：市场扩张的同时，住房成本仍控制在家庭收入的四分之一以内。',
+        'quote.adrec.h': 'ADREC 总干事',
+        'quote.adrec': '住宅销售 AED 704 亿，接近去年同期的三倍。外资占金额 70%，FDI 达 AED 138 亿、来自 116 个国籍；本国买家投入 AED 210 亿，同比亦翻倍。近九成金额在竣工前锁定——登记之后，必须对进度、监管账户和开发商承诺持续监管。',
+        'freeze.h': '租金上涨临时冻结 · 2026 年 6 月 2 日生效',
+        'freeze.p': '新租价格指数月环比曾在 12–1 月见顶约 1.6%。6 月 2 日起全酋长国临时冻结租金上调：续租涨幅上限 0%，重新出租按前一份合同租金，ADGM 社区除外。6 月公寓新租涨幅回落至 0.5%、别墅持平。ADREC 强调一个月不成趋势，将按数据而非日历评估该措施。',
+        's.supply': '01 · 住宅供应', 's.supply.sub': '存量 40.9 万套，阿布扎比地区占 79%；至 2030 年再增约 7.1 万套',
+        'c.stock': '全酋长国住宅存量（千套）', 'c.stock.sub': '2022–H1 2026 年均 +2.9%；2026–2030 预测年均 +3.8%',
+        'c.stock.cap': '来源：ADREC · 不含国民住房未来供应 · 扎夫拉地区未计入 Al Dhannah City 约 1 万套',
+        'c.own': '阿布扎比地区：租 vs 买', 'c.own.sub': '在租住房占已入住存量的 69%；投资区更高',
+        'c.own.cap': '来源：ADREC / Tawtheeq 与水电入住数据 · H1 2026',
+        'c.dist': '阿布扎比地区十大城区存量', 'c.dist.sub': '10 个城区合计约 20.9 万套，占地区存量 65%；前六城超过一半',
+        'th.district': '城区', 'th.apt': '公寓', 'th.villa': '别墅 / 联排', 'th.total': '合计',
+        'chip.iz': '约 7.2 万套',
+        'c.pipe': '阿布扎比地区新增供应节奏', 'c.pipe.sub': 'H2 2026–2030 共增约 6.75 万套；开发项目占 77%，建筑许可占 23%',
+        'c.pipe.cap': '来源：ADREC 已登记项目巡检 + 有效建筑许可 · 2028 年交付峰值约 2.18 万套',
+        'c.future': '增量供应集中在六城', 'c.future.sub': 'H1 2026–2030 增量的 77%；公寓增量 75% 来自萨迪亚特、里姆、亚斯',
+        'i.s1': '九家头部开发商贡献阿布扎比地区开发项目管道的 76%（Aldar、Modon、Bloom、Reportage、Radiant、SAAS、Ajyal Burtville、Sama Emirates、Burtville）。',
+        'i.s2': '别墅增量 56% 来自 Zayed City、Madinat Al Riyad、Al Hidayriyyat Island、Al Bahyah。',
+        'i.s3': '投资区 H2 2026–2030 预计新增约 6.25 万套，增长将在 2027 年后明显加速。',
+        's.sales': '02 · 成交与住宅销售', 's.sales.sub': '全类交易翻倍，住宅销售近三倍；期房和新城区贡献了绝大部分增量',
+        'c.tx': '全类房地产交易额（十亿 AED）', 'c.tx.sub': 'H1 2026 达 1,170 亿，其中买卖 860 亿、占 74%——序列中最高占比',
+        'c.tx.cap': '来源：ADREC 登记 · 含买卖、按揭、Musataha 等',
+        'c.buyer': '住宅销售买家结构（十亿 AED）', 'c.buyer.sub': '同比多出的约 450 亿中：居留外籍贡献 50%、本国 27%、非居留 23%',
+        'c.buyer.cap': '企业按注册地归类：阿联酋公司计入本国，外国公司计入非居留外资',
+        'c.offplan': '期房 vs 现房',
+        'i.op1': '期房 AED 624 亿（金额 89% / 宗数 82%），同比超过三倍。',
+        'i.op2': '期房公寓同比 +220%，84% 集中在萨迪亚特、ADGM（里姆+玛丽亚）、亚斯、法希德四城。',
+        'i.op3': '期房别墅/联排同比 +289%；65% 金额来自 Al Naseem、Nawayef West/East、Ramhan、Bashayer Villas、SHA Residences、Bayn 七个项目。',
+        'i.op4': '现房 AED 80 亿，同比 +6%（公寓 +9%、别墅 +3%），为序列中最强上半年现房。',
+        'i.op5': '现房 61% 现金、39% 按揭；现房按揭 AED 31 亿，同比 +3%。',
+        'c.nat': '外资来源（按字母序前十）', 'c.nat.sub': 'FDI 与居留外籍各自约 61–62% 的金额来自前十国籍',
+        'th.nres': '非居留外资（FDI）', 'th.res': '居留外籍',
+        'c.salesd': 'H1 2026 住宅销售金额按城区', 'c.salesd.sub': '胡达里亚特以 190 亿登顶（占 27%，同比 8 倍）；成熟三岛合计仍占 44%',
+        'c.salesd.cap': '新兴四城 Ramhan / Fahid / Ghadeer Al Tayr / Zayed City 合计 AED 101 亿（14%）',
+        'c.proj': '十大项目 · 占全市场 43%', 'c.proj.sub': '合计约 AED 300 亿；头部十家开发商拿下期房一级销售约 90%（AED 510 亿）',
+        'c.price': '现房重复销售价格指数', 'c.price.sub': '同房源跨期对比，剔除产品结构变化 · 以 2020 Q1 = 100',
+        'c.apt.yoy': '公寓同比', 'c.apt.n': '一年前为 +15%，加速上涨',
+        'c.villa.yoy': '别墅 / 联排同比', 'c.villa.n': '较 2020 年基期已高 72%',
+        'c.rpt.sales': '重复销售指数', 'c.rpt.sales.n': '阿布扎比地区需求仍快于供应',
+        'c.rpt.lease': '重复租赁指数', 'c.rpt.lease.n': '与销售指数一并同比',
+        'c.band': '投资区成交价带（H1 2026）', 'c.band.sub': '各价带需求都在涨，增量主要来自高端',
+        'i.b1': '公寓 >AED 28k/㎡ 金额扩大 3.3 倍，占公寓成交额 46%。',
+        'i.b2': '公寓 <AED 17k/㎡ 仍增至近 3,000 套（+14%，AED 44 亿）。',
+        'i.b3': '别墅 >AED 19k/㎡ 同比 4.6 倍，占别墅金额一半（一年前约三分之一）。',
+        'c.psqm': '公寓均价与天花板（千 AED/㎡，H1 2026）',
+        'c.psqm.sub': '多数城区最高价是均价的 2–4 倍，均价不能代表板块全貌',
+        'th.avg': '公寓均价', 'th.max': '公寓最高', 'th.vavg': '别墅均价', 'th.vmax': '别墅最高',
+        'c.psqm.cap': '里姆别墅样本仅 29 笔：Reem Hills 约 9–12k，运河一线约 16k',
+        's.leases': '03 · 住宅租赁', 's.leases.sub': '价值涨、成交量稳：高入住、新供应有限、自住比例上升',
+        'c.lv': '住宅租赁合同年值（十亿 AED）', 'c.lv.sub': 'H1 2026 全酋长国 93 亿、同比 +8%；阿布扎比地区占 92%',
+        'c.lv.cap': '来源：Tawtheeq 在租合同 · 截止 2026-06-30',
+        'c.lvol': '在租合同数量（千份）', 'c.lvol.sub': '23.3 万份（阿布地区 20.1 万），同比仅 +2%',
+        'c.lvol.cap': '量价背离：价值几乎全部由租金水平推动',
+        'c.lmix': '产品结构（阿布扎比地区）',
+        'i.l1': '公寓贡献租赁金额的 74%，合同量约 86%；自 2022 年以来净新增在租合同的约 87% 来自公寓。',
+        'i.l2': '别墅只占已入住存量 14%，却贡献 26% 的租赁金额，租金约为公寓的两倍以上。',
+        'i.l3': '投资区新租：公寓 +21%、别墅 +16%；全地区新租公寓 +17%、别墅 +9%。',
+        'c.ldist': '过去 12 个月租赁金额：十五城占 86%',
+        'c.ldist.cap': '公寓金额 58% 来自达纳、里姆、扎希亚、拉哈、MBZ；别墅 51% 来自哈利法城、MBZ、亚斯、萨迪亚特、Al Muntazah',
+        's.com': '04 · 商业地产', 's.com.sub': '零售与写字楼都是「供应慢、需求更快、租金向上」',
+        'c.retail': '零售 GLA 结构（万㎡）', 'c.retail.sub': 'H1 2026 总量约 385 万㎡；街铺/社区商场 + 大型商场合计占 69%',
+        'c.retail.cap': 'H1 年化供应增速 5%（2025 全年仅 1.3%）· 街铺 +7.1 万㎡、中小商场 +3.9 万㎡',
+        'c.office': '写字楼 GLA 结构（万㎡）', 'c.office.sub': '总量约 342 万㎡，较 2025 年末仅 +0.3%；Prime 已追上 Grade A',
+        'c.office.cap': '11 个商务区占 84% GLA · 达纳、里姆、纳赫扬、玛丽亚为核心',
+        'c.rocc': '零售出租率', 'c.rocc.n': '五年高位附近 · 大型商场 94.2%，高需求商场 95.6%',
+        'i.r1': '新租指数 +9%，全部合同 +6%。',
+        'c.oocc': '写字楼出租率', 'c.oocc.n': 'Prime 95% · Grade A 95% · Grade B 近满租已持续约 3.5 年',
+        'i.o1': '新租 +13%，全部合同 +9%——涨价来自新成交，而非续租。',
+        'i.o2': '供给纪律支撑平衡：新库存随到随被消化。',
+        'c.rgloc': '零售 GLA 地理集中', 'c.rgloc.sub': '九个城区（各超 15 万㎡）合计 235 万㎡、占 62%',
+        's.why': '05 · 阿布扎比的长期底盘', 's.why.sub': '报告第五章：制度、资金与宜居，解释本轮成交为何不只是周期',
+        'w.1t': '政府监管的期房资金', 'w.1p': '买家付款进入政府监管账户，按核验后的工程进度向开发商拨付。H1 近九成金额是期房，这一机制是市场能放大的前提。',
+        'w.2t': '投资区 100% 永久产权', 'w.2p': '指定投资区内，外国人可 100% 持有单元、土地或楼宇。ADGM 以普通法运行，Q1 2026 有 179 家资管、263 只基金。',
+        'w.3t': '0% 个税 · 9% 企业税', 'w.3p': '利润可在 AML 框架下全额汇出。迪拉姆锚定美元，利率跟随美联储。主权评级 Fitch AA / Moody\'s Aa2。',
+        'w.4t': '10 年黄金签证', 'w.4p': '投资者、创业者与专业人才。购房 AED 200 万及以上可直接获签，家属不受年龄限制，海外停留期间身份可维持。',
+        'w.5t': '资本之都', 'w.5p': '主权财富基金约 1.8 万亿美元。Q1 2026 在 ADGM 设点的资管合计管理规模超 4.4 万亿美元；百万富翁人口十年约 +80%。',
+        'w.6t': 'MENA 最宜居', 'w.6p': 'EIU 全球宜居指数 MENA 第一。IMD 世界竞争力 2026 年第 5。200+ 国籍、Louvre / NYU AD / Cleveland Clinic，以及 2026 年 9 月的 LIVEX。',
+        'disc': '本页根据 ADREC《Abu Dhabi Real Estate Market Report H1 2026》整理，用于阅读与讨论，不构成投资、法律或税务建议。交易以 ADREC 登记时点计，与 SPA / MOU 签署日可能不同；法院强制过户已从住宅销售分析中剔除；供应预测基于当前已登记项目与有效许可，随后续巡检可能调整。政策与税费以官方最新规定为准。',
+        'cta.h': '用这份半年报，对一下你的预算和板块',
+        'cta.p': '告诉我预算区间和用途（投资 / 自住 / 身份），我按 ADREC 口径给你一份候选清单，并标明风险，而不是保证收益。',
+        'cta.wx': '微信', 'cta.invest': '投资阿布扎比总览', 'cta.gv': '黄金签证 FAQ',
+        'cta.calc': '买房成本计算器', 'cta.old': '2025 年报交互版',
+        'chart.copied': '已复制'
+      },
+      en: {
+        'meta.title': 'Abu Dhabi Real Estate Market Report H1 2026 · William Xing',
+        'nav.back': '← Home',
+        'nav.overview': 'Overview', 'nav.supply': 'Supply', 'nav.sales': 'Sales',
+        'nav.leases': 'Leases', 'nav.commercial': 'Commercial', 'nav.why': 'Why AD',
+        'hero.title': 'Abu Dhabi Real Estate Market Report · H1 2026',
+        'hero.lede': 'The strongest first half on record: AED 117 billion in all transactions — more than four-fifths of full-year 2025. Residential unit sales hit AED 70.4 billion, nearly 3× last year; foreign buyers took 70% of value, and nearly nine in ten dirhams were off-plan.',
+        'hero.note': 'Source: Abu Dhabi Real Estate Centre (ADREC), Abu Dhabi Real Estate Market Report H1 2026. Figures are registrations in the period; court-mandated transfers excluded from unit-sales analysis.',
+        'kpi.t1': 'All real-estate transactions', 'kpi.t1n': 'Strongest H1 on record · ~81% of full-year 2025',
+        'kpi.t2': 'Residential unit sales', 'kpi.t2n': 'Bulk of AED 86B in sales · ~15,900 units',
+        'kpi.t3': 'Foreign share of sales value', 'kpi.t3n': 'Resident expats 51% + non-resident 20% · 116 nationalities',
+        'kpi.t4': 'Off-plan share of sales value', 'kpi.t4n': 'Ready still majority cash (61%) · mortgages resilient',
+        'kpi.t5': 'Emirate residential stock', 'kpi.t5n': 'Abu Dhabi Region 324k units, 79% · +2.9% annual average',
+        'kpi.t6': 'New supply by 2030', 'kpi.t6n': 'Emirate +3.8% p.a. · AD Region +4.6%, deliveries peak in 2028',
+        'kpi.t7': 'Residential lease value', 'kpi.t7n': '233k active contracts · volume +2%, value driven by rents',
+        'kpi.t8': 'Office occupancy', 'kpi.t8n': 'Retail 94% · Prime / Grade A effectively full · new leases +13%',
+        'quote.dmt.h': 'DMT Chairman',
+        'quote.dmt': 'This report records AED 117 billion in transactions in the first six months of 2026, the strongest first-half on record and more than four-fifths of last year’s full-year value. Abu Dhabi is the most liveable city in MENA on the EIU Global Liveability Index. The planning objective is for housing costs to remain within a quarter of household income as the market expands.',
+        'quote.adrec.h': 'ADREC Director General',
+        'quote.adrec': 'Residential unit sales reached AED 70.4 billion, close to three times the same period last year. Foreign buyers accounted for 70% of value; FDI hit AED 13.8 billion from 116 nationalities. Emirati buyers committed AED 21.0 billion, more than double last year. Nearly nine in ten dirhams were off-plan — registration must be followed by project and escrow oversight.',
+        'freeze.h': 'Temporary rental-increase freeze · effective 2 June 2026',
+        'freeze.p': 'Month-on-month new-lease growth peaked around 1.6% in December–January. On 2 June a freeze took effect: renewals capped at 0%, re-lets held at the preceding contract value; ADGM communities excluded. In June, apartment new-lease growth eased to 0.5% and villas were flat. One month is not a trend — ADREC will review the measure against the data, not the calendar.',
+        's.supply': '01 · Residential supply', 's.supply.sub': '409,000 units of stock, 79% in Abu Dhabi Region; ~71,000 more by 2030',
+        'c.stock': 'Emirate residential stock (’000 units)', 'c.stock.sub': '+2.9% p.a. 2022–H1 2026; projected +3.8% p.a. 2026–2030',
+        'c.stock.cap': 'Source: ADREC · excludes national housing pipeline · Al Dhafra excludes ~10,000 units in Al Dhannah City',
+        'c.own': 'Abu Dhabi Region: rent vs own', 'c.own.sub': 'Tenants occupy 69% of occupied homes; higher in investment zones',
+        'c.own.cap': 'Source: ADREC / Tawtheeq and utility occupancy · H1 2026',
+        'c.dist': 'Top 10 districts by stock, Abu Dhabi Region', 'c.dist.sub': '~209,000 units, 65% of regional stock; six districts hold more than half',
+        'th.district': 'District', 'th.apt': 'Apartments', 'th.villa': 'Villas / TH', 'th.total': 'Total',
+        'chip.iz': '~72,000 units',
+        'c.pipe': 'Abu Dhabi Region incremental supply', 'c.pipe.sub': '~67.5k units H2 2026–2030; development projects 77%, building permits 23%',
+        'c.pipe.cap': 'Source: ADREC-registered projects + active permits · 2028 peak ~21,800 units',
+        'c.future': 'Six districts drive 77% of additions', 'c.future.sub': 'H1 2026–2030; 75% of apartment additions from Saadiyat, Reem and Yas',
+        'i.s1': 'Nine major developers account for 76% of the AD Region development pipeline (Aldar, Modon, Bloom, Reportage, Radiant, SAAS, Ajyal Burtville, Sama Emirates, Burtville).',
+        'i.s2': '56% of villa additions come from Zayed City, Madinat Al Riyad, Al Hidayriyyat Island and Al Bahyah.',
+        'i.s3': 'Investment zones are expected to add ~62.5k units between H2 2026 and 2030, with growth accelerating after 2027.',
+        's.sales': '02 · Transactions and unit sales', 's.sales.sub': 'All transactions more than doubled; residential sales nearly tripled, led by off-plan and new districts',
+        'c.tx': 'All real-estate transaction value (AED bn)', 'c.tx.sub': 'H1 2026 AED 117 bn, of which sales AED 86 bn (74%) — the highest sales share in the series',
+        'c.tx.cap': 'Source: ADREC registrations · sales, mortgages, Musataha and other',
+        'c.buyer': 'Residential sales by buyer type (AED bn)', 'c.buyer.sub': 'Of ~AED 45 bn y-o-y growth: resident foreigners 50%, Emiratis 27%, non-residents 23%',
+        'c.buyer.cap': 'Companies classified by registration: UAE-registered as Emirati; foreign-registered as non-resident',
+        'c.offplan': 'Off-plan vs ready',
+        'i.op1': 'Off-plan AED 62.4 bn (89% of value / 82% of deals), more than 3× y-o-y.',
+        'i.op2': 'Off-plan apartments +220% y-o-y; 84% concentrated in Saadiyat, ADGM (Reem + Maryah), Yas and Fahid.',
+        'i.op3': 'Off-plan villas/TH +289% y-o-y; 65% of value from seven projects: Al Naseem, Nawayef West/East, Ramhan, Bashayer Villas, SHA Residences, Bayn.',
+        'i.op4': 'Ready AED 8.0 bn, +6% y-o-y (apartments +9%, villas +3%) — strongest H1 ready print in the series.',
+        'i.op5': 'Ready sales 61% cash / 39% mortgaged; ready mortgages AED 3.1 bn, +3% y-o-y.',
+        'c.nat': 'Foreign origin (top 10, alphabetical)', 'c.nat.sub': 'About 61–62% of FDI and resident-foreign value came from the top 10 nationalities in each category',
+        'th.nres': 'Non-resident (FDI)', 'th.res': 'Resident foreign',
+        'c.salesd': 'H1 2026 residential sales value by district', 'c.salesd.sub': 'Al Hidayriyyat leads at AED 19.0 bn (27%, 8× y-o-y); proven islands still 44%',
+        'c.salesd.cap': 'Four emerging districts — Ramhan, Fahid, Ghadeer Al Tayr, Zayed City — AED 10.1 bn (14%)',
+        'c.proj': 'Top 10 projects · 43% of the market', 'c.proj.sub': '~AED 30 bn; ten developers captured ~90% of off-plan primary sales (AED 51 bn)',
+        'c.price': 'Ready-market repeat sales index', 'c.price.sub': 'Same-unit price change, mix-adjusted · rebased to 100 in Q1 2020',
+        'c.apt.yoy': 'Apartments y-o-y', 'c.apt.n': 'Up from +15% a year earlier — accelerating',
+        'c.villa.yoy': 'Villas / TH y-o-y', 'c.villa.n': '72% above the 2020 base',
+        'c.rpt.sales': 'Repeat sales index', 'c.rpt.sales.n': 'Demand still outpaces supply in Abu Dhabi Region',
+        'c.rpt.lease': 'Repeat lease index', 'c.rpt.lease.n': 'Reported alongside the sales index',
+        'c.band': 'Investment-zone price bands (H1 2026)', 'c.band.sub': 'Demand rose in every band; value growth was upmarket',
+        'i.b1': 'Apartments >AED 28k/sqm expanded 3.3× and captured 46% of apartment value.',
+        'i.b2': 'Apartments <AED 17k/sqm still grew to nearly 3,000 units (+14%, AED 4.4 bn).',
+        'i.b3': 'Villas >AED 19k/sqm grew 4.6× y-o-y to half of villa value, from about a third a year earlier.',
+        'c.psqm': 'Average vs ceiling prices (AED ’000 / sqm, H1 2026)',
+        'c.psqm.sub': 'In most districts the max is 2–4× the mean — averages do not describe the full product range',
+        'th.avg': 'Apt avg', 'th.max': 'Apt max', 'th.vavg': 'Villa avg', 'th.vmax': 'Villa max',
+        'c.psqm.cap': 'Al Reem villa figures based on 29 deals: Reem Hills ~AED 9–12k, premium canal-front ~AED 16k',
+        's.leases': '03 · Residential leases', 's.leases.sub': 'Value up, volumes steady: high occupancy, limited new supply, more owner-occupation',
+        'c.lv': 'Residential lease value (AED bn)', 'c.lv.sub': 'H1 2026 emirate AED 9.3 bn, +8% y-o-y; Abu Dhabi Region 92%',
+        'c.lv.cap': 'Source: Tawtheeq active contracts · cut-off 30 June 2026',
+        'c.lvol': 'Active lease contracts (’000)', 'c.lvol.sub': '233k (201k in Abu Dhabi Region), +2% y-o-y',
+        'c.lvol.cap': 'Volume–value split: almost all value growth is price, not new contracts',
+        'c.lmix': 'Product mix (Abu Dhabi Region)',
+        'i.l1': 'Apartments are 74% of lease value and ~86% of contracts; ~87% of net new active leases since 2022.',
+        'i.l2': 'Villas are 14% of occupied units but 26% of lease value — more than 2× apartment rents.',
+        'i.l3': 'Investment-zone new leases: apartments +21%, villas +16%; all-zone new leases +17% / +9%.',
+        'c.ldist': 'Last-12-month lease value: 15 districts = 86%',
+        'c.ldist.cap': '58% of apartment lease value from Al Danah, Reem, Al Zahiyah, Al Raha, MBZ; 51% of villa value from Khalifa City, MBZ, Yas, Saadiyat, Al Muntazah',
+        's.com': '04 · Commercial real estate', 's.com.sub': 'Retail and offices: supply disciplined, demand faster, rents higher',
+        'c.retail': 'Retail GLA mix (’000 sqm)', 'c.retail.sub': 'H1 2026 ~3.85 mn sqm; street/community + large malls = 69%',
+        'c.retail.cap': 'H1 supply +5% annualised (vs +1.3% in all of 2025) · street +71k sqm, small-mid malls +39k sqm',
+        'c.office': 'Office GLA mix (’000 sqm)', 'c.office.sub': '~3.42 mn sqm, +0.3% vs end-2025; Prime has caught Grade A',
+        'c.office.cap': '11 business districts hold 84% of GLA · Al Danah, Reem, Al Nahyan, Al Maryah',
+        'c.rocc': 'Retail occupancy', 'c.rocc.n': 'Near a five-year high · large malls 94.2%, high-demand malls 95.6%',
+        'i.r1': 'New-lease index +9%; all contracts +6%.',
+        'c.oocc': 'Office occupancy', 'c.oocc.n': 'Prime 95% · Grade A 95% · Grade B effectively full for ~3.5 years',
+        'i.o1': 'New leases +13%, all contracts +9% — price pressure from new deals, not renewals.',
+        'i.o2': 'Disciplined supply: new stock is absorbed as it arrives.',
+        'c.rgloc': 'Retail GLA concentration', 'c.rgloc.sub': 'Nine districts above 150k sqm hold 2.35 mn sqm, 62%',
+        's.why': '05 · Abu Dhabi’s longer game', 's.why.sub': 'Chapter 5 of the report: institutions, capital and liveability behind the cycle',
+        'w.1t': 'Government-supervised escrow', 'w.1p': 'Off-plan buyer funds sit in supervised accounts and are released against verified construction progress. With ~90% of H1 value off-plan, this is the operating premise of the boom.',
+        'w.2t': '100% freehold in investment zones', 'w.2p': 'Foreign buyers may own units, land or buildings outright in designated zones. ADGM runs on common law: 179 asset managers and 263 funds in Q1 2026.',
+        'w.3t': '0% income tax · 9% corporate tax', 'w.3p': 'Full profit repatriation within an AML framework. AED is pegged to the USD; rates track the Fed. Sovereign ratings Fitch AA / Moody’s Aa2.',
+        'w.4t': '10-year Golden Visa', 'w.4p': 'Investors, entrepreneurs and specialised talent. Property of AED 2 million or more qualifies directly, with family sponsorship regardless of age, residency maintained while abroad.',
+        'w.5t': 'Capital of capital', 'w.5p': '~USD 1.8 tn in Abu Dhabi sovereign wealth funds. Asset managers announcing in ADGM in Q1 2026 represent over USD 4.4 tn AUM. Millionaire population ~+80% in a decade.',
+        'w.6t': 'Most liveable in MENA', 'w.6p': 'EIU Global Liveability Index #1 in MENA. IMD World Competitiveness 2026: 5th. 200+ nationalities, Louvre / NYU AD / Cleveland Clinic, and LIVEX in September 2026.',
+        'disc': 'This page is a reading of ADREC’s Abu Dhabi Real Estate Market Report H1 2026. It is not investment, legal or tax advice. Transactions are ADREC registrations and may differ from SPA/MOU dates; court-mandated transfers are excluded from unit-sales analysis; supply projections rest on currently registered projects and active permits and may change. Always check official rules.',
+        'cta.h': 'Map this half-year onto your budget and district shortlist',
+        'cta.p': 'Send a budget range and purpose (invest / live / residency). I’ll put together an ADREC-based shortlist with the risks written down — not a guaranteed yield.',
+        'cta.wx': 'WeChat', 'cta.invest': 'Invest in Abu Dhabi', 'cta.gv': 'Golden Visa FAQ',
+        'cta.calc': 'Buy-cost calculator', 'cta.old': '2025 annual interactive',
+        'chart.copied': 'Copied'
+      }
+    };
+
+    var STORAGE = 'site-lang';
+    var charts = [];
+    var GOLD = '#b8956a';
+    var GOLD_L = '#d4c4a8';
+    var GOLD_B = '#e8d5a3';
+    var MUTED = '#8a8278';
+    var FILL2 = 'rgba(108, 122, 112, 0.85)';
+    var FILL3 = 'rgba(92, 107, 122, 0.85)';
+
+    Chart.defaults.color = MUTED;
+    Chart.defaults.borderColor = 'rgba(184,149,106,0.16)';
+    Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif';
+    Chart.defaults.plugins.legend.labels.boxWidth = 10;
+    Chart.defaults.plugins.legend.labels.boxHeight = 10;
+    Chart.defaults.plugins.legend.labels.padding = 12;
+    Chart.defaults.plugins.tooltip.backgroundColor = '#0a0a0a';
+    Chart.defaults.plugins.tooltip.borderColor = 'rgba(184,149,106,0.28)';
+    Chart.defaults.plugins.tooltip.borderWidth = 1;
+    Chart.defaults.plugins.tooltip.titleColor = GOLD_B;
+    Chart.defaults.plugins.tooltip.bodyColor = '#ece6dc';
+
+    function t(lang, key) {
+      return (I18N[lang] && I18N[lang][key]) || (I18N.zh[key]) || key;
+    }
+
+    function applyLang(lang) {
+      document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+      document.title = t(lang, 'meta.title');
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (key) el.textContent = t(lang, key);
+      });
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        var on = btn.dataset.lang === lang;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
+    function getLang() { return localStorage.getItem(STORAGE) || 'zh'; }
+
+    function barHtml(name, value, max, suffix) {
+      var pct = Math.max(4, (value / max) * 100);
+      return '<div class="bar-row"><span class="bar-name">' + name + '</span>' +
+        '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="bar-val">' + suffix + '</span></div>';
+    }
+
+    function fillBars() {
+      var future = [
+        ['Al Saadiyat Island', 14631],
+        ['Al Reem Island', 13518],
+        ['Yas Island', 11815],
+        ['Zayed City', 4784],
+        ['Khalifa City', 3955],
+        ['Al Hidayriyyat', 3477]
+      ];
+      document.getElementById('futureBars').innerHTML = future.map(function (d) {
+        return barHtml(d[0], d[1], 14631, d[1].toLocaleString() + ' u');
+      }).join('');
+
+      var proj = [
+        ['Al Naseem', 4.3],
+        ['Nawayef West', 4.2],
+        ['Nawayef East', 4.1],
+        ['Four Seasons PR', 3.2],
+        ['The Row Saadiyat', 3.2],
+        ['Ramhan Island', 2.9],
+        ['Yas Riva Residences', 2.2],
+        ['Bashayer Residences', 2.0],
+        ['SHA Residences', 2.0],
+        ['Bashayer Villas', 2.0]
+      ];
+      document.getElementById('projBars').innerHTML = proj.map(function (d) {
+        return barHtml(d[0], d[1], 4.3, 'AED ' + d[1].toFixed(1) + 'B');
+      }).join('');
+
+      var leases = [
+        ['Al Danah', 2.48],
+        ['Al Reem Island', 1.58],
+        ['MBZ City', 1.49],
+        ['Khalifa City', 1.33],
+        ['Al Zahiyah', 1.30],
+        ['Al Raha', 1.20],
+        ['Al Bateen', 0.93],
+        ['Al Hisn', 0.78]
+      ];
+      document.getElementById('leaseBars').innerHTML = leases.map(function (d) {
+        return barHtml(d[0], d[1], 2.48, d[1].toFixed(2) + 'B');
+      }).join('');
+
+      var retail = [
+        ['Al Danah', 544],
+        ['Yas Island', 407],
+        ['Al Reem Island', 269],
+        ['MBZ City', 267],
+        ['Al Zahiyah', 227],
+        ['Industrial City', 188]
+      ];
+      document.getElementById('retailBars').innerHTML = retail.map(function (d) {
+        return barHtml(d[0], d[1], 544, d[1] + 'k');
+      }).join('');
+    }
+
+    function stacked(canvas, labels, datasets, stackedX) {
+      return new Chart(canvas, {
+        type: 'bar',
+        data: { labels: labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { position: 'bottom' } },
+          scales: {
+            x: { stacked: !!stackedX, grid: { display: false } },
+            y: { stacked: !!stackedX, grid: { color: 'rgba(184,149,106,0.08)' }, beginAtZero: true }
+          }
+        }
+      });
+    }
+
+    function doughnut(canvas, labels, data, colors) {
+      return new Chart(canvas, {
+        type: 'doughnut',
+        data: { labels: labels, datasets: [{ data: data, backgroundColor: colors, borderWidth: 0 }] },
+        options: {
+          responsive: true, maintainAspectRatio: false, cutout: '62%',
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+    }
+
+    function lineChart(canvas, labels, datasets) {
+      return new Chart(canvas, {
+        type: 'line',
+        data: { labels: labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { position: 'bottom' } },
+          scales: {
+            x: { grid: { display: false } },
+            y: { grid: { color: 'rgba(184,149,106,0.08)' }, beginAtZero: true }
+          }
+        }
+      });
+    }
+
+    function buildCharts(lang) {
+      charts.forEach(function (c) { c.destroy(); });
+      charts = [];
+
+      var ad = lang === 'en' ? 'Abu Dhabi Region' : '阿布扎比地区';
+      var ain = lang === 'en' ? 'Al Ain' : '艾因';
+      var dhafra = lang === 'en' ? 'Al Dhafra' : '扎夫拉';
+      var emirati = lang === 'en' ? 'Emirati' : '本国买家';
+      var resident = lang === 'en' ? 'Resident foreign' : '居留外籍';
+      var fdi = lang === 'en' ? 'Non-resident (FDI)' : '非居留外资';
+      var tenant = lang === 'en' ? 'Tenant-occupied' : '租住';
+      var owner = lang === 'en' ? 'Owner-occupied' : '自住';
+      var allZone = lang === 'en' ? 'All occupied' : '全部已入住';
+      var iz = lang === 'en' ? 'Investment zones' : '投资区';
+      var dev = lang === 'en' ? 'Development projects' : '开发项目';
+      var perm = lang === 'en' ? 'Building permits' : '建筑许可';
+      var others = lang === 'en' ? 'Others' : '其他';
+      var emerging = lang === 'en' ? 'Emerging 4 districts' : '新兴四城';
+
+      charts.push(stacked(document.getElementById('chartStock'),
+        ['2022','2023','2024','2025','H1 26','2026e','2027e','2028e','2029e','2030e'],
+        [
+          { label: ad, data: [291,300,308,318,324,330,342,364,378,392], backgroundColor: GOLD, stack: 's' },
+          { label: dhafra, data: [75,78,79,79,79,80,80,81,82,82], backgroundColor: FILL2, stack: 's' },
+          { label: ain, data: [6,6,6,6,6,6,6,6,6,6], backgroundColor: FILL3, stack: 's' }
+        ], true));
+
+      charts.push(stacked(document.getElementById('chartTenure'),
+        [allZone, iz],
+        [
+          { label: tenant, data: [69, 74], backgroundColor: GOLD },
+          { label: owner, data: [31, 26], backgroundColor: FILL2 }
+        ], true));
+
+      charts.push(stacked(document.getElementById('chartPipe'),
+        ['H2 2026','2027','2028','2029','2030'],
+        [
+          { label: dev, data: [3.7, 8.7, 14.4, 12.5, 12.8], backgroundColor: GOLD },
+          { label: perm, data: [2.7, 2.9, 7.4, 1.8, 0.6], backgroundColor: FILL2 }
+        ], true));
+
+      charts.push(lineChart(document.getElementById('chartTx'),
+        ['H1 22','H2 22','H1 23','H2 23','H1 24','H2 24','H1 25','H2 25','H1 26'],
+        [{
+          label: lang === 'en' ? 'All transactions (AED bn)' : '全类交易（十亿 AED）',
+          data: [27, 61, 46, 47, 40, 60, 55, 87, 117],
+          borderColor: GOLD, backgroundColor: 'rgba(184,149,106,0.12)',
+          fill: true, tension: 0.25, pointRadius: 3, pointBackgroundColor: GOLD_B
+        }, {
+          label: lang === 'en' ? 'Sales (AED bn)' : '买卖（十亿 AED）',
+          data: [10, 16, 23, 29, 21, 32, 33, 61, 86],
+          borderColor: FILL2, tension: 0.25, pointRadius: 3, pointBackgroundColor: '#9aa89e'
+        }]));
+
+      charts.push(stacked(document.getElementById('chartBuyer'),
+        ['H1 23','H2 23','H1 24','H2 24','H1 25','H2 25','H1 26'],
+        [
+          { label: emirati, data: [7.8, 14.0, 6.5, 9.8, 8.9, 19.8, 21.0], backgroundColor: FILL2 },
+          { label: resident, data: [6.3, 11.9, 8.8, 14.0, 13.1, 26.0, 35.6], backgroundColor: GOLD },
+          { label: fdi, data: [0.8, 2.2, 2.9, 4.0, 3.4, 4.7, 13.8], backgroundColor: GOLD_B }
+        ], true));
+
+      charts.push(doughnut(document.getElementById('chartSalesDist'),
+        ['Al Hidayriyyat 19.0', 'Saadiyat 13.3', 'ADGM 10.5', 'Yas 7.3', emerging + ' 10.1', others + ' 10.2'],
+        [19.0, 13.3, 10.5, 7.3, 10.1, 10.2],
+        [GOLD_B, GOLD, GOLD_L, FILL2, FILL3, 'rgba(138,130,120,0.45)']));
+
+      charts.push(lineChart(document.getElementById('chartLease'),
+        ['H1 22','H2 22','H1 23','H2 23','H1 24','H2 24','H1 25','H2 25','H1 26'],
+        [{
+          label: lang === 'en' ? 'Emirate lease value' : '全酋长国租赁年值',
+          data: [6.6, 7.3, 7.3, 7.7, 8.0, 8.4, 8.6, 9.1, 9.3],
+          borderColor: GOLD, backgroundColor: 'rgba(184,149,106,0.12)',
+          fill: true, tension: 0.25, pointRadius: 3, pointBackgroundColor: GOLD_B
+        }, {
+          label: ad,
+          data: [6.3, 6.6, 6.8, 7.1, 7.3, 7.7, 7.9, 8.4, 8.5],
+          borderColor: FILL2, tension: 0.25, pointRadius: 3
+        }]));
+
+      charts.push(lineChart(document.getElementById('chartLeaseVol'),
+        ['H1 22','H2 22','H1 23','H2 23','H1 24','H2 24','H1 25','H2 25','H1 26'],
+        [{
+          label: lang === 'en' ? 'Emirate active leases' : '全酋长国在租合同',
+          data: [192, 200, 207, 215, 223, 227, 229, 232, 233],
+          borderColor: GOLD, tension: 0.25, pointRadius: 3, pointBackgroundColor: GOLD_B
+        }, {
+          label: ad,
+          data: [164, 171, 178, 185, 192, 196, 198, 200, 201],
+          borderColor: FILL2, tension: 0.25, pointRadius: 3
+        }]));
+
+      var hd = lang === 'en' ? 'High-demand malls' : '高需求商场';
+      var lg = lang === 'en' ? 'Large malls' : '大型商场';
+      var sm = lang === 'en' ? 'Small–mid malls' : '中小商场';
+      var bb = lang === 'en' ? 'Big box' : '仓储零售';
+      var st = lang === 'en' ? 'Street / community' : '街铺 / 社区商场';
+      charts.push(stacked(document.getElementById('chartRetail'),
+        ['2022','2023','2024','2025','H1 26'],
+        [
+          { label: hd, data: [536,545,551,555,559], backgroundColor: GOLD_B },
+          { label: lg, data: [864,889,922,926,926], backgroundColor: GOLD },
+          { label: sm, data: [302,315,331,337,376], backgroundColor: GOLD_L },
+          { label: bb, data: [262,269,269,280,259], backgroundColor: FILL3 },
+          { label: st, data: [1534,1581,1633,1657,1728], backgroundColor: FILL2 }
+        ], true));
+
+      charts.push(doughnut(document.getElementById('chartOffice'),
+        ['Prime 0.48M', 'Grade A 0.48M', 'Grade B 0.98M', (lang === 'en' ? 'Unclassified' : '未分级') + ' 1.47M'],
+        [477, 484, 979, 1467],
+        [GOLD_B, GOLD, FILL2, FILL3]));
+    }
+
+    function setLang(lang) {
+      if (lang !== 'zh' && lang !== 'en') return;
+      localStorage.setItem(STORAGE, lang);
+      applyLang(lang);
+      buildCharts(lang);
+    }
+
+    fillBars();
+    applyLang(getLang());
+    buildCharts(getLang());
+
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+    });
+
+    var wechatBtn = document.getElementById('copy-wechat');
+    if (wechatBtn) {
+      wechatBtn.addEventListener('click', function () {
+        var id = wechatBtn.dataset.wechat;
+        var lang = getLang();
+        var labelSpan = wechatBtn.querySelector('[data-wechat-label]');
+        var idSpan = wechatBtn.querySelector('.btn-id');
+        navigator.clipboard.writeText(id).then(function () {
+          if (labelSpan) labelSpan.textContent = t(lang, 'chart.copied');
+          if (idSpan) idSpan.textContent = '';
+          setTimeout(function () {
+            if (labelSpan) labelSpan.textContent = t(lang, 'cta.wx');
+            if (idSpan) idSpan.textContent = id;
+          }, 1600);
+        }).catch(function () {});
+      });
+    }
+
+    var links = document.querySelectorAll('.sec-nav a');
+    var sections = Array.prototype.map.call(links, function (a) {
+      return document.querySelector(a.getAttribute('href'));
+    });
+    function onScroll() {
+      var y = window.scrollY + 120;
+      var idx = 0;
+      sections.forEach(function (sec, i) {
+        if (sec && sec.offsetTop <= y) idx = i;
+      });
+      links.forEach(function (a, i) { a.classList.toggle('active', i === idx); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+  </script>
+</body>
+</html>
