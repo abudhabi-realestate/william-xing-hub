@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>阿布扎比商业地产 H1 2026 分析报告 · William Xing</title>
+  <meta name="description" content="从 ADREC H1 2026 抽出的商业地产专篇：写字楼出租率 95%、零售 94%，供应极慢、新租快于续租。给投资决策用的解读，不是原报告译本。" />
+  <link rel="canonical" href="https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026-commercial.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100' rx='16'/><circle cx='50' cy='50' r='28' fill='none' stroke='%23c9a227' stroke-width='3'/><text y='58' x='50' text-anchor='middle' font-size='36' fill='%23e8d5a3'>W</text></svg>" />
+  <style>
+    :root {
+      --ink: #12151a;
+      --muted: #5c6470;
+      --line: #d9d4cb;
+      --paper: #f6f3ee;
+      --card: #fffdf9;
+      --navy: #152033;
+      --gold: #9a7b3c;
+      --gold-soft: #c4a35a;
+      --up: #1f6b4a;
+      --down: #a33b2c;
+      --warn: #8a5a12;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px 80px; }
+
+    header.hero {
+      background: var(--navy);
+      color: #f3eee4;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .kicker {
+      letter-spacing: 0.18em; text-transform: uppercase;
+      font-size: 12px; color: var(--gold-soft); margin: 0 0 14px;
+    }
+    h1 {
+      font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+      font-size: clamp(28px, 4vw, 44px); font-weight: 600;
+      line-height: 1.2; margin: 0 0 16px;
+    }
+    .lede { max-width: 780px; color: #d4cfc4; font-size: 16px; margin: 0; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 18px 28px;
+      margin-top: 28px; font-size: 13px; color: #b7b1a6;
+    }
+    .meta b { color: #f3eee4; font-weight: 600; }
+    .hero-nav { margin-top: 22px; font-size: 13px; }
+    .hero-nav a { color: var(--gold-soft); text-decoration: none; margin-right: 18px; }
+    .hero-nav a:hover { color: #f3eee4; }
+
+    nav.toc {
+      position: sticky; top: 0; z-index: 10;
+      background: #efeae2; border-bottom: 1px solid var(--line);
+    }
+    nav.toc ul {
+      list-style: none; margin: 0; padding: 10px 0;
+      display: flex; gap: 8px; overflow-x: auto;
+    }
+    nav.toc a {
+      text-decoration: none; white-space: nowrap;
+      font-size: 13px; padding: 6px 10px; color: var(--muted);
+    }
+    nav.toc a:hover { color: var(--navy); }
+
+    h2 {
+      font-family: Georgia, "Noto Serif SC", serif;
+      font-size: 26px; margin: 56px 0 8px; color: var(--navy);
+    }
+    h3 { font-size: 17px; margin: 28px 0 8px; color: var(--navy); }
+    p { margin: 0 0 14px; }
+    .sub { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+
+    .kpis {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 12px; margin: 28px 0;
+    }
+    .kpi {
+      background: var(--card); border: 1px solid var(--line);
+      padding: 16px 18px;
+    }
+    .kpi .label { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+    .kpi .val {
+      font-family: Georgia, serif;
+      font-size: 28px; line-height: 1.2; margin: 6px 0 2px;
+    }
+    .kpi .chg { font-size: 13px; font-weight: 600; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .card { background: var(--card); border: 1px solid var(--line); padding: 18px 20px; }
+    .card h3 { margin-top: 0; }
+
+    table {
+      width: 100%; border-collapse: collapse;
+      background: var(--card); font-size: 14px; margin: 8px 0 16px;
+    }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+    th {
+      background: var(--navy); color: #f3eee4;
+      font-weight: 600; font-size: 12px; letter-spacing: 0.03em;
+    }
+    td.r, th.r { text-align: right; }
+    tr:last-child td { border-bottom: 0; }
+
+    .bars { display: flex; flex-direction: column; gap: 10px; }
+    .bar-row {
+      display: grid; grid-template-columns: 150px 1fr 88px;
+      gap: 10px; align-items: center; font-size: 13px;
+    }
+    .track { background: #ece7de; height: 10px; }
+    .fill { height: 100%; background: var(--navy); }
+    .fill.gold { background: var(--gold); }
+
+    .callout {
+      border-left: 3px solid var(--gold);
+      background: #efe8d8; padding: 14px 18px; margin: 18px 0;
+    }
+    .callout strong { color: var(--navy); }
+    .risk { border-left-color: var(--down); background: #f6eae7; }
+    .watch { border-left-color: var(--warn); background: #f4ecdc; }
+
+    .theme {
+      display: grid; grid-template-columns: 48px 1fr; gap: 12px;
+      padding: 14px 0; border-bottom: 1px solid var(--line);
+    }
+    .theme:last-child { border-bottom: 0; }
+    .idx { font-family: Georgia, serif; color: var(--gold); font-size: 22px; line-height: 1.2; }
+
+    .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 22px; align-items: start; }
+    ul.clean { margin: 0; padding: 0 0 0 18px; }
+    ul.clean li { margin: 0 0 8px; }
+    .small { font-size: 13px; color: var(--muted); }
+    footer {
+      margin-top: 56px; padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 12px;
+    }
+    footer a { color: var(--navy); }
+
+    @media (max-width: 860px) {
+      .kpis, .grid-2, .grid-3, .split { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 4px; }
+      .wrap { padding: 0 16px 48px; }
+    }
+    @media print {
+      nav.toc { display: none; }
+      header.hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, table, .kpi { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Abu Dhabi Commercial Real Estate · H1 2026</p>
+      <h1>阿布扎比商业地产半年报分析</h1>
+      <p class="lede">
+        这是从 ADREC《H1 2026 市场报告》第四章抽出来的专篇，写给投资决策，不是原报告译本。
+        核心判断：阿布扎比商业地产的故事不是「卖爆了」，而是「几乎租满了」。
+        住宅半年成交创纪录；商业这一侧，官方给的是出租率、租金指数和供给纪律——房东有定价权，开发商没有放量空间。
+      </p>
+      <div class="meta">
+        <span>数据窗口 <b>截至 2026 年 6 月</b></span>
+        <span>覆盖 <b>办公 / 零售</b>（本报告无仓储专章）</span>
+        <span>主数据源 <b>ADREC</b></span>
+        <span>对照 <b>迪拜 H1 商业半年报</b></span>
+      </div>
+      <div class="hero-nav">
+        <a href="adrec-h1-2026.html">← 完整 H1 市场报告</a>
+        <a href="./">主页</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <div class="wrap">
+      <ul>
+        <li><a href="#verdict">结论</a></li>
+        <li><a href="#glance">总览</a></li>
+        <li><a href="#office">办公</a></li>
+        <li><a href="#retail">零售</a></li>
+        <li><a href="#vsdxb">对照迪拜</a></li>
+        <li><a href="#risks">风险</a></li>
+        <li><a href="#outlook">H2 展望</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="verdict">
+      <h2>一句话结论</h2>
+      <p class="sub">先读这一段，再决定要不要往下翻数字。</p>
+      <div class="callout">
+        <strong>H1 2026 的阿布扎比商业地产，是一个「供给几乎冻结、使用端把空间吃满、新租把价格往上标」的市场。</strong>
+        写字楼整体出租率 95%，Prime / Grade A 基本满租；零售维持中游 90%。
+        办公新租指数同比 +13%、全部合同 +9%；零售新租 +9%、全部合同 +6%。
+        差额本身就是信号：涨价来自新成交，不是坐地户续约。
+        全酋长国房地产交易 1,170 亿迪拉姆里，商业只是配角——买卖额约 70 亿、占销售的 8–9%。
+        所以不要把住宅那套「期房抢筹」直接套到阿布的商场和写字楼上。这里的稀缺，写在出租率里。
+      </div>
+
+      <div class="theme">
+        <div class="idx">01</div>
+        <div>
+          <strong>办公是「有纪律的满租」，不是「有管道的抢筹」。</strong>
+          存量约 342 万㎡，较 2025 年末只 +0.3%。Prime 已经追上 Grade A（各约 48 万㎡），顶部两档都 95% 出租。新库存随到随被消化。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">02</div>
+        <div>
+          <strong>零售在加速补货，但需求仍跑得更快。</strong>
+          H1 年化供应 +5%（2025 全年只有 1.3%），增量主要是街铺/社区商场和中小商场，不是再造一座超级 mall。出租率仍在五年高位附近，新租 +9%。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">03</div>
+        <div>
+          <strong>地理上就是一座 CBD：Al Danah。</strong>
+          达纳一地 80.6 万㎡办公（全市最大）、54.4 万㎡零售。里姆、玛丽亚、纳赫扬是第二圈。十一城占办公 GLA 的 84%。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">04</div>
+        <div>
+          <strong>和迪拜 H1 是镜像，不是同款。</strong>
+          迪拜是投资人抢下一轮 Grade A 期房、租户续约不扩租；阿布是房东收新租溢价、开发商几乎没有增量可卖。
+          同一国家、两种商业周期位置。
+        </div>
+      </div>
+    </section>
+
+    <section id="glance">
+      <h2>市场总览</h2>
+      <p class="sub">ADREC 商业章节的口径是供应、出租率、租金指数——不是分户销售笔数。读数前先换镜头。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">写字楼出租率</div>
+          <div class="val">95%</div>
+          <div class="chg up">Prime / Grade A 基本满租</div>
+        </div>
+        <div class="kpi">
+          <div class="label">零售出租率</div>
+          <div class="val">94%</div>
+          <div class="chg up">五年高位附近</div>
+        </div>
+        <div class="kpi">
+          <div class="label">办公新租指数</div>
+          <div class="val">+13%</div>
+          <div class="chg up">全部合同 +9% YoY</div>
+        </div>
+        <div class="kpi">
+          <div class="label">零售新租指数</div>
+          <div class="val">+9%</div>
+          <div class="chg up">全部合同 +6% YoY</div>
+        </div>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">零售存量 GLA</div>
+          <div class="val">385 万㎡</div>
+          <div class="chg">H1 年化 +5%</div>
+        </div>
+        <div class="kpi">
+          <div class="label">办公存量 GLA</div>
+          <div class="val">342 万㎡</div>
+          <div class="chg">较 2025 年末 +0.3%</div>
+        </div>
+        <div class="kpi">
+          <div class="label">商业占房地产销售</div>
+          <div class="val">~8–9%</div>
+          <div class="chg">约 AED 70 亿 / 销售 860 亿</div>
+        </div>
+        <div class="kpi">
+          <div class="label">住宅销售（对照）</div>
+          <div class="val">704 亿</div>
+          <div class="chg">占销售约 82%</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>板块</th>
+            <th class="r">存量</th>
+            <th class="r">供给变化</th>
+            <th class="r">出租率</th>
+            <th class="r">新租 YoY</th>
+            <th class="r">全部合同 YoY</th>
+            <th>结构要点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>办公</td>
+            <td class="r">3.42 百万㎡</td>
+            <td class="r">+0.3%</td>
+            <td class="r up">95%</td>
+            <td class="r up">+13%</td>
+            <td class="r up">+9%</td>
+            <td>Prime 追上 Grade A；未分级仍占 43%</td>
+          </tr>
+          <tr>
+            <td>零售</td>
+            <td class="r">3.85 百万㎡</td>
+            <td class="r">+5% 年化</td>
+            <td class="r up">94%</td>
+            <td class="r up">+9%</td>
+            <td class="r up">+6%</td>
+            <td>街铺+社区商场 45%；与大型 mall 合计 69%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small">供给变化：办公相对 2025 年末；零售为 H1 年化增速，对照 2025 全年 +1.3%。租金指数以 2020 Q1 = 100 的重复租赁口径。</p>
+
+      <h3>怎么读这张表</h3>
+      <div class="grid-2">
+        <div class="card">
+          <h3>新租快于续租，是房东市场的指纹</h3>
+          <p>办公 +13% vs +9%，零售 +9% vs +6%。如果涨价来自全体租户同步加租，两条线应贴在一起。现在是新租户、空出来再租的单元，把边际价格抬上去——在位租户还没完全跟价。</p>
+        </div>
+        <div class="card">
+          <h3>住宅喧哗，商业静音，并不矛盾</h3>
+          <p>H1 住宅销售 704 亿、期房 89%，那是投资区可分割产权的产品。办公和 mall 大量由机构持有、整体出租，不会出现在「单元销售」排行榜上。看商业，要看出租率和新租，不要看 1,170 亿里缺席了谁。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="office">
+      <h2>办公：顶部满了，管道几乎没了</h2>
+      <p class="sub">ADREC 的原话是：供给纪律支撑平衡，新库存随到随被消化。翻译一下——这边没有「下一轮 Grade A 期房」可抢。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">Prime</div>
+          <div class="val">48 万㎡</div>
+          <div class="chg">中位在租 ≥ AED 1,800/㎡</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Grade A</div>
+          <div class="val">48 万㎡</div>
+          <div class="chg">中位在租 ≥ AED 1,200/㎡</div>
+        </div>
+        <div class="kpi">
+          <div class="label">Grade B</div>
+          <div class="val">98 万㎡</div>
+          <div class="chg">近满租已约 3.5 年</div>
+        </div>
+        <div class="kpi">
+          <div class="label">未分级</div>
+          <div class="val">147 万㎡</div>
+          <div class="chg">占存量约 43%</div>
+        </div>
+      </div>
+
+      <p>
+        Prime 在本报告里第一次在体量上追上 Grade A。分级标准很硬：不仅看租金，还要求单宗在租 GLA ≥ 1,000㎡。
+        未分级部分只有供应数据、没有可靠的每平租金——页内不要拿全市均租去对标 Prime。
+      </p>
+
+      <h3>存量几乎不长</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th class="r">Prime</th>
+            <th class="r">Grade A</th>
+            <th class="r">Grade B</th>
+            <th class="r">未分级</th>
+            <th class="r">合计 ’000㎡</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2022</td><td class="r">471</td><td class="r">468</td><td class="r">948</td><td class="r">1,319</td><td class="r">3,206</td></tr>
+          <tr><td>2023</td><td class="r">474</td><td class="r">478</td><td class="r">963</td><td class="r">1,348</td><td class="r">3,263</td></tr>
+          <tr><td>2024</td><td class="r">477</td><td class="r">482</td><td class="r">970</td><td class="r">1,416</td><td class="r">3,344</td></tr>
+          <tr><td>2025</td><td class="r">477</td><td class="r">484</td><td class="r">977</td><td class="r">1,467</td><td class="r">3,406</td></tr>
+          <tr><td>H1 2026</td><td class="r">477</td><td class="r">484</td><td class="r">979</td><td class="r">1,467</td><td class="r">3,418</td></tr>
+        </tbody>
+      </table>
+      <p>
+        四年半，全市办公只多了约 21 万㎡。H1 增量主要进了 Prime（同比约 +2%）和未分级（约 +1%）。
+        Grade A 存量几乎冻结。这就是 Prime 能「追上」Grade A 的原因：不是 A 萎缩，是顶部分级在吸收仅有的新货。
+      </p>
+
+      <div class="split">
+        <div>
+          <h3>办公 GLA 高度集中</h3>
+          <div class="bars">
+            <div class="bar-row"><span>Al Danah</span><div class="track"><div class="fill" style="width:100%"></div></div><span>806k</span></div>
+            <div class="bar-row"><span>Al Reem Island</span><div class="track"><div class="fill" style="width:48%"></div></div><span>385k</span></div>
+            <div class="bar-row"><span>Al Nahyan</span><div class="track"><div class="fill" style="width:32%"></div></div><span>259k</span></div>
+            <div class="bar-row"><span>Al Maryah</span><div class="track"><div class="fill" style="width:30%"></div></div><span>239k</span></div>
+            <div class="bar-row"><span>Al Zahiyah</span><div class="track"><div class="fill" style="width:27%"></div></div><span>216k</span></div>
+            <div class="bar-row"><span>Al Bateen</span><div class="track"><div class="fill" style="width:25%"></div></div><span>202k</span></div>
+            <div class="bar-row"><span>Al Hisn</span><div class="track"><div class="fill" style="width:23%"></div></div><span>184k</span></div>
+            <div class="bar-row"><span>Al Manhal</span><div class="track"><div class="fill" style="width:20%"></div></div><span>158k</span></div>
+          </div>
+          <p class="small" style="margin-top:12px">十一城合计约 280 万㎡、占 84%。另有 Al Rawdah 155k、Al Muntazah 104k、Khalifa City 102k。</p>
+        </div>
+        <div class="card">
+          <h3>需求从哪来</h3>
+          <p>ADREC 把办公满租和 ADGM 放在同一张底图里：Q1 2026 自由区持牌 13,353、从业超过 4.7 万人，资管规模同比 +57%；当季宣布入驻的资管合计管理规模超过 4.4 万亿美元。</p>
+          <p>Al Maryah / Al Reem 是金融占用；Al Danah 是传统 CBD。两者都满，意味着「去次级区凑合」的弹性很小——租户要的是已验证的商务区，不是便宜空楼。</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>投资含义：优质办公的机会在「新供应」，不在「抄现存空置」。</strong>
+        ADREC 写得很直白：Prime 和 Grade A 有效满租，已经连续三年半，这本身就是给高端开发的信号。
+        反过来：如果你买的是未分级、非核心区的二手单元，95% 的全市出租率保护不了你——那 43% 未分级库存里，质量差很大。
+      </div>
+    </section>
+
+    <section id="retail">
+      <h2>零售：补的是街巷，不是又一座超级 mall</h2>
+      <p class="sub">总量 385 万㎡。真正的骨架是街铺和社区商场（173 万㎡，约 45%），大型 mall 其次。H1 加速的，也是这两头里偏「日常消费」的部分。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">街铺 / 社区商场</div>
+          <div class="val">173 万㎡</div>
+          <div class="chg">H1 新增约 +7.1 万㎡</div>
+        </div>
+        <div class="kpi">
+          <div class="label">大型商场</div>
+          <div class="val">93 万㎡</div>
+          <div class="chg">出租率 94.2%（去年 92.7%）</div>
+        </div>
+        <div class="kpi">
+          <div class="label">高需求商场</div>
+          <div class="val">56 万㎡</div>
+          <div class="chg">出租率 95.6% · 租金 2,652</div>
+        </div>
+        <div class="kpi">
+          <div class="label">中小商场</div>
+          <div class="val">38 万㎡</div>
+          <div class="chg">H1 新增约 +3.9 万㎡</div>
+        </div>
+      </div>
+
+      <h3>业态结构与租金（AED/㎡，H1 2026）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th class="r">GLA ’000㎡</th>
+            <th class="r">占总量</th>
+            <th class="r">平均租金</th>
+            <th>定义印象</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>街铺 &amp; 社区商场</td>
+            <td class="r">1,728</td>
+            <td class="r">45%</td>
+            <td class="r">1,184</td>
+            <td>日常消费骨架；2022 以来新 GLA 约 55% 走这里</td>
+          </tr>
+          <tr>
+            <td>大型商场</td>
+            <td class="r">926</td>
+            <td class="r">24%</td>
+            <td class="r">1,590</td>
+            <td>高店铺数、大体量；需求在向目的地业态集中</td>
+          </tr>
+          <tr>
+            <td>高需求商场</td>
+            <td class="r">559</td>
+            <td class="r">15%</td>
+            <td class="r">2,652</td>
+            <td>溢价租金 + 超大体量；全市最贵一层</td>
+          </tr>
+          <tr>
+            <td>中小商场</td>
+            <td class="r">376</td>
+            <td class="r">10%</td>
+            <td class="r">1,273</td>
+            <td>H1 放量的另一头</td>
+          </tr>
+          <tr>
+            <td>仓储式 / Big Box</td>
+            <td class="r">259</td>
+            <td class="r">7%</td>
+            <td class="r">2,436</td>
+            <td>多为业主自用；Tawtheeq 样本偏向小铺/餐饮，租金会偏高</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small">Big Box 的 2,436 不要直接当「仓储零售比高需求商场还贵」——脚注写了口径偏差。高需求商场 2,652 才是可比的目的地租金锚。</p>
+
+      <h3>供应节奏：2025 几乎停，H1 突然加快</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th class="r">高需求</th>
+            <th class="r">大型</th>
+            <th class="r">中小</th>
+            <th class="r">Big Box</th>
+            <th class="r">街铺/社区</th>
+            <th class="r">合计</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2022</td><td class="r">536</td><td class="r">864</td><td class="r">302</td><td class="r">262</td><td class="r">1,534</td><td class="r">3,497</td></tr>
+          <tr><td>2023</td><td class="r">545</td><td class="r">889</td><td class="r">315</td><td class="r">269</td><td class="r">1,581</td><td class="r">3,600</td></tr>
+          <tr><td>2024</td><td class="r">551</td><td class="r">922</td><td class="r">331</td><td class="r">269</td><td class="r">1,633</td><td class="r">3,707</td></tr>
+          <tr><td>2025</td><td class="r">555</td><td class="r">926</td><td class="r">337</td><td class="r">280</td><td class="r">1,657</td><td class="r">3,755</td></tr>
+          <tr><td>H1 2026</td><td class="r">559</td><td class="r">926</td><td class="r">376</td><td class="r">259</td><td class="r">1,728</td><td class="r">3,849</td></tr>
+        </tbody>
+      </table>
+      <p>
+        2025 全年只加了约 4.8 万㎡；H1 2026 半年就加了约 9.4 万㎡。
+        大型商场存量卡住（926 万不变），Big Box 还略减。加速的是可被社区消化的格式。
+        增量地理：亚斯岛、Zayed Port、Al Hisn、Bani Yas、Al Danah。
+      </p>
+
+      <div class="split">
+        <div>
+          <h3>零售 GLA 也是达纳 + 亚斯</h3>
+          <div class="bars">
+            <div class="bar-row"><span>Al Danah</span><div class="track"><div class="fill gold" style="width:100%"></div></div><span>544k</span></div>
+            <div class="bar-row"><span>Yas Island</span><div class="track"><div class="fill gold" style="width:75%"></div></div><span>407k</span></div>
+            <div class="bar-row"><span>Al Reem</span><div class="track"><div class="fill gold" style="width:49%"></div></div><span>269k</span></div>
+            <div class="bar-row"><span>MBZ City</span><div class="track"><div class="fill gold" style="width:49%"></div></div><span>267k</span></div>
+            <div class="bar-row"><span>Al Zahiyah</span><div class="track"><div class="fill gold" style="width:42%"></div></div><span>227k</span></div>
+            <div class="bar-row"><span>工业城</span><div class="track"><div class="fill gold" style="width:35%"></div></div><span>188k</span></div>
+          </div>
+          <p class="small" style="margin-top:12px">九个城区各超 15 万㎡，合计 235 万㎡、占 62%。Bani Yas 170k、Al Kasir 154k、Al Nahyan 151k。</p>
+        </div>
+        <div class="card">
+          <h3>需求在向「有组织的目的地」集中</h3>
+          <p>大型商场出租率从 92.7% 提到 94.2%，高需求商场 95.6%。新供应在加快，空置却没被砸开——ADREC 的解释是需求在向组织化、目的地级业态集中。</p>
+          <p>这对买家的分层很狠：社区底商吃的是人口和日常消费；目的地 mall 吃的是租金权力。两者的 1,184 和 2,652 不是同一个资产。</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>结构判断：</strong>零售不是「缺一座新超级 mall」，而是日常格式在补、目的地格式在满租涨租。
+        H1 供应年化 5% 已经比 2025 快一截。若下半年继续按这个速度铺街铺，而入住和消费跟不上，最先松的会是新社区底商，不是 Yas / Danah 的目的地租金。
+      </div>
+    </section>
+
+    <section id="vsdxb">
+      <h2>对照迪拜 H1：同一国家，两种周期位置</h2>
+      <p class="sub">迪拜半年报是 DLD 成交驱动；阿布这份是 ADREC 租赁/供应驱动。数字不能横加，位置可以横比。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>阿布扎比（ADREC）</th>
+            <th>迪拜（DLD / 市场报告）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>主角</td>
+            <td>出租率与新租价格指数</td>
+            <td>分户销售金额与期房</td>
+          </tr>
+          <tr>
+            <td>办公使用端</td>
+            <td>整体 95%，Prime / A 满租；新租 +13%</td>
+            <td>空置约 6.1%、优质 0.7%；但新签租赁量 -12%、额 -27%</td>
+          </tr>
+          <tr>
+            <td>办公资本端</td>
+            <td>供给 +0.3%，几乎无新管道可抢</td>
+            <td>期房办公金额超 130 亿，同比数倍；五个盘拿走七成期房额</td>
+          </tr>
+          <tr>
+            <td>零售使用端</td>
+            <td>94% 出租，新租 +9%，需求快于供应</td>
+            <td>空置降到 4.7%，但新签量额约 -27%</td>
+          </tr>
+          <tr>
+            <td>零售资本端</td>
+            <td>街铺/社区在补货；机构持有的 mall 很少进入单元销售</td>
+            <td>期房零售均价已高于办公；二手 Marina / Bay 在跌</td>
+          </tr>
+          <tr>
+            <td>仓储</td>
+            <td>本报告无专章，不能从 ADREC H1 直接定价</td>
+            <td>13 笔成交、近零空置，是「无货」不是「没人要」</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>不要把迪拜的买法搬过来</h3>
+          <p>在迪拜，H1 的超额收益在「能买到的下一轮 Grade A 期房」。在阿布，官方数据说的是：下一轮几乎还没上市，现有 Prime 已经满了。能买到的分户办公，要按楼、按区、按是否真在投资区去拆，不能用 95% 全市出租率当保险箱。</p>
+        </div>
+        <div class="card">
+          <h3>两城可以组成一对仓位</h3>
+          <p>迪拜给你的是管道和价格发现（也带集中度风险）；阿布给你的是使用密度和租金权力（也带「买不到机构资产」的流动性折价）。同一宏观垫板——ADGM AUM +57%、非油增长、主权评级——同时支撑两边，但产品形态不同。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="risks">
+      <h2>风险与误读</h2>
+      <p class="sub">最容易错的，是把住宅半年报的情绪，直接浇到商场和写字楼上。</p>
+
+      <div class="callout risk">
+        <strong>1. 全市出租率不是你那栋楼的出租率。</strong>
+        办公 43% 是未分级库存；零售 38% 在九城之外的长尾。Al Danah Prime 满租，推不出工业城或外围底商也满租。
+      </div>
+      <div class="callout risk">
+        <strong>2. 新租指数 ≠ 你的在租合同会立刻 +13%。</strong>
+        全部合同办公只 +9%、零售 +6%。在位租户的加租路径受合同、以及 2026 年 6 月住宅租金冻结的政策气氛影响——商业条款各约不同，但「政策开始管房租」本身会改变谈判预期。
+      </div>
+      <div class="callout risk">
+        <strong>3. 零售 H1 加速补货，可能是 2025 停工的补偿，也可能是转折。</strong>
+        半年加了约 9.4 万㎡，已经超过 2025 全年。如果 H2 继续按 5% 年化铺街铺，社区格式会先于目的地 mall 出现空置压力。
+      </div>
+      <div class="callout risk">
+        <strong>4. Big Box 租金 2,436 会骗人。</strong>
+        业态以业主自用为主，登记样本偏向小铺和餐饮。用它做仓储或超市回报测算，会系统性高估。
+      </div>
+      <div class="callout risk">
+        <strong>5. 商业几乎不在「单元销售」里，流动性是另一套。</strong>
+        住宅可以按套退出；核心 mall 和整栋办公的买家是机构。个人投资者看到 95% 出租率，买到的可能只是可分割的、非核心的、未分级单元。
+      </div>
+      <div class="callout watch">
+        <strong>6. 仓储不要假装知道。</strong>
+        ADREC H1 商业章没有工业/仓储专节。迪拜报告里出现的 KEZAD / ADAFZ 租金，是另一套数据，不能回填进本页当「阿布官方结论」。
+      </div>
+    </section>
+
+    <section id="outlook">
+      <h2>H2 2026：该延续的，和该盯住的</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>大概率延续</h3>
+          <ul class="clean">
+            <li><strong>Prime / Grade A 继续满租。</strong> 存量管道以季度计几乎不长，ADGM 和首都商务区的占用没有近端替代。</li>
+            <li><strong>新租仍会快于续租。</strong> 只要空出来的单元能被马上吃掉，房东在新成交上就有标价权。</li>
+            <li><strong>零售目的地业态的租金权力还在。</strong> 高需求商场 95.6%、2,652 AED/㎡ 这一档，短期很难被街铺增量打穿。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>必须盯住</h3>
+          <ul class="clean">
+            <li><strong>零售供给会不会把 5% 年化变成全年趋势。</strong> 这是本报告里唯一「加速」的供给数字。</li>
+            <li><strong>未分级办公有没有被悄悄消化，还是继续当统计分母。</strong> 全市 95% 很大程度靠头部业态。</li>
+            <li><strong>有没有真正的 Prime 新供应入市。</strong> 出现之前，资本端故事是「租满」；出现之后，才变成「管道」——那是迪拜已经在演的剧本。</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>按角色的操作含义</h3>
+      <table>
+        <thead>
+          <tr><th>角色</th><th>更站得住的位置</th><th>更危险的位置</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>长线资本 / 自用</td>
+            <td>Al Danah、Al Maryah、Al Reem 的 Prime / Grade A；能验证租约和物业分级的整栋或大板块</td>
+            <td>用 95% 全市出租率去给未分级、外围单元做估值</td>
+          </tr>
+          <tr>
+            <td>想「学迪拜买期房办公」的人</td>
+            <td>等真正进入投资区、可分割、且分级能对上 Prime/A 的新盘；现在官方数据说的是几乎没货</td>
+            <td>把住宅 89% 期房热度，当成商业也有同样的一级市场深度</td>
+          </tr>
+          <tr>
+            <td>零售买家</td>
+            <td>目的地 mall / 高需求档的租金权力；人口已经在场的社区日常格式</td>
+            <td>H1 刚放量的新街铺（还没有消费验证）；用 Big Box 样本租金去做回报</td>
+          </tr>
+          <tr>
+            <td>房东 / 在租业主</td>
+            <td>空出来再租，按新租指数重新定价；Grade B 已满租三年半，续约不必急着让步</td>
+            <td>假设住宅租金冻结会自动压低商业新租——ADGM 社区连住宅冻结都豁免，商务区更不是同一套规则</td>
+          </tr>
+          <tr>
+            <td>租户</td>
+            <td>Prime / A 尽快续约；大面积不要假设 2026 下半年会空出一截</td>
+            <td>把「商业销售只占 8–9%」读成需求弱；那是产权结构，不是空置</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>收束：</strong>
+        阿布扎比 H1 2026 的住宅市场在交易纪录里狂欢；商业市场在出租率里沉默地紧。
+        办公几乎不增加供应，顶部两档已经满了，新租把价格往上标。
+        零售仍是需求快于供应，但街铺开始加速——这是唯一需要在 H2 重新量一次的变量。
+        <strong>和迪拜对照着看：那边资本跑在租户前面，这边租户已经把空间占满、资本还买不到同类资产。</strong>
+        下一份有意义的阿布商业报告，要看的不是出租率能不能到 96%，而是有没有 Prime 级新供应真正登记入市。
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        数据来自 Abu Dhabi Real Estate Centre《Abu Dhabi Real Estate Market Report H1 2026》商业地产章节（零售供应/出租/租金，办公供应/出租/租金），以及全类销售结构中的商业占比。
+        迪拜对照来自同期 DLD 口径的商业半年报，统计对象不同，不能直接加总。
+      </p>
+      <p>
+        完整住宅+商业交互页：<a href="adrec-h1-2026.html">ADREC H1 2026 市场报告</a>
+        · 来源 <a href="https://www.adrec.gov.ae" target="_blank" rel="noopener">adrec.gov.ae</a>
+      </p>
+      <p>生成日期：2026-08-27 · 仅供研究参考，不构成投资建议。</p>
+    </footer>
+  </main>
+</body>
+</html>
