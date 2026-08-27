@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>迪拜商业地产 H1 2026 分析报告 · William Xing</title>
+  <meta name="description" content="迪拜办公/零售/仓储 H1 2026：销售创纪录、租赁更谨慎、仓储无货。期房主导、Q2 均价走平、供给墙在 2028 年之后。" />
+  <link rel="canonical" href="https://abudhabi-realestate.github.io/william-xing-hub/dubai-h1-2026-commercial.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100' rx='16'/><circle cx='50' cy='50' r='28' fill='none' stroke='%23c9a227' stroke-width='3'/><text y='58' x='50' text-anchor='middle' font-size='36' fill='%23e8d5a3'>W</text></svg>" />
+  <style>
+    :root {
+      --ink: #12151a;
+      --muted: #5c6470;
+      --line: #d9d4cb;
+      --paper: #f6f3ee;
+      --card: #fffdf9;
+      --navy: #152033;
+      --navy-2: #1d2c44;
+      --gold: #9a7b3c;
+      --gold-soft: #c4a35a;
+      --up: #1f6b4a;
+      --down: #a33b2c;
+      --warn: #8a5a12;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px 80px; }
+
+    header.hero {
+      background: var(--navy);
+      color: #f3eee4;
+      padding: 56px 0 48px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .kicker {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--gold-soft);
+      margin: 0 0 14px;
+    }
+    h1 {
+      font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+    .lede { max-width: 760px; color: #d4cfc4; font-size: 16px; margin: 0; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 18px 28px;
+      margin-top: 28px; font-size: 13px; color: #b7b1a6;
+    }
+    .meta b { color: #f3eee4; font-weight: 600; }
+
+    nav.toc {
+      position: sticky; top: 0; z-index: 10;
+      background: #efeae2;
+      border-bottom: 1px solid var(--line);
+    }
+    nav.toc ul {
+      list-style: none; margin: 0; padding: 10px 0;
+      display: flex; gap: 8px; overflow-x: auto;
+    }
+    nav.toc a {
+      text-decoration: none; white-space: nowrap;
+      font-size: 13px; padding: 6px 10px; color: var(--muted);
+    }
+    nav.toc a:hover { color: var(--navy); }
+
+    h2 {
+      font-family: Georgia, "Noto Serif SC", serif;
+      font-size: 26px; margin: 56px 0 8px; color: var(--navy);
+    }
+    h3 {
+      font-size: 17px; margin: 28px 0 8px; color: var(--navy);
+    }
+    p { margin: 0 0 14px; }
+    .sub { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 16px 18px;
+    }
+    .kpi .label { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+    .kpi .val {
+      font-family: Georgia, serif;
+      font-size: 28px; line-height: 1.2; margin: 6px 0 2px;
+    }
+    .kpi .chg { font-size: 13px; font-weight: 600; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .flat { color: var(--warn); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 18px 20px;
+    }
+    .card h3 { margin-top: 0; }
+    .num { font-family: Georgia, serif; }
+
+    table {
+      width: 100%; border-collapse: collapse;
+      background: var(--card); font-size: 14px;
+    }
+    th, td {
+      text-align: left; padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      background: var(--navy); color: #f3eee4;
+      font-weight: 600; font-size: 12px; letter-spacing: 0.03em;
+    }
+    td.r, th.r { text-align: right; }
+    tr:last-child td { border-bottom: 0; }
+
+    .bars { display: flex; flex-direction: column; gap: 10px; }
+    .bar-row { display: grid; grid-template-columns: 140px 1fr 90px; gap: 10px; align-items: center; font-size: 13px; }
+    .track { background: #ece7de; height: 10px; position: relative; }
+    .fill { height: 100%; background: var(--navy); }
+    .fill.gold { background: var(--gold); }
+    .fill.alt { background: #4a6284; }
+
+    .callout {
+      border-left: 3px solid var(--gold);
+      background: #efe8d8;
+      padding: 14px 18px;
+      margin: 18px 0;
+    }
+    .callout strong { color: var(--navy); }
+    .risk {
+      border-left-color: var(--down);
+      background: #f6eae7;
+    }
+    .watch {
+      border-left-color: var(--warn);
+      background: #f4ecdc;
+    }
+
+    .theme {
+      display: grid; grid-template-columns: 48px 1fr; gap: 12px;
+      padding: 14px 0; border-bottom: 1px solid var(--line);
+    }
+    .theme:last-child { border-bottom: 0; }
+    .idx {
+      font-family: Georgia, serif; color: var(--gold);
+      font-size: 22px; line-height: 1.2;
+    }
+
+    .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 22px; align-items: start; }
+    ul.clean { margin: 0; padding: 0 0 0 18px; }
+    ul.clean li { margin: 0 0 8px; }
+    .small { font-size: 13px; color: var(--muted); }
+    .hero-nav { margin-top: 22px; font-size: 13px; }
+    .hero-nav a { color: var(--gold-soft); text-decoration: none; margin-right: 18px; }
+    .hero-nav a:hover { color: #f3eee4; }
+    footer {
+      margin-top: 56px; padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 12px;
+    }
+    footer a { color: var(--navy); }
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      font-size: 12px; color: var(--muted); margin: 0 0 12px;
+    }
+    .swatch {
+      display: inline-block; width: 10px; height: 10px;
+      margin-right: 6px; vertical-align: -1px;
+    }
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin: 4px 0 8px;
+    }
+    .month-cell { text-align: center; font-size: 12px; color: var(--muted); }
+    .pair {
+      height: 150px;
+      display: flex; align-items: flex-end; justify-content: center; gap: 4px;
+    }
+    .pair i {
+      display: block; width: 16px;
+      background: #c5bba8;
+      font-style: normal;
+    }
+    .pair i.now { background: var(--navy); }
+    .pipe {
+      display: grid;
+      grid-template-columns: 52px 1fr 88px;
+      gap: 10px; align-items: center;
+      font-size: 13px; margin: 7px 0;
+    }
+    .pipe .track { height: 12px; }
+
+    @media (max-width: 860px) {
+      .kpis, .grid-2, .grid-3, .split { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 4px; }
+      .wrap { padding: 0 16px 48px; }
+    }
+    @media print {
+      nav.toc { display: none; }
+      header.hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card, table, .kpi { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Dubai Commercial Real Estate · H1 2026</p>
+      <h1>迪拜商业地产半年报分析</h1>
+      <p class="lede">
+        这是一份写给投资决策用的解读。
+        核心判断：H1 2026 的爆发力来自期房对优质（Grade A）办公稀缺的提前下注；
+        租户端已经更谨慎。销售火热、租赁走弱、仓储无货，是同一套供需结构的三个面。
+      </p>
+      <div class="meta">
+        <span>数据窗口 <b>2026年1–6月</b> vs H1 2025</span>
+        <span>覆盖 <b>办公 / 零售 / 仓储</b></span>
+        <span>主数据源 <b>DLD 交易记录</b></span>
+      </div>
+      <div class="hero-nav">
+        <a href="adrec-h1-2026-commercial.html">对照 · 阿布扎比商业专篇</a>
+        <a href="./">主页</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <div class="wrap">
+      <ul>
+        <li><a href="#verdict">结论</a></li>
+        <li><a href="#glance">总览</a></li>
+        <li><a href="#office">办公</a></li>
+        <li><a href="#pipeline">供给</a></li>
+        <li><a href="#retail">零售</a></li>
+        <li><a href="#wh">仓储</a></li>
+        <li><a href="#geo">地缘与宏观</a></li>
+        <li><a href="#risks">风险</a></li>
+        <li><a href="#outlook">H2 展望</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="verdict">
+      <h2>一句话结论</h2>
+      <p class="sub">先读这一段，再决定要不要往下翻数字。</p>
+      <div class="callout">
+        <strong>H1 2026 是“投资人抢未来供给、租户守现有空间”的半年。</strong>
+        全市商业销售 3,437 笔、196 亿迪拉姆，量增 42%、额增 188%。
+        但新签租赁全面回落，续租才是租赁市场的支柱。
+        这意味着资本在给 3–5 年后的 Grade A 定价，而实际使用端尚未同步扩张。
+        只要供给缺口还在，价格就有支撑；一旦租赁疲软持续到资本化率重估，现房价和期房价都会先被打回。
+      </div>
+
+      <div class="theme">
+        <div class="idx">01</div>
+        <div>
+          <strong>Grade A 稀缺正在重定价核心走廊。</strong>
+          Business Bay 期房办公从 3,105 涨到 5,025 AED/平方英尺（+62%）；
+          DIFC 租金自 2023 年起累计上涨 41%，供给管道基本枯竭。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">02</div>
+        <div>
+          <strong>销售与租赁已经分叉。</strong>
+          新签办公租赁量 -12%、零售新签 -27%；续租稳住甚至增长。
+          租户在“续约不扩租”，投资人在“买下一轮库存”。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">03</div>
+        <div>
+          <strong>仓储不是弱板块，是无货可卖。</strong>
+          成交从 17 笔降到 13 笔、金额腰斩，但均价仍涨到 524 AED/平方英尺。
+          核心工业区空置率接近零，溢出需求去了北酋长国，且只推高真正缺货的片区。
+        </div>
+      </div>
+      <div class="theme">
+        <div class="idx">04</div>
+        <div>
+          <strong>地缘冲击降温了节奏，没有打断趋势。</strong>
+          办公成交在 3 月和 5 月两次塌量（266 / 244 笔），4 月被高价期房拉回。
+          Q2 全市均价却走平在 2,199 AED/ft²，并没有跟成交量一起掉。
+          阿联酋 Q1 GDP 仍增 3%，非油经济 +4.8%。
+        </div>
+      </div>
+    </section>
+
+    <section id="glance">
+      <h2>市场总览</h2>
+      <p class="sub">办公和零售把市场拉起来；仓储成交下滑，读数要反过来看。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">商业销售笔数</div>
+          <div class="val">3,437</div>
+          <div class="chg up">▲ 42% YoY</div>
+        </div>
+        <div class="kpi">
+          <div class="label">商业销售金额</div>
+          <div class="val">196 亿</div>
+          <div class="chg up">▲ 188% · AED</div>
+        </div>
+        <div class="kpi">
+          <div class="label">期房占比（量）</div>
+          <div class="val">67%</div>
+          <div class="chg">H1 26 成交结构</div>
+        </div>
+        <div class="kpi">
+          <div class="label">对照基数 H1 25</div>
+          <div class="val">2,423</div>
+          <div class="chg">金额 68.1 亿 AED</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>板块</th>
+            <th class="r">H1 25 笔数</th>
+            <th class="r">H1 26 笔数</th>
+            <th class="r">量变</th>
+            <th class="r">H1 26 金额</th>
+            <th class="r">额变</th>
+            <th class="r">均价 AED/ft²</th>
+            <th class="r">价变</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>办公</td>
+            <td class="r">1,860</td>
+            <td class="r">2,571</td>
+            <td class="r up">+38.2%</td>
+            <td class="r">158 亿</td>
+            <td class="r up">+199.2%</td>
+            <td class="r">3,202</td>
+            <td class="r up">+85.4%</td>
+          </tr>
+          <tr>
+            <td>零售</td>
+            <td class="r">546</td>
+            <td class="r">853</td>
+            <td class="r up">+56.2%</td>
+            <td class="r">37.1 亿</td>
+            <td class="r up">+174.8%</td>
+            <td class="r">3,486</td>
+            <td class="r up">+54.3%</td>
+          </tr>
+          <tr>
+            <td>仓储</td>
+            <td class="r">17</td>
+            <td class="r">13</td>
+            <td class="r down">-23.5%</td>
+            <td class="r">0.943 亿</td>
+            <td class="r down">-47.7%</td>
+            <td class="r">524</td>
+            <td class="r up">+3.1%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small">金额口径：办公 AED 15.8B、零售 AED 3.71B、仓储 AED 94.3M。全市合计约 AED 19.6B。</p>
+
+      <h3>怎么读这张表</h3>
+      <div class="grid-2">
+        <div class="card">
+          <h3>量价不同步，说明结构变了</h3>
+          <p>办公量只增 38%，金额却翻了近 3 倍；单笔均额从 286 万拉到 615 万（+115%）。这不是同一批资产普涨，而是成交重心从二手旧库存切到高价期房 Grade A。</p>
+        </div>
+        <div class="card">
+          <h3>零售均价已经超过办公</h3>
+          <p>零售 3,486 vs 办公 3,202。驱动不是社区底商，而是品牌化、配套型新盘（Binghatti City 7,483、Sobha Central 6,668）。二手零售不但没跟上，部分片区还在跌。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="office">
+      <h2>办公：主战场，也是集中度最高的地方</h2>
+      <p class="sub">H1 史上最强上半年。真正的故事不是“买得更多”，而是“几乎只买下一轮供给”。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">期房办公成交</div>
+          <div class="val">1,701</div>
+          <div class="chg up">▲ 367% · 去年 364</div>
+        </div>
+        <div class="kpi">
+          <div class="label">二手办公成交</div>
+          <div class="val">870</div>
+          <div class="chg down">▼ 42% · 去年 1,496</div>
+        </div>
+        <div class="kpi">
+          <div class="label">期房均价</div>
+          <div class="val">3,826</div>
+          <div class="chg up">▲ 110% AED/ft²</div>
+        </div>
+        <div class="kpi">
+          <div class="label">单笔均额</div>
+          <div class="val">615 万</div>
+          <div class="chg up">▲ 115% · 去年 286 万</div>
+        </div>
+      </div>
+
+      <p>
+        期房办公金额超过 130 亿迪拉姆，占办公销售金额的 83.3%，比 2019–2025 全部期房办公成交加总还高。
+        单笔均额从 286 万拉到 615 万（+115%）——量增 38%，额增近 2 倍，说明多出来的不是更多小户，而是更高价的票。
+        二手量腰斩，但二手价格仍在涨——这是典型的“愿意卖的人不卖、愿意买的人去抢新盘”。
+      </p>
+
+      <h3>月度节奏：1–2 月放量，3 月和 5 月塌，4 月被大单救回来</h3>
+      <p>
+        去年上半年办公成交几乎一条平线（每月 273–326 笔、约 8–10 亿）。
+        今年 1 月 679 笔 / 33 亿、2 月 621 笔 / 34 亿，然后 3 月掉到 266 笔 / 16 亿。
+        4 月金额重新回到 33 亿，但笔数只有 428——更少的交易、同样量级的钱，对应的正是 4 月期房占比冲到全年峰值 75%。
+        5 月笔数是上半年最低（244），6 月金额也只有 17 亿。
+        冲突打断的是节奏，不是价格带：每个月的成交额仍高于去年同期。
+      </p>
+      <div class="legend">
+        <span><i class="swatch" style="background:#c5bba8"></i>H1 2025</span>
+        <span><i class="swatch" style="background:#152033"></i>H1 2026</span>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>办公成交笔数</h3>
+          <div class="month-grid">
+            <div class="month-cell"><div class="pair"><i style="height:40%"></i><i class="now" style="height:100%"></i></div>1月<br>273 / 679</div>
+            <div class="month-cell"><div class="pair"><i style="height:47%"></i><i class="now" style="height:91%"></i></div>2月<br>317 / 621</div>
+            <div class="month-cell"><div class="pair"><i style="height:45%"></i><i class="now" style="height:39%"></i></div>3月<br>305 / 266</div>
+            <div class="month-cell"><div class="pair"><i style="height:47%"></i><i class="now" style="height:63%"></i></div>4月<br>318 / 428</div>
+            <div class="month-cell"><div class="pair"><i style="height:48%"></i><i class="now" style="height:36%"></i></div>5月<br>325 / 244</div>
+            <div class="month-cell"><div class="pair"><i style="height:48%"></i><i class="now" style="height:49%"></i></div>6月<br>326 / 334</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>办公成交金额（亿 AED）</h3>
+          <div class="month-grid">
+            <div class="month-cell"><div class="pair"><i style="height:24%"></i><i class="now" style="height:97%"></i></div>1月<br>8 / 33</div>
+            <div class="month-cell"><div class="pair"><i style="height:26%"></i><i class="now" style="height:100%"></i></div>2月<br>9 / 34</div>
+            <div class="month-cell"><div class="pair"><i style="height:29%"></i><i class="now" style="height:47%"></i></div>3月<br>10 / 16</div>
+            <div class="month-cell"><div class="pair"><i style="height:24%"></i><i class="now" style="height:97%"></i></div>4月<br>8 / 33</div>
+            <div class="month-cell"><div class="pair"><i style="height:29%"></i><i class="now" style="height:74%"></i></div>5月<br>10 / 25</div>
+            <div class="month-cell"><div class="pair"><i style="height:26%"></i><i class="now" style="height:50%"></i></div>6月<br>9 / 17</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>期房不是“渐渐变多”，是每个月都占过半</h3>
+      <p>
+        2025 年同期，期房办公只占每月成交的 5%–26%，现房才是主体。
+        2026 年这个结构翻过来：期房每月占 57%–75%，4 月见顶 75%。
+        跳得最猛的是 5 月（6% → 71%）和 6 月（5% → 67%）。现房成交从 3 月起明显低于 1–2 月——能马上入住的库存，并没有分享这轮狂欢。
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>月份</th>
+            <th class="r">2025 期房占比</th>
+            <th class="r">2026 期房占比</th>
+            <th class="r">变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1月</td><td class="r">7%</td><td class="r">61%</td><td class="r up">+54pt</td></tr>
+          <tr><td>2月</td><td class="r">20%</td><td class="r">57%</td><td class="r up">+37pt</td></tr>
+          <tr><td>3月</td><td class="r">26%</td><td class="r">68%</td><td class="r up">+42pt</td></tr>
+          <tr><td>4月</td><td class="r">25%</td><td class="r">75%</td><td class="r up">+50pt</td></tr>
+          <tr><td>5月</td><td class="r">6%</td><td class="r">71%</td><td class="r up">+65pt</td></tr>
+          <tr><td>6月</td><td class="r">5%</td><td class="r">67%</td><td class="r up">+62pt</td></tr>
+        </tbody>
+      </table>
+
+      <div class="split">
+        <div>
+          <h3>期房看新盘，现房看老区：两套市场</h3>
+          <p class="small">全市合计：Business Bay 814、Al Sufouh 1 498、JLT 333、Maritime City 88、Barsha Heights 82。</p>
+          <div class="bars">
+            <div class="bar-row"><span>Al Sufouh 1 期房</span><div class="track"><div class="fill" style="width:73%"></div></div><span>498 · 15 亿</span></div>
+            <div class="bar-row"><span>Business Bay 期房</span><div class="track"><div class="fill" style="width:100%"></div></div><span>476 · 68 亿</span></div>
+            <div class="bar-row"><span>Maritime City 期房</span><div class="track"><div class="fill" style="width:18%"></div></div><span>31 Above</span></div>
+            <div class="bar-row"><span>Trade Center 2 期房</span><div class="track"><div class="fill" style="width:16%"></div></div><span>票面最高</span></div>
+            <div class="bar-row"><span>Majan 期房</span><div class="track"><div class="fill" style="width:12%"></div></div><span>新走廊</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>现房仍集中在成熟商务区</h3>
+          <p>Business Bay 与 JLT 合计约占现房成交量的 73%、金额的 75%。Barsha Heights 和 Dubai Silicon Oasis 笔数接近，但金额明显更低——现房市场按支付能力分层，便宜库存也有成交，只是带不动均价。</p>
+          <p>期房则是项目驱动：Al Sufouh First 的量几乎就是 Danube 的 Shahrukhz；Business Bay 的 68 亿靠 HQ by Rove、Lumena、Enara、Lumena Alta 一串开盘；Maritime City 基本是 Beyond 的 31 Above；Trade Center Second 量不是最大，但单笔均额最高。</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h3>全市均价会骗人：成交均价 3,202 ≠ 时序均价 2,199</h3>
+        <p>H1 成交均价 3,202 AED/ft² 把 Business Bay / DIFC / Downtown 的高价期房和 Deira、Bur Dubai 搅在一起，且被新盘结构拉高。另一条全市销售均价时序在 2026 年 6 月是 <strong>2,199 AED/ft²</strong>：相对 2025 年 6 月的 1,832 涨了 20.1%，相对 2020 年 9 月低点 807 已经涨了约 172%。</p>
+        <p>更关键的是斜率：2026 Q1 均价涨了 7.3%（从 2025 年 12 月的 2,050 上来），Q2 几乎走平（3 月 2,199 → 6 月 2,199，环比 +0.02%）。量在塌、价在横——这是“活动降温、价格带还没破”的直接证据，也说明再用全年成交均价外推 H2 涨幅会高估。</p>
+        <table>
+          <thead>
+            <tr><th>时点</th><th class="r">全市销售均价 AED/ft²</th><th>读法</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2018 年 3 月</td><td class="r">966</td><td>上一轮高位附近</td></tr>
+            <tr><td>2020 年 9 月</td><td class="r">807</td><td>本轮低点</td></tr>
+            <tr><td>2025 年 6 月</td><td class="r">1,832</td><td>同比对照</td></tr>
+            <tr><td>2025 年 12 月</td><td class="r">2,050</td><td>进入 2026 前的台阶</td></tr>
+            <tr><td>2026 年 3 月 / 6 月</td><td class="r">2,199</td><td>Q2 走平，同比 +20.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>子市场定价：已建成 Grade A vs 新晋走廊</h3>
+      <table>
+        <thead>
+          <tr><th>子市场</th><th>类型</th><th class="r">H1 25</th><th class="r">H1 26</th><th class="r">变化</th><th>驱动</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Business Bay</td><td>既有</td><td class="r">3,105</td><td class="r">5,025</td><td class="r up">+61.8%</td><td>核心稀缺 + 旗舰盘</td></tr>
+          <tr><td>JLT</td><td>既有</td><td class="r">1,215</td><td class="r">3,293</td><td class="r up">+171.0%</td><td>新盘重定价，非同质普涨</td></tr>
+          <tr><td>Barsha Heights</td><td>既有</td><td class="r">1,624</td><td class="r">2,237</td><td class="r up">+37.8%</td><td>次核心补涨</td></tr>
+          <tr><td>JVC</td><td>既有</td><td class="r">1,175</td><td class="r">1,966</td><td class="r up">+67.3%</td><td>社区商务带</td></tr>
+          <tr><td>Motor City</td><td>既有</td><td class="r">1,814</td><td class="r">1,884</td><td class="r up">+3.9%</td><td>H1 走平；O1NE District 将引入新供给</td></tr>
+          <tr><td>Trade Center 1</td><td>新兴</td><td class="r">—</td><td class="r">5,147</td><td class="r">新进图</td><td>进入顶级定价带</td></tr>
+          <tr><td>Trade Center 2 (SZR)</td><td>新兴</td><td class="r">—</td><td class="r">4,902</td><td class="r">新进图</td><td>SZR 永久产权 + 改造</td></tr>
+          <tr><td>Al Sufouh</td><td>新兴</td><td class="r">—</td><td class="r">4,279</td><td class="r">新进图</td><td>Danube Shahrukhz</td></tr>
+          <tr><td>Maritime City</td><td>新兴</td><td class="r">—</td><td class="r">3,684</td><td class="r">新进图</td><td>31 Above</td></tr>
+          <tr><td>Meydan Horizon</td><td>新兴</td><td class="r">—</td><td class="r">3,162</td><td class="r">新进图</td><td>新走廊放量</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>Sheikh Zayed Road 正在重新成为 Grade A 走廊。</strong>
+        永久产权转换 + 老塔改造（AHS Tower 是样本）打开了新的价格带。
+        AHS 6 月以 11 亿迪拉姆收购香格里拉酒店，并放进约 500 亿年底管线，本质是在赌这条走廊“供给结构性受限”。子市场数据支持这个判断。
+      </div>
+
+      <h3>集中度风险：五个盘拿走七成期房金额</h3>
+      <p>
+        仅 5 个项目贡献 856 笔、逾 94 亿迪拉姆，占 H1 期房办公金额的 <strong>71.7%</strong>。
+        Business Bay 一地 476 笔、68 亿，约占期房金额 52%。
+      </p>
+      <table>
+        <thead>
+          <tr><th>项目</th><th>开发商</th><th>子市场</th><th>角色</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lumena / Lumena Alta</td><td>Omniyat</td><td>Business Bay</td><td>金额主力之一</td></tr>
+          <tr><td>HQ by Rove</td><td>Rove</td><td>Business Bay</td><td>与 Lumena、Enara 共同撑起 68 亿</td></tr>
+          <tr><td>Enara</td><td>—</td><td>Business Bay</td><td>同批开盘</td></tr>
+          <tr><td>AHS Tower</td><td>AHS Properties</td><td>Sheikh Zayed Road</td><td>SZR 改造样本</td></tr>
+          <tr><td>Shahrukhz</td><td>Danube</td><td>Al Sufouh First</td><td>该区 498 笔 / 15 亿的主引擎</td></tr>
+          <tr><td>31 Above</td><td>Beyond</td><td>Dubai Maritime City</td><td>该区期房几乎由它贡献</td></tr>
+        </tbody>
+      </table>
+      <p class="small">分析含义：H1 的“市场繁荣”高度依赖旗舰开盘，不是广泛的二手流动性。后续成交会跟着新盘节奏走，而不是跟着全市租户需求走。</p>
+
+      <h3>DIFC：交易量看起来少，租金才是信号</h3>
+      <div class="grid-2">
+        <div class="card">
+          <p>DIFC 71.7 万平方米办公存量绝大多数由开发商/机构持有并出租，不进入公开分户销售。真正能转手的是 Burj Daman、Park Towers、Emirates Financial Towers、Liberty House 等分户产权楼。</p>
+          <p>租金更干净：2009–2021 年在 183–244 AED/ft²/年横盘 12 年；2022 年起重定价 41%，2025 年 12 月见 395，2026 Q1 回落到 392——平台整理，不是反转。</p>
+        </div>
+        <div class="card">
+          <ul class="clean">
+            <li>注册公司 10,018 家（+30% YoY）</li>
+            <li>受监管金融机构 1,134（+16%）</li>
+            <li>AI / FinTech 1,933（+39%）</li>
+            <li>从业 50,200 人，2025 年新增 4,122 岗</li>
+            <li>人均仅 14.3 m²；在建仅 5,444 m²，占存量 0.8%</li>
+            <li>下一档供给是 Zabeel District 1,770 万 ft²（约 2.3 倍现存量），<strong>2030 年前到不了</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>租赁：续约在撑市，新签在退</h3>
+      <table>
+        <thead>
+          <tr><th>办公租赁</th><th class="r">H1 26</th><th class="r">同比</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>新签合同</td><td class="r">9,036 份 / 11.3 亿</td><td class="r down">量 -12.0% · 额 -27.6%</td></tr>
+          <tr><td>续租合同</td><td class="r">14,906 份 / 20.2 亿</td><td class="r up">量 +4.4% · 额 +18.8%</td></tr>
+        </tbody>
+      </table>
+      <p>
+        全市空置约 6.1%，优质仅 0.7%。Q2 租赁登记同比 +24.6%，主要是续租和情绪修复，不是扩张。
+        Q2 有 66% 的租赁交易低于 500 ft²（上季低于 60%）——笔数是中小企业在贡献，大租户把决策拉长了。
+      </p>
+      <div class="callout watch">
+        <strong>投资含义：</strong>销售火热靠的是未来租金预期，不是当期扩租。
+        2026 已交付办公约 10.5 万㎡，在建约 14.4 万㎡，短期租金仍有支撑；
+        但若新签持续弱、大租户继续观望，资本化率会先于房价调整。
+      </div>
+    </section>
+
+    <section id="pipeline">
+      <h2>办公供给：紧缺是现在，墙在 2028 年之后</h2>
+      <p class="sub">2023–2025 几乎没货。2026 开始回暖，但真正的放量要到 2028–2030，而且会溢到传统商务区之外。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">2026 已交付</div>
+          <div class="val">10.5 万㎡</div>
+          <div class="chg">约 113 万 ft²</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2026 在建</div>
+          <div class="val">14.4 万㎡</div>
+          <div class="chg">尚未形成即期供给</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2027–2030 计划</div>
+          <div class="val">113 万㎡</div>
+          <div class="chg">约 1,216 万 ft²</div>
+        </div>
+        <div class="kpi">
+          <div class="label">其中 2028 及以后</div>
+          <div class="val">86%</div>
+          <div class="chg">近端仍然紧</div>
+        </div>
+      </div>
+
+      <p>
+        2023 年交付了 11.0 万㎡之后，2024 只交了 1.3 万㎡、2025 年 3.5 万㎡——这就是这轮租金和期房价能涨起来的库存背景。
+        2026 交付回到 10.5 万㎡，另有 14.4 万㎡在建，看起来像拐点，但 2027 计划也只有 15.6 万㎡。
+        真正的墙在后面：2028 年 28.5 万㎡、2029 年 29.7 万㎡、2030 年 39.4 万㎡。
+      </p>
+
+      <div class="legend">
+        <span><i class="swatch" style="background:#152033"></i>已交付 / 在建</span>
+        <span><i class="swatch" style="background:#9a7b3c"></i>计划交付</span>
+      </div>
+      <div class="card">
+        <div class="pipe"><span>2023</span><div class="track"><div class="fill" style="width:28%"></div></div><span>11.0 万㎡ 已交付</span></div>
+        <div class="pipe"><span>2024</span><div class="track"><div class="fill" style="width:3%"></div></div><span>1.3 万㎡ 已交付</span></div>
+        <div class="pipe"><span>2025</span><div class="track"><div class="fill" style="width:9%"></div></div><span>3.5 万㎡ 已交付</span></div>
+        <div class="pipe"><span>2026</span><div class="track"><div class="fill" style="width:27%"></div></div><span>10.5 万㎡ 已交付</span></div>
+        <div class="pipe"><span>2026 在建</span><div class="track"><div class="fill gold" style="width:37%"></div></div><span>14.4 万㎡</span></div>
+        <div class="pipe"><span>2027</span><div class="track"><div class="fill gold" style="width:40%"></div></div><span>15.6 万㎡ 计划</span></div>
+        <div class="pipe"><span>2028</span><div class="track"><div class="fill gold" style="width:72%"></div></div><span>28.5 万㎡ 计划</span></div>
+        <div class="pipe"><span>2029</span><div class="track"><div class="fill gold" style="width:75%"></div></div><span>29.7 万㎡ 计划</span></div>
+        <div class="pipe"><span>2030</span><div class="track"><div class="fill gold" style="width:100%"></div></div><span>39.4 万㎡ 计划</span></div>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px">
+        <div class="card">
+          <h3>对 2026–2027 的含义</h3>
+          <p>近端供给仍然对不上 H1 已经卖掉的期房热情。DIFC 要等到 2030 后的 Zabeel；核心走廊（Business Bay、Trade Center、Al Sufouh）在 2027 年前没有明显减压阀。这支撑“继续涨租、继续给旗舰期房溢价”的基准情形。</p>
+        </div>
+        <div class="card">
+          <h3>新供给在往传统商务区外走</h3>
+          <p>已经公布的项目里，Downtown Jebel Ali 的 RAW District、Motor City 的 O1NE District（AVENEW 与 KORA）是在既有办公地图之外开新节点。Motor City 上半年期房价几乎走平（+3.9%），不等于以后没故事——只是故事还没写进均价。</p>
+        </div>
+      </div>
+      <div class="callout watch">
+        <strong>2028 年以后要换一副眼镜。</strong>
+        计划管线的 86% 堆在 2028–2030。如果租户新签到那时还没跟上，这批非核心新区会先以价换量，再回头压核心区的租金预期。H1 的期房买家，买的其实是 2028 前后的交房——时间上正好撞上这堵墙。
+      </div>
+    </section>
+
+    <section id="retail">
+      <h2>零售：新盘溢价，二手掉队</h2>
+      <p class="sub">金额同比 +175%，但租赁新签腰斩式回落。投资者买的是“品牌零售新供给”，租户买的是谨慎。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">成交 / 金额</div>
+          <div class="val">853</div>
+          <div class="chg up">37.1 亿 · 量 +56% 额 +175%</div>
+        </div>
+        <div class="kpi">
+          <div class="label">均价</div>
+          <div class="val">3,486</div>
+          <div class="chg up">▲ 54% · 已高于办公</div>
+        </div>
+        <div class="kpi">
+          <div class="label">期房成交</div>
+          <div class="val">579</div>
+          <div class="chg up">▲ 89% · 均价 4,048</div>
+        </div>
+        <div class="kpi">
+          <div class="label">二手成交</div>
+          <div class="val">274</div>
+          <div class="chg up">▲ 14% · 价格却在部分片区跌</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3>成交地点更分散，也更“社区化”</h3>
+          <div class="bars">
+            <div class="bar-row"><span>JVC</span><div class="track"><div class="fill gold" style="width:100%"></div></div><span>89</span></div>
+            <div class="bar-row"><span>International City</span><div class="track"><div class="fill gold" style="width:91%"></div></div><span>81</span></div>
+            <div class="bar-row"><span>Majan</span><div class="track"><div class="fill gold" style="width:67%"></div></div><span>60</span></div>
+            <div class="bar-row"><span>Business Bay</span><div class="track"><div class="fill gold" style="width:66%"></div></div><span>59</span></div>
+            <div class="bar-row"><span>Dubai South</span><div class="track"><div class="fill gold" style="width:56%"></div></div><span>50</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>品牌零售已自成一档</h3>
+          <p>Binghatti City（奔驰品牌盘）期房零售 <strong>7,483 AED/ft²</strong>，超过全市零售均价一倍，是整份报告最高价。Sobha Central 6,668。这是配套溢价，不是传统铺位逻辑。</p>
+          <p class="small">Downtown 上半年大约只有 5 笔零售成交——不是需求没了，是 Emaar 把持大部分零售、几乎不放货。能成交的就是稀缺溢价。</p>
+        </div>
+      </div>
+
+      <h3>二手零售没有分享这轮上涨</h3>
+      <table>
+        <thead>
+          <tr><th>片区（二手）</th><th class="r">H1 25</th><th class="r">H1 26</th><th class="r">变化</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Business Bay</td><td class="r">3,112</td><td class="r">2,793</td><td class="r down">-10.2%</td></tr>
+          <tr><td>Dubai Marina</td><td class="r">3,133</td><td class="r">2,415</td><td class="r down">-22.9%</td></tr>
+          <tr><td>JVC</td><td class="r">—</td><td class="r">—</td><td class="r down">-5.5%</td></tr>
+        </tbody>
+      </table>
+      <p>办公是“新盘涨、二手也涨（尽管量缩）”；零售是“新盘暴涨、二手走弱”。说明资金在追开发商叙事和品牌溢价，而不是在给现有铺位重定价。</p>
+
+      <h3>租赁：旅游相关谨慎，空置率反而改善</h3>
+      <p>
+        新签从 9,324 降到 6,800，金额 15 亿降到 10.9 亿，量额都约 -27%。
+        续租量几乎持平（26,069 → 26,075），金额微降 3.4%。
+        独立跟踪的 Q2 数据：零售租赁同比 -0.2%、环比 -14.2%，归因于旅游相关谨慎。
+        但全市零售空置从一年前的 8.0% 降到 <strong>4.7%</strong>，靠的是次级商场和社区 mall 承接本地消费。
+      </p>
+      <div class="callout">
+        <strong>结构判断：</strong>投资者在给新零售供给定价，租户（尤其旅游暴露区位）在收缩新承诺。
+        空置率下降说明现有空间仍能消化；新签下滑说明增量扩张停了。两者可以同时成立。
+      </div>
+    </section>
+
+    <section id="wh">
+      <h2>仓储：迪拜最稀缺的资产类别</h2>
+      <p class="sub">成交下滑如果单独看是弱，叠上空置和租金就是“没有可卖的东西”。</p>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label">成交笔数</div>
+          <div class="val">13</div>
+          <div class="chg down">▼ 23.5% · 去年 17</div>
+        </div>
+        <div class="kpi">
+          <div class="label">成交金额</div>
+          <div class="val">9430 万</div>
+          <div class="chg down">▼ 47.7% AED</div>
+        </div>
+        <div class="kpi">
+          <div class="label">均价</div>
+          <div class="val">524</div>
+          <div class="chg up">▲ 3.1% AED/ft²</div>
+        </div>
+        <div class="kpi">
+          <div class="label">H1 新增需求</div>
+          <div class="val">1230 万</div>
+          <div class="chg">ft² 意向需求</div>
+        </div>
+      </div>
+
+      <p>
+        核心工业区空置率接近零。租户不退租、业主不抛售，迪拜几乎没有可开发工业用地。
+        所以交易稀少不是需求消失，是市场被锁死。均价仍涨，符合“有价无市”而不是“有市无价”。
+      </p>
+
+      <h3>迪拜工业租金：贵的更贵，软的也只是从高位回一点</h3>
+      <ul class="clean">
+        <li><strong>Al Quoz Grade A</strong> 仍是最贵：90 AED/ft²（+6% YoY）</li>
+        <li><strong>Dubai South</strong> 涨幅最大：+22% 至 55，受益物流和杰贝阿里需求</li>
+        <li><strong>Dubai Industrial City</strong> +16% 至 52–55 区间</li>
+        <li>JAFZA Grade A -2% 至 41、Al Quoz Grade B -2% 至 57：从 2025 年末高点回落，不是转弱，出租率仍接近满租</li>
+      </ul>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>需求结构</h3>
+          <p>制造与工业 35.1% + 物流 15.5% = 一半。零售贸易 12.1%，建筑地产 9.3%。更关键的是：超过 10 万 ft² 的“巨型仓”需求占比从 H2 2025 的约 7.8% 升到 <strong>27%</strong>。大用户还在找空间，库存却几乎没了。</p>
+        </div>
+        <div class="card">
+          <h3>供给时间表很残酷</h3>
+          <p>迪拜 2027 年确认新增仅约 320 万 ft²；2028 年几乎还没有开工发包。对租户来说，缓解仍然遥远。预期：核心枢纽继续近零空置、租金坚挺，东海岸走廊地价继续升。</p>
+        </div>
+      </div>
+
+      <h3>溢出：北酋长国不是铁板一块</h3>
+      <p>缺货的地方跟迪拜同向涨，库存多的地方还在降价抢租客。</p>
+      <table>
+        <thead>
+          <tr><th>市场</th><th class="r">租金 / 变化</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>KEZAD Mussafah（阿布扎比）</td><td class="r">630 AED/m² · +15%</td><td>酋长国最高；制造与区域分拨</td></tr>
+          <tr><td>ADAFZ（阿布扎比）</td><td class="r">625 AED/m²</td><td>自贸区 + 机场邻近</td></tr>
+          <tr><td>Al Markaz（阿布扎比）</td><td class="r">400 AED/m² · +7%</td><td>便宜端也在涨</td></tr>
+          <tr><td>Al Jurf, Ajman</td><td class="r">57.8 AED/ft² · +11.9%</td><td>可租库存仅约 30 万 ft²</td></tr>
+          <tr><td>Al Sajaa, Sharjah</td><td class="r">51.6 AED/ft² · +11.5%</td><td>供给同样紧</td></tr>
+          <tr><td>Umm Al Thuoob, UAQ</td><td class="r">-18.5%</td><td>单独握有 520 万 ft² 库存，北酋最大供给袋</td></tr>
+          <tr><td>Sharjah Industrial Area</td><td class="r">-8.6%</td><td>仍在以价换量</td></tr>
+          <tr><td>Emirates Industrial City</td><td class="r">-16.9%</td><td>供给充裕端</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>霍尔木兹海峡改道正在变成永久基础设施。</strong>
+        货量转向富查伊拉、霍尔法坎、萨拉拉再陆运进迪拜/阿布扎比。
+        东海岸 Al Rugaylat、Dibba 两个深水码头获 50 年特许；霍尔法坎扩建；沙迦–达曼海陆走廊绕开海峡。
+        这不是临时绕行，是海湾物流网络的结构性重画。对仓储和工业用地是中长期利好，但短端仍然解决不了迪拜无地的问题。
+      </div>
+    </section>
+
+    <section id="geo">
+      <h2>地缘冲击与宏观垫板</h2>
+      <p class="sub">2 月 28 日伊朗–以色列–美国军事升级，是这半年唯一真正的外生冲击。市场降温了，但没断。</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>可以量到的冲击</h3>
+          <ul class="clean">
+            <li>办公成交 3 月 266 笔 / 16 亿，5 月再探底 244 笔；4 月金额回到 33 亿，靠的是期房大单（当月期房占比 75%）</li>
+            <li>Q2 全市商业销售额环比 -36% 至 242.5 亿，成交从 Q1 的 3,619 降到 2,840</li>
+            <li>3 月上半月住宅成交约 -25%，观望峰值</li>
+            <li>冲突中有机构把全年 GDP 从 +4.8% 改口到收缩情景</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>随后的韧性</h3>
+          <ul class="clean">
+            <li>办公/零售 H1 销售额仍各自同比 +175% 以上</li>
+            <li>办公销售额同比约 +190%，零售约 +178%（含冲突季度）</li>
+            <li>Q1 实际 GDP +3% 至 4,850 亿，非油 +4.8%、占经济 79.4%</li>
+            <li>金融保险是最快板块 +17.3%；建筑仍 +8.1%</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>为什么办公和工业扛住了</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3>结构性稀缺</h3>
+          <p>房东保有定价权。Q2 优质办公租金仍同比 +13.6%，只是决策周期变长。</p>
+        </div>
+        <div class="card">
+          <h3>期房看 3–5 年</h3>
+          <p>短期地缘噪音对交房周期更长的期房，历史影响小于现房和租赁。这与 H1 期房份额上升一致。</p>
+        </div>
+        <div class="card">
+          <h3>避风港路径依赖</h3>
+          <p>阿拉伯之春、新冠、此前地区冲突后，资本通常回流甚至加速。迪拜被当作区域资金安全港，这个定位还在被交易验证。</p>
+        </div>
+      </div>
+
+      <h3>利率、评级、贸易</h3>
+      <table>
+        <thead>
+          <tr><th>指标</th><th>读数</th><th>对商业地产的含义</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>央行基准利率</td><td>3.65%（2025 年 12 月后持稳）</td><td>融资成本不再上升，但别指望 2026 年大幅降息；杠杆买家不会突然更轻松</td></tr>
+          <tr><td>Fitch 主权评级</td><td>2026 年 5 月维持 AA-</td><td>油收与财政缓冲被确认；阿布扎比主权净海外资产约相当于 2025 年阿联酋 GDP 的 164%</td></tr>
+          <tr><td>非油出口 H1</td><td>4,528 亿 · +23.9%</td><td>与物流改道同一条线：租户需求有贸易基本面，不只是投资情绪</td></tr>
+          <tr><td>ADGM AUM</td><td>单季 +57%</td><td>金融自由区在冲突季度仍吸资，和 DIFC 公司数 +30% 互相印证</td></tr>
+          <tr><td>Vision 2031</td><td>经济规模目标翻倍至 3 万亿</td><td>给长周期资本一个官方锚；H1 期房行为与这个锚一致</td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>预测被砍、结果打脸。</strong>
+        冲突中的预测从增长改成收缩，实际 Q1 仍是 +3%。
+        政府口径是“冲击限于少数活动、没有打偏增长轨迹”。
+        板块数据大体支持这一点。对地产而言：宏观垫板是真的，但它解释的是“为什么没崩”，不是“估值已经便宜”。
+      </div>
+    </section>
+
+    <section id="risks">
+      <h2>风险与误读</h2>
+      <p class="sub">最容易被错用的地方，不在数字本身，而在把“销售创纪录”直接翻译成“基本面全面强”。</p>
+
+      <div class="callout risk">
+        <strong>1. 销售≠使用。</strong>
+        办公新签量 -12%、额 -27%；零售新签量额约 -27%。
+        投资端在给 2028–2030 年的 Grade A 定价，使用端在续约避险。
+        这个缺口如果在 H2 收不拢，租金增速会先于房价降温。
+      </div>
+      <div class="callout risk">
+        <strong>2. 集中度过高。</strong>
+        五个办公期房项目 = 71.7% 期房金额；Business Bay 一地约 52%。
+        任何一个旗舰盘延期、定价失守或开发商信用事件，都会让“全市繁荣”的叙事瞬间变窄。
+      </div>
+      <div class="callout risk">
+        <strong>3. 均价含新盘结构效应。</strong>
+        JLT 期房均价近乎三倍，更可能是新产品入场重定价，不是同一资产普涨。
+        用全市 PSF 做横向比较或投报，会高估存量资产的实际涨幅。
+      </div>
+      <div class="callout risk">
+        <strong>4. 零售二手是隐伤。</strong>
+        Marina 二手 -22.9%、Business Bay 二手 -10.2%。
+        如果把 Binghatti / Sobha 的品牌溢价当成零售市场的普遍租金资本化，会买在错误的分层里。
+      </div>
+      <div class="callout risk">
+        <strong>5. 仓储“买不到”也会变成“买贵”。</strong>
+        近零空置支持租金，但不保证任何一笔成交都合理。样本只有 13 笔，金额口径波动极大（-47.7%）。
+        北酋已经出现供给袋降价（UAQ -18.5%）。溢出不是同质利好。
+      </div>
+      <div class="callout watch">
+        <strong>6. 地缘路径仍是外生变量。</strong>
+        可控降温支持当前韧性叙事；冲突拖延或外溢会继续拉长决策、打击旅游零售。
+        历史避风港经验有效，但不能当对冲工具。月度数据已经显示：冲击会先打成交量，价格带可以暂时横住。
+      </div>
+      <div class="callout risk">
+        <strong>7. 2028 年供给墙，而且不在老地图上。</strong>
+        2027–2030 计划办公约 113 万㎡，86% 从 2028 年起交付，并溢出到 Jebel Ali、Motor City 等新节点。
+        H1 卖掉的高价期房，交房时间正好对上这批供给。若租户需求届时仍是“续约不扩租”，非核心盘会先受伤。
+      </div>
+    </section>
+
+    <section id="outlook">
+      <h2>H2 2026：该延续的，和该盯住的</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>大概率延续</h3>
+          <ul class="clean">
+            <li><strong>Grade A 办公稀缺（近端）。</strong> 2026 已交付约 10.5 万㎡、2027 计划约 15.6 万㎡；DIFC 要等到 2030 后 Zabeel。Business Bay、Trade Center、Al Sufouh 没有近端减压阀。</li>
+            <li><strong>期房仍会主导销售。</strong> 2026 年每个月期房都占过半，4 月高达 75%。成交将继续跟踪旗舰开盘，而不是全市铺开。</li>
+            <li><strong>仓储紧缺还有一段路。</strong> 2028 几乎无新开工。核心工业枢纽近零空置和涨租仍是基准情形。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>必须盯住</h3>
+          <ul class="clean">
+            <li><strong>租售分叉。</strong> 若新签继续弱、续租消化全部需求，租金增长可能见顶，并回头约束资本价值。</li>
+            <li><strong>价格已经走平。</strong> 全市销售均价 Q2 停在 2,199 AED/ft²。量可以再被开盘拉起来，均价时序不见得跟涨。</li>
+            <li><strong>2028 供给墙。</strong> 计划管线 86% 在 2028–2030，且部分落在 Jebel Ali / Motor City。要看这些节点有没有真实租户，而不只是销售去化。</li>
+            <li><strong>冲突与利率。</strong> 范围、持续时间，以及 3.65% 基准是否松动，会直接打到杠杆期房买家和国际租户的决策速度。</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>按角色的操作含义</h3>
+      <table>
+        <thead>
+          <tr><th>角色</th><th>更站得住的位置</th><th>更危险的位置</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>长线资本 / 自用</td>
+            <td>核心走廊 Grade A、DIFC 可交易分户、真正缺货的工业、东海岸物流节点的长期土地逻辑</td>
+            <td>用全市均价或旗舰期房溢价去对标次级存量</td>
+          </tr>
+          <tr>
+            <td>期房投资者</td>
+            <td>供给确定、区位进入 Grade A 定价带、开发商执行力可验证的少数项目</td>
+            <td>把开盘集中度当成市场广度；买在 2028 前后交房、且落在未验证新节点的产品</td>
+          </tr>
+          <tr>
+            <td>零售买家</td>
+            <td>品牌/配套溢价盘（明白自己买的是产品分层）；社区 mall 承接本地消费的逻辑</td>
+            <td>旅游暴露二手铺、以及假设 Downtown 无成交 = 市场差</td>
+          </tr>
+          <tr>
+            <td>仓储 / 物流</td>
+            <td>迪拜核心满租资产（若能买到）、阿布扎比 KEZAD/ADAFZ、Ajman Al Jurf / Sharjah Al Sajaa 这类紧供给口袋</td>
+            <td>北酋供给袋（UAQ Umm Al Thuoob 等）——溢出需求不会自动填平所有空仓</td>
+          </tr>
+          <tr>
+            <td>租户</td>
+            <td>尽快续约锁定 Grade A / 工业空间；大面积需求不要假设 2027 前有实质性缓解</td>
+            <td>把新签下滑读成租金会很快回头；优质空置仅 0.7%，不支持这个赌</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>收束：</strong>
+        H1 2026 对迪拜办公和零售销售是真正的纪录半年，引擎是对供给不足的 Grade A 管道的期房押注——即便经历了一次看得见的地区冲突和一次被证伪的衰退预测。
+        租赁是更冷静的镜像：租户续约不扩张，旅游零售谨慎，仓储不是最弱板块而是最缺货板块。
+        合在一起：投资人对迪拜长周期的信念，目前仍快于租户对短周期的信心。
+        <strong>H2 要看的不是销售额能不能再创新高，而是：租售缺口会不会收、2,199 这道均价线会不会破、以及 2028 那堵供给墙有没有被提前交易进今天的期房价。</strong>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        销售数据窗口为 2026 年 1–6 月，对照 2025 年同期。租赁、空置与供给管道口径可能因统计窗口和覆盖范围不同而不直接加总。
+      </p>
+      <p>
+        阿布扎比对照：<a href="adrec-h1-2026-commercial.html">阿布扎比商业地产 H1 2026</a>
+        · <a href="./">主页</a>
+      </p>
+      <p>生成日期：2026-08-27 · 仅供研究参考，不构成投资建议。</p>
+    </footer>
+  </main>
+</body>
+</html>

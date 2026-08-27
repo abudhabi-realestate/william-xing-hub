@@ -10,6 +10,7 @@
 |------|-----|
 | ADREC H1 2026 市场报告 | https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026.html |
 | 阿布扎比商业地产 H1 2026 | https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026-commercial.html |
+| 迪拜商业地产 H1 2026 | https://abudhabi-realestate.github.io/william-xing-hub/dubai-h1-2026-commercial.html |
 | 投资阿布扎比 · 数据全景 | https://abudhabi-realestate.github.io/william-xing-hub/invest-in-abu-dhabi.html |
 | 阿联酋税务居民证 TRC 2026 指南 | https://abudhabi-realestate.github.io/william-xing-hub/uae-trc-2026.html |
 | 迪拜 CRS · 税务合规 30 问 | https://abudhabi-realestate.github.io/william-xing-hub/dubai-crs-faq.html |
