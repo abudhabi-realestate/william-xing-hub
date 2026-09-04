@@ -8,6 +8,7 @@
 
 | 类型 | URL |
 |------|-----|
+| 阿布扎比期房目录 | https://abudhabi-realestate.github.io/william-xing-hub/offplan/#/zh |
 | ADREC H1 2026 市场报告 | https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026.html |
 | 阿布扎比商业地产 H1 2026 | https://abudhabi-realestate.github.io/william-xing-hub/adrec-h1-2026-commercial.html |
 | 迪拜商业地产 H1 2026 | https://abudhabi-realestate.github.io/william-xing-hub/dubai-h1-2026-commercial.html |
