@@ -17,3 +17,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://abudhabi-realestate.github.io/william-xing-hub/sitemap.xml
+Sitemap: https://abudhabi-realestate.github.io/william-xing-hub/sitemap.txt
