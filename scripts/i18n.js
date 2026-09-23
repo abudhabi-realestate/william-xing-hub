@@ -145,6 +145,7 @@ SiteI18n.init({
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
       '咨询联系：<span class="contact-wechat">微信 nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      '迪拜 RERA 经纪人牌照 BRN 97977<br>' +
       '© 邢文举 · 阿联酋',
   },
   en: {
@@ -293,6 +294,7 @@ SiteI18n.init({
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
       'Contact: <span class="contact-wechat">WeChat nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
+      'Dubai RERA Broker License BRN 97977<br>' +
       '© William Xing · UAE',
   },
 });
