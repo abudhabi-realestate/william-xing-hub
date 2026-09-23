@@ -2,8 +2,8 @@ SiteI18n.init({
   zh: {
     'meta.title': '邢文举 · 阿布扎比 / 迪拜房产与实用工具',
     'hero.name': '邢文举 · William Xing',
-    'hero.tagline': '阿布 ADREC 数据 · 迪拜实操 · 双城选型',
-    'hero.sub': '阿布扎比 / 迪拜 · 阿联酋房产顾问',
+    'hero.tagline': '主场阿布扎比 · Reem / Yas / Saadiyat 期房 · ADREC 公开数据',
+    'hero.sub': '阿布扎比顾问 · 迪拜 RERA BRN 97977（仅覆盖迪拜经纪）',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': '投资 · 居留 · 自住',
     'nav.offplan': '阿布期房',
@@ -41,9 +41,9 @@ SiteI18n.init({
     'invest.desc': 'ADREC 2026 Q1 官方数据、六大投资优势、五城税负与收益率对比、Vision 2030 重点板块 — 一页讲清楚。',
     'invest.go': 'READ →',
     'hero.bio':
-      '长居阿联酋，<strong>阿布扎比 + 迪拜双城</strong>房产研究与实操顾问。' +
-      '阿布扎比侧重 ADREC 数据解读，深耕 Reem / Yas / Saadiyat 等核心投资区；迪拜熟悉主流板块与开发商项目，覆盖投资、居留与自住场景。' +
-      '曾在菊厂历练，用<strong>跨境视角</strong>看现金流、成本与风险——帮你把两城差异和选型逻辑一次讲清楚。',
+      '主场是<strong>阿布扎比</strong>：Reem / Yas / Saadiyat 期房选型，依据 ADREC 公开市场报告做核验，而不是只转开发商册子。' +
+      '已发布 H1 2026 解读、阿布30天系列和期房目录。迪拜持 <strong>RERA BRN 97977</strong>，该牌照只覆盖迪拜经纪，<strong>不是</strong>阿布扎比 ADREC 经纪牌照。' +
+      '曾在菊厂历练，用跨境视角看现金流、成本与风险。',
     'tools.title': 'Tools · 实用工具',
     'tools.sub': '静态数据工具矩阵 · 可收藏 · 可转发',
     'vlog.title': 'Blog · 阿布30天',
@@ -145,14 +145,15 @@ SiteI18n.init({
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
       '咨询联系：<span class="contact-wechat">微信 nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
-      '迪拜 RERA 经纪人牌照 BRN 97977<br>' +
+      '主场阿布扎比 Reem / Yas / Saadiyat · ADREC 公开数据解读<br>' +
+      '迪拜 RERA 经纪人牌照 BRN 97977（仅覆盖迪拜经纪，非 ADREC 牌照）<br>' +
       '© 邢文举 · 阿联酋',
   },
   en: {
     'meta.title': 'William Xing · Abu Dhabi / Dubai Real Estate & Tools',
     'hero.name': 'William Xing',
-    'hero.tagline': 'Abu Dhabi ADREC data · Dubai practice · Dual-city allocation',
-    'hero.sub': 'Abu Dhabi / Dubai · UAE Real Estate Advisor',
+    'hero.tagline': 'Abu Dhabi first · Reem / Yas / Saadiyat off-plan · published ADREC data',
+    'hero.sub': 'Abu Dhabi advisor · Dubai RERA BRN 97977 (Dubai brokerage only)',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': 'Investment · Residency · End-use',
     'nav.offplan': 'Off-plan',
@@ -190,9 +191,9 @@ SiteI18n.init({
     'invest.desc': 'ADREC Q1 2026 official data, six reasons to invest, a five-city tax/yield comparison, and Vision 2030 hotspots — on one page.',
     'invest.go': 'READ →',
     'hero.bio':
-      'Based in the UAE, advising across <strong>Abu Dhabi and Dubai</strong>. ' +
-      'Abu Dhabi: ADREC-driven insights on Reem, Yas, Saadiyat and core districts. Dubai: mainstream areas and developer projects for investment, residency and end-use. ' +
-      'Former Huawei stint with a <strong>cross-border lens</strong> on cash flow, costs and risk — clarifying how the two markets differ and what fits you.',
+      'Primary market is <strong>Abu Dhabi</strong>: Reem / Yas / Saadiyat off-plan, checked against published ADREC reports rather than developer brochures. ' +
+      'Published work includes the H1 2026 brief, the 30-day series and an off-plan catalogue. Holds <strong>Dubai RERA BRN 97977</strong> — a Dubai brokerage licence, <strong>not</strong> an Abu Dhabi ADREC broker licence. ' +
+      'Former Huawei, with a cross-border view on cash flow, cost and risk.',
     'tools.title': 'Tools · Free Resources',
     'tools.sub': 'Static data tools · Bookmark · Share',
     'vlog.title': 'Blog · Abu 30 Days',
@@ -294,7 +295,8 @@ SiteI18n.init({
     'contact.whatsapp': 'WhatsApp · +971522240716',
     footer:
       'Contact: <span class="contact-wechat">WeChat nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
-      'Dubai RERA Broker License BRN 97977<br>' +
+      'Abu Dhabi first: Reem / Yas / Saadiyat · published ADREC data<br>' +
+      'Dubai RERA BRN 97977 (Dubai brokerage only; not an ADREC licence)<br>' +
       '© William Xing · UAE',
   },
 });
