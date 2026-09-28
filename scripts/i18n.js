@@ -3,7 +3,7 @@ SiteI18n.init({
     'meta.title': '邢文举 · 阿布扎比 / 迪拜房产与实用工具',
     'hero.name': '邢文举 · William Xing',
     'hero.tagline': '主场阿布扎比 · Reem / Yas / Saadiyat 期房 · ADREC 公开数据',
-    'hero.sub': '阿布扎比顾问 · 迪拜 RERA BRN 97977（仅覆盖迪拜经纪）',
+    'hero.sub': '阿布扎比顾问 · 迪拜 RERA BRN 97977',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': '投资 · 居留 · 自住',
     'nav.offplan': '阿布期房',
@@ -42,7 +42,7 @@ SiteI18n.init({
     'invest.go': 'READ →',
     'hero.bio':
       '主场是<strong>阿布扎比</strong>：Reem / Yas / Saadiyat 期房选型，依据 ADREC 公开市场报告做核验，而不是只转开发商册子。' +
-      '已发布 H1 2026 解读、阿布30天系列和期房目录。迪拜持 <strong>RERA BRN 97977</strong>，该牌照只覆盖迪拜经纪，<strong>不是</strong>阿布扎比 ADREC 经纪牌照。' +
+      '已发布 H1 2026 解读、阿布30天系列和期房目录。迪拜持 <strong>RERA BRN 97977</strong>。' +
       '曾在菊厂历练，用跨境视角看现金流、成本与风险。',
     'tools.title': 'Tools · 实用工具',
     'tools.sub': '静态数据工具矩阵 · 可收藏 · 可转发',
@@ -146,14 +146,14 @@ SiteI18n.init({
     footer:
       '咨询联系：<span class="contact-wechat">微信 nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
       '主场阿布扎比 Reem / Yas / Saadiyat · ADREC 公开数据解读<br>' +
-      '迪拜 RERA 经纪人牌照 BRN 97977（仅覆盖迪拜经纪，非 ADREC 牌照）<br>' +
+      '迪拜 RERA 经纪人牌照 BRN 97977<br>' +
       '© 邢文举 · 阿联酋',
   },
   en: {
     'meta.title': 'William Xing · Abu Dhabi / Dubai Real Estate & Tools',
     'hero.name': 'William Xing',
     'hero.tagline': 'Abu Dhabi first · Reem / Yas / Saadiyat off-plan · published ADREC data',
-    'hero.sub': 'Abu Dhabi advisor · Dubai RERA BRN 97977 (Dubai brokerage only)',
+    'hero.sub': 'Abu Dhabi advisor · Dubai RERA BRN 97977',
     'hero.label': 'Profile · AUH & DXB Real Estate',
     'tag.invest': 'Investment · Residency · End-use',
     'nav.offplan': 'Off-plan',
@@ -192,7 +192,7 @@ SiteI18n.init({
     'invest.go': 'READ →',
     'hero.bio':
       'Primary market is <strong>Abu Dhabi</strong>: Reem / Yas / Saadiyat off-plan, checked against published ADREC reports rather than developer brochures. ' +
-      'Published work includes the H1 2026 brief, the 30-day series and an off-plan catalogue. Holds <strong>Dubai RERA BRN 97977</strong> — a Dubai brokerage licence, <strong>not</strong> an Abu Dhabi ADREC broker licence. ' +
+      'Published work includes the H1 2026 brief, the 30-day series and an off-plan catalogue. Holds <strong>Dubai RERA BRN 97977</strong>. ' +
       'Former Huawei, with a cross-border view on cash flow, cost and risk.',
     'tools.title': 'Tools · Free Resources',
     'tools.sub': 'Static data tools · Bookmark · Share',
@@ -296,7 +296,7 @@ SiteI18n.init({
     footer:
       'Contact: <span class="contact-wechat">WeChat nothing9802</span> · WhatsApp <a href="https://wa.me/971522240716">+971522240716</a><br>' +
       'Abu Dhabi first: Reem / Yas / Saadiyat · published ADREC data<br>' +
-      'Dubai RERA BRN 97977 (Dubai brokerage only; not an ADREC licence)<br>' +
+      'Dubai RERA BRN 97977<br>' +
       '© William Xing · UAE',
   },
 });
